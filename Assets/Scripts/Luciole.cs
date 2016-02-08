@@ -32,6 +32,8 @@ public class Luciole : MonoBehaviour {
 			if (hitCollider == collider) {
 				spriteRenderer.sprite = lightenedSprite;
 				lightened = true;
+
+				Chapter1Manager.checkLuciole();
 			}
 		}
 
@@ -41,6 +43,8 @@ public class Luciole : MonoBehaviour {
 			if (hitCollider == collider) {
 				spriteRenderer.sprite = lightenedSprite;
 				lightened = true;
+
+				Chapter1Manager.checkLuciole();
 			}
 		}
 	} 
