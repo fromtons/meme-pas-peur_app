@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System;
 
 public class Luciole : MonoBehaviour {
 
@@ -11,10 +13,14 @@ public class Luciole : MonoBehaviour {
 	private SpriteRenderer spriteRenderer;
 	private BoxCollider2D collider;
 
+	AudioSource audioSource;
+	public AudioClip audioClip;
+
 	// Use this for initialization
 	void Start () {
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		collider = GetComponent<BoxCollider2D> ();
+		audioSource = GetComponent<AudioSource> ();
 
 		this.FollowPath();	
 	}
@@ -25,12 +31,14 @@ public class Luciole : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown(0)) {
+		if (Input.GetMouseButtonDown(0) && !lightened) {
 			Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
 			if (hitCollider == collider) {
 				spriteRenderer.sprite = lightenedSprite;
 				lightened = true;
+
+				audioSource.PlayOneShot(audioClip);
 
 				Chapter1Manager.checkLuciole();
 			}

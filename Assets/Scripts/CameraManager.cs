@@ -8,9 +8,13 @@ public class CameraManager : MonoBehaviour {
 	public float moveToX;
 	public float moveToY;
 
+	public AudioClip ambientLight;
+	AudioSource audioSource;
+
 	// Use this for initialization
 	void Start () {
 		ccc = (ColorCorrectionCurves) GetComponent(typeof(ColorCorrectionCurves));
+		audioSource = GetComponents<AudioSource>()[0];
 
 		iTween.MoveTo(gameObject, iTween.Hash("position", new Vector3(moveToX,moveToY, -2f), "time", Chapter1Manager.introAnimationDuration, "easetype", iTween.EaseType.easeInOutSine));
 	}
@@ -18,6 +22,17 @@ public class CameraManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	public void toggleLight() {
+		disableGreyscale ();
+		enableLightSounds();
+	}
+
+	private void enableLightSounds() {
+		audioSource.clip = ambientLight;
+		audioSource.time = 0;
+		audioSource.Play ();
 	}
 
 	public void disableGreyscale() {

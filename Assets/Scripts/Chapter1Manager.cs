@@ -5,7 +5,6 @@ public class Chapter1Manager : MonoBehaviour {
 
 	public static int nbOfLuciolesToCheck = 3;
 	public static int nbOfLuciolesChecked = 0;
-
 	public static int introAnimationDuration = 26;
 
 	// Use this for initialization
@@ -29,7 +28,7 @@ public class Chapter1Manager : MonoBehaviour {
 			BackgroundManager bgMngr = (BackgroundManager) background.GetComponent(typeof(BackgroundManager));
 			bgMngr.ChangeColor (new Color(1f,1f,1f,1f));
 			CameraManager cameraManager = (CameraManager) mainCamera.GetComponent(typeof(CameraManager));
-			cameraManager.disableGreyscale();
+			cameraManager.toggleLight();
 			Piri piri = (Piri) hero.GetComponent (typeof(Piri));
 			piri.state = Piri.STATE_NORMAL;
 		}
