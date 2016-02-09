@@ -12,7 +12,7 @@ public class CameraManager : MonoBehaviour {
 	void Start () {
 		ccc = (ColorCorrectionCurves) GetComponent(typeof(ColorCorrectionCurves));
 
-		iTween.MoveTo(gameObject, iTween.Hash("position", new Vector3(moveToX,moveToY, -2f), "time", 8, "easetype", iTween.EaseType.easeInOutSine));
+		iTween.MoveTo(gameObject, iTween.Hash("position", new Vector3(moveToX,moveToY, -2f), "time", Chapter1Manager.introAnimationDuration, "easetype", iTween.EaseType.easeInOutSine));
 	}
 	
 	// Update is called once per frame
