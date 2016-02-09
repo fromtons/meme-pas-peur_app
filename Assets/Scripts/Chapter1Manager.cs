@@ -5,11 +5,11 @@ public class Chapter1Manager : MonoBehaviour {
 
 	public static int nbOfLuciolesToCheck = 3;
 	public static int nbOfLuciolesChecked = 0;
-	public static int introAnimationDuration = 26;
+	public static int introAnimationDuration = 25;
 
 	// Use this for initialization
 	void Start () {
-		
+		nbOfLuciolesChecked = 0;
 	}
 	
 	// Update is called once per frame

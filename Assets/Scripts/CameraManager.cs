@@ -11,17 +11,26 @@ public class CameraManager : MonoBehaviour {
 	public AudioClip ambientLight;
 	AudioSource audioSource;
 
+	public AudioClip notificationSound;
+
 	// Use this for initialization
 	void Start () {
 		ccc = (ColorCorrectionCurves) GetComponent(typeof(ColorCorrectionCurves));
 		audioSource = GetComponents<AudioSource>()[0];
 
-		iTween.MoveTo(gameObject, iTween.Hash("position", new Vector3(moveToX,moveToY, -10f), "time", Chapter1Manager.introAnimationDuration, "easetype", iTween.EaseType.easeInOutSine));
+		iTween.MoveTo(gameObject, iTween.Hash("position", new Vector3(moveToX,moveToY, -10f), "time", Chapter1Manager.introAnimationDuration, "easetype", iTween.EaseType.easeInOutSine, "oncomplete", "OnIntroComplete"));
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	void OnIntroComplete() {
+		AudioSource audioSource2 = GetComponents<AudioSource> ()[1];
+		audioSource2.clip = notificationSound;
+		audioSource2.time = 0;
+		audioSource2.Play ();
 	}
 
 	public void toggleLight() {
