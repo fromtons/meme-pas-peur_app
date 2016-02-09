@@ -12,6 +12,9 @@ public class SceneLoader : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		Debug.Log ("init sceneloader");
+
 		if(loadingScreen) loadingScreen.SetActive (false);
 		collider = GetComponent<BoxCollider2D> ();
 	}
@@ -37,6 +40,7 @@ public class SceneLoader : MonoBehaviour {
 	}
 
 	public void ManuallyLoadScene() {
+		Debug.Log ("try to load a scene");
 		StartCoroutine(DisplayLoadingScreen(sceneToLoad));
 	}
 }
