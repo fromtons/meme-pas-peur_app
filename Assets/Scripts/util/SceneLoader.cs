@@ -6,15 +6,13 @@ public class SceneLoader : MonoBehaviour {
 
 	public string sceneToLoad;
 	public bool disableMouseButtonDown = false;
+	public float delay = 0f;
 
 	BoxCollider2D collider;
 	public GameObject loadingScreen; 
 
 	// Use this for initialization
 	void Start () {
-
-		Debug.Log ("init sceneloader");
-
 		if(loadingScreen) loadingScreen.SetActive (false);
 		collider = GetComponent<BoxCollider2D> ();
 	}
@@ -33,6 +31,8 @@ public class SceneLoader : MonoBehaviour {
 	IEnumerator DisplayLoadingScreen(string level) {
 		if(loadingScreen) loadingScreen.SetActive(true);
 
+		yield return new WaitForSeconds(delay);
+
 		AsyncOperation async = SceneManager.LoadSceneAsync (level);
 		while (!async.isDone) {
 			yield return null;
@@ -40,7 +40,6 @@ public class SceneLoader : MonoBehaviour {
 	}
 
 	public void ManuallyLoadScene() {
-		Debug.Log ("try to load a scene");
 		StartCoroutine(DisplayLoadingScreen(sceneToLoad));
 	}
 }
