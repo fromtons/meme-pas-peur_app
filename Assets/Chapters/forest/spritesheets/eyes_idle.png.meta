@@ -1,0 +1,2714 @@
+fileFormatVersion: 2
+guid: a2e1d56711d1a43edbaf7704cfc3a025
+timeCreated: 1460566366
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: yeux000
+    21300002: yeux001
+    21300004: yeux002
+    21300006: yeux003
+    21300008: yeux004
+    21300010: yeux005
+    21300012: yeux006
+    21300014: yeux007
+    21300016: yeux008
+    21300018: yeux009
+    21300020: yeux010
+    21300022: yeux011
+    21300024: yeux012
+    21300026: yeux013
+    21300028: yeux014
+    21300030: yeux015
+    21300032: yeux016
+    21300034: yeux017
+    21300036: yeux018
+    21300038: yeux019
+    21300040: yeux020
+    21300042: yeux021
+    21300044: yeux022
+    21300046: yeux023
+    21300048: yeux024
+    21300050: yeux025
+    21300052: yeux026
+    21300054: yeux027
+    21300056: yeux028
+    21300058: yeux029
+    21300060: yeux030
+    21300062: yeux031
+    21300064: yeux032
+    21300066: yeux033
+    21300068: yeux034
+    21300070: yeux035
+    21300072: yeux036
+    21300074: yeux037
+    21300076: yeux038
+    21300078: yeux039
+    21300080: yeux040
+    21300082: yeux041
+    21300084: yeux042
+    21300086: yeux043
+    21300088: yeux044
+    21300090: yeux045
+    21300092: yeux046
+    21300094: yeux047
+    21300096: yeux048
+    21300098: yeux049
+    21300100: yeux050
+    21300102: yeux051
+    21300104: yeux052
+    21300106: yeux053
+    21300108: yeux054
+    21300110: yeux055
+    21300112: yeux056
+    21300114: yeux057
+    21300116: yeux058
+    21300118: yeux059
+    21300120: yeux060
+    21300122: yeux061
+    21300124: yeux062
+    21300126: yeux063
+    21300128: yeux064
+    21300130: yeux065
+    21300132: yeux066
+    21300134: yeux067
+    21300136: yeux068
+    21300138: yeux069
+    21300140: yeux070
+    21300142: yeux071
+    21300144: yeux072
+    21300146: yeux073
+    21300148: yeux074
+    21300150: yeux075
+    21300152: yeux076
+    21300154: yeux077
+    21300156: yeux078
+    21300158: yeux079
+    21300160: yeux080
+    21300162: yeux081
+    21300164: yeux082
+    21300166: yeux083
+    21300168: yeux084
+    21300170: yeux085
+    21300172: yeux086
+    21300174: yeux087
+    21300176: yeux088
+    21300178: yeux089
+    21300180: yeux090
+    21300182: yeux091
+    21300184: yeux092
+    21300186: yeux093
+    21300188: yeux094
+    21300190: yeux095
+    21300192: yeux096
+    21300194: yeux097
+    21300196: yeux098
+    21300198: yeux099
+    21300200: yeux100
+    21300202: yeux101
+    21300204: yeux102
+    21300206: yeux103
+    21300208: yeux104
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: yeux000
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1760
+        width: 604
+        height: 58
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.05172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -81, y: 60}
+        - {x: -94, y: 61}
+        - {x: -255, y: 61}
+        - {x: -281, y: 37}
+        - {x: -281, y: 22}
+        - {x: -230, y: 3}
+        - {x: -107, y: 3}
+        - {x: -62, y: 18}
+        - {x: -59, y: 23}
+        - {x: -59, y: 31}
+      - - {x: 150, y: 61}
+        - {x: 101, y: 47}
+        - {x: 101, y: 3}
+        - {x: 323, y: 3}
+        - {x: 323, y: 42}
+        - {x: 295, y: 61}
+    - name: yeux001
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1554
+        width: 604
+        height: 49
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.1632653}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -281, y: 57}
+        - {x: -281, y: 26}
+        - {x: -255, y: 8}
+        - {x: -59, y: 8}
+        - {x: -59, y: 57}
+      - - {x: 257, y: 57}
+        - {x: 159, y: 57}
+        - {x: 101, y: 34}
+        - {x: 101, y: 8}
+        - {x: 308, y: 8}
+        - {x: 323, y: 24}
+        - {x: 323, y: 34}
+        - {x: 293, y: 48}
+    - name: yeux002
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 884
+        width: 604
+        height: 40
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -255, y: 52}
+        - {x: -281, y: 38}
+        - {x: -281, y: 12}
+        - {x: -59, y: 12}
+        - {x: -59, y: 43}
+        - {x: -105, y: 52}
+      - - {x: 140, y: 52}
+        - {x: 101, y: 31}
+        - {x: 101, y: 21}
+        - {x: 117, y: 12}
+        - {x: 284, y: 12}
+        - {x: 323, y: 17}
+        - {x: 323, y: 48}
+        - {x: 300, y: 52}
+    - name: yeux003
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 692
+        width: 604
+        height: 34
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.47058824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -151, y: 50}
+        - {x: -226, y: 50}
+        - {x: -281, y: 36}
+        - {x: -281, y: 16}
+        - {x: -59, y: 16}
+        - {x: -59, y: 32}
+        - {x: -103, y: 46}
+      - - {x: 289, y: 50}
+        - {x: 144, y: 50}
+        - {x: 101, y: 46}
+        - {x: 101, y: 26}
+        - {x: 110, y: 23}
+        - {x: 132, y: 16}
+        - {x: 286, y: 16}
+        - {x: 323, y: 24}
+        - {x: 323, y: 33}
+        - {x: 316, y: 38}
+    - name: yeux004
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 323
+        width: 604
+        height: 29
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.7241379}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux005
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 777
+        width: 604
+        height: 24
+      alignment: 9
+      pivot: {x: 0.46523178, y: -1.0833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux006
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 751
+        width: 406
+        height: 24
+      alignment: 9
+      pivot: {x: 0.44827586, y: -1.0833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux007
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 177
+        width: 604
+        height: 26
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.9230769}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux008
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 517
+        width: 604
+        height: 31
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.61290324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux009
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 765
+        width: 604
+        height: 35
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.42857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -105, y: 41}
+        - {x: -117, y: 43}
+        - {x: -149, y: 50}
+        - {x: -190, y: 50}
+        - {x: -234, y: 45}
+        - {x: -254, y: 40}
+        - {x: -281, y: 32}
+        - {x: -281, y: 24}
+        - {x: -276, y: 15}
+        - {x: -68, y: 15}
+        - {x: -59, y: 23}
+        - {x: -59, y: 29}
+        - {x: -67, y: 33}
+      - - {x: 315, y: 23}
+        - {x: 323, y: 25}
+        - {x: 323, y: 32}
+        - {x: 282, y: 43}
+        - {x: 230, y: 50}
+        - {x: 192, y: 50}
+        - {x: 108, y: 34}
+        - {x: 101, y: 29}
+        - {x: 101, y: 21}
+        - {x: 139, y: 15}
+        - {x: 267, y: 15}
+        - {x: 275, y: 16}
+        - {x: 289, y: 18}
+        - {x: 300, y: 20}
+    - name: yeux010
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 881
+        width: 604
+        height: 40
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -255, y: 50}
+        - {x: -281, y: 34}
+        - {x: -281, y: 23}
+        - {x: -248, y: 10}
+        - {x: -75, y: 10}
+        - {x: -59, y: 12}
+        - {x: -59, y: 46}
+        - {x: -95, y: 50}
+      - - {x: 154, y: 50}
+        - {x: 104, y: 42}
+        - {x: 101, y: 34}
+        - {x: 101, y: 21}
+        - {x: 109, y: 18}
+        - {x: 130, y: 10}
+        - {x: 323, y: 10}
+        - {x: 323, y: 37}
+        - {x: 276, y: 50}
+    - name: yeux011
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1547
+        width: 604
+        height: 49
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.10204082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -219, y: 54}
+        - {x: -241, y: 47}
+        - {x: -253, y: 43}
+        - {x: -281, y: 32}
+        - {x: -281, y: 21}
+        - {x: -262, y: 10}
+        - {x: -221, y: 5}
+        - {x: -94, y: 5}
+        - {x: -59, y: 16}
+        - {x: -59, y: 33}
+        - {x: -112, y: 54}
+      - - {x: 280, y: 54}
+        - {x: 133, y: 54}
+        - {x: 101, y: 36}
+        - {x: 101, y: 20}
+        - {x: 120, y: 5}
+        - {x: 272, y: 5}
+        - {x: 293, y: 10}
+        - {x: 323, y: 23}
+        - {x: 323, y: 44}
+    - name: yeux012
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1760
+        width: 604
+        height: 58
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.05172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -81, y: 60}
+        - {x: -94, y: 61}
+        - {x: -255, y: 61}
+        - {x: -281, y: 37}
+        - {x: -281, y: 22}
+        - {x: -230, y: 3}
+        - {x: -107, y: 3}
+        - {x: -62, y: 18}
+        - {x: -59, y: 23}
+        - {x: -59, y: 31}
+      - - {x: 150, y: 61}
+        - {x: 101, y: 47}
+        - {x: 101, y: 3}
+        - {x: 323, y: 3}
+        - {x: 323, y: 42}
+        - {x: 295, y: 61}
+    - name: yeux013
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1988
+        width: 605
+        height: 58
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.05172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 29}
+        - {x: -74, y: 42}
+        - {x: -124, y: 61}
+        - {x: -236, y: 61}
+        - {x: -282, y: 36}
+        - {x: -282, y: 22}
+        - {x: -220, y: 3}
+        - {x: -126, y: 3}
+        - {x: -101, y: 7}
+        - {x: -76, y: 14}
+        - {x: -59, y: 23}
+      - - {x: 132, y: 61}
+        - {x: 101, y: 54}
+        - {x: 101, y: 5}
+        - {x: 102, y: 3}
+        - {x: 311, y: 3}
+        - {x: 323, y: 25}
+        - {x: 323, y: 34}
+        - {x: 308, y: 61}
+    - name: yeux014
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 1989
+        width: 605
+        height: 57
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.07017544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -220, y: 61}
+        - {x: -278, y: 45}
+        - {x: -282, y: 39}
+        - {x: -282, y: 19}
+        - {x: -226, y: 4}
+        - {x: -85, y: 4}
+        - {x: -59, y: 21}
+        - {x: -59, y: 43}
+        - {x: -109, y: 61}
+      - - {x: 165, y: 61}
+        - {x: 157, y: 60}
+        - {x: 103, y: 35}
+        - {x: 101, y: 29}
+        - {x: 101, y: 20}
+        - {x: 110, y: 4}
+        - {x: 307, y: 4}
+        - {x: 323, y: 24}
+        - {x: 323, y: 38}
+        - {x: 271, y: 61}
+    - name: yeux015
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1931
+        width: 605
+        height: 55
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.09090909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -259, y: 60}
+        - {x: -282, y: 45}
+        - {x: -282, y: 9}
+        - {x: -280, y: 5}
+        - {x: -59, y: 5}
+        - {x: -59, y: 50}
+        - {x: -108, y: 60}
+      - - {x: 101, y: 19}
+        - {x: 129, y: 5}
+        - {x: 282, y: 5}
+        - {x: 323, y: 13}
+        - {x: 323, y: 40}
+        - {x: 305, y: 56}
+        - {x: 270, y: 60}
+        - {x: 156, y: 60}
+        - {x: 101, y: 36}
+    - name: yeux016
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1713
+        width: 604
+        height: 55
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.09090909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -128, y: 60}
+        - {x: -234, y: 60}
+        - {x: -281, y: 41}
+        - {x: -281, y: 21}
+        - {x: -274, y: 12}
+        - {x: -224, y: 5}
+        - {x: -87, y: 5}
+        - {x: -59, y: 19}
+        - {x: -59, y: 32}
+        - {x: -90, y: 55}
+      - - {x: 302, y: 60}
+        - {x: 146, y: 60}
+        - {x: 101, y: 48}
+        - {x: 101, y: 16}
+        - {x: 150, y: 5}
+        - {x: 254, y: 5}
+        - {x: 307, y: 13}
+        - {x: 323, y: 26}
+        - {x: 323, y: 45}
+    - name: yeux017
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1875
+        width: 605
+        height: 54
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.11111111}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -282, y: 6}
+        - {x: -59, y: 6}
+        - {x: -59, y: 51}
+        - {x: -64, y: 56}
+        - {x: -88, y: 60}
+        - {x: -256, y: 60}
+        - {x: -282, y: 37}
+      - - {x: 110, y: 60}
+        - {x: 101, y: 58}
+        - {x: 101, y: 10}
+        - {x: 127, y: 6}
+        - {x: 287, y: 6}
+        - {x: 323, y: 20}
+        - {x: 323, y: 42}
+        - {x: 308, y: 60}
+    - name: yeux018
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1875
+        width: 605
+        height: 54
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.11111111}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -236, y: 60}
+        - {x: -280, y: 56}
+        - {x: -282, y: 53}
+        - {x: -282, y: 12}
+        - {x: -245, y: 6}
+        - {x: -77, y: 6}
+        - {x: -59, y: 18}
+        - {x: -59, y: 35}
+        - {x: -93, y: 60}
+      - - {x: 293, y: 60}
+        - {x: 143, y: 60}
+        - {x: 101, y: 34}
+        - {x: 101, y: 23}
+        - {x: 126, y: 8}
+        - {x: 157, y: 6}
+        - {x: 256, y: 6}
+        - {x: 294, y: 14}
+        - {x: 323, y: 27}
+        - {x: 323, y: 38}
+    - name: yeux019
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1820
+        width: 605
+        height: 53
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.13207547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -252, y: 60}
+        - {x: -282, y: 41}
+        - {x: -282, y: 24}
+        - {x: -243, y: 7}
+        - {x: -105, y: 7}
+        - {x: -59, y: 13}
+        - {x: -59, y: 46}
+        - {x: -106, y: 60}
+      - - {x: 293, y: 15}
+        - {x: 313, y: 23}
+        - {x: 323, y: 28}
+        - {x: 323, y: 35}
+        - {x: 311, y: 46}
+        - {x: 258, y: 60}
+        - {x: 158, y: 60}
+        - {x: 101, y: 41}
+        - {x: 101, y: 21}
+        - {x: 111, y: 13}
+        - {x: 158, y: 7}
+        - {x: 244, y: 7}
+        - {x: 252, y: 8}
+        - {x: 258, y: 9}
+        - {x: 269, y: 11}
+    - name: yeux020
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1659
+        width: 604
+        height: 52
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.15384616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -84, y: 45}
+        - {x: -116, y: 60}
+        - {x: -242, y: 60}
+        - {x: -281, y: 37}
+        - {x: -281, y: 27}
+        - {x: -259, y: 8}
+        - {x: -62, y: 8}
+        - {x: -59, y: 19}
+        - {x: -59, y: 29}
+        - {x: -60, y: 33}
+      - - {x: 180, y: 60}
+        - {x: 150, y: 53}
+        - {x: 109, y: 39}
+        - {x: 101, y: 32}
+        - {x: 101, y: 19}
+        - {x: 123, y: 8}
+        - {x: 299, y: 8}
+        - {x: 323, y: 11}
+        - {x: 323, y: 44}
+        - {x: 270, y: 60}
+    - name: yeux021
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1650
+        width: 604
+        height: 52
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.15384616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -281, y: 27}
+        - {x: -267, y: 8}
+        - {x: -59, y: 8}
+        - {x: -59, y: 39}
+        - {x: -76, y: 60}
+        - {x: -267, y: 60}
+        - {x: -281, y: 38}
+      - - {x: 127, y: 60}
+        - {x: 101, y: 55}
+        - {x: 101, y: 13}
+        - {x: 137, y: 8}
+        - {x: 287, y: 8}
+        - {x: 323, y: 21}
+        - {x: 323, y: 41}
+        - {x: 307, y: 60}
+    - name: yeux022
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 1822
+        width: 605
+        height: 50
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -233, y: 59}
+        - {x: -270, y: 53}
+        - {x: -282, y: 37}
+        - {x: -282, y: 24}
+        - {x: -245, y: 9}
+        - {x: -103, y: 9}
+        - {x: -59, y: 15}
+        - {x: -59, y: 35}
+        - {x: -102, y: 59}
+      - - {x: 119, y: 59}
+        - {x: 113, y: 58}
+        - {x: 101, y: 34}
+        - {x: 101, y: 25}
+        - {x: 103, y: 19}
+        - {x: 129, y: 9}
+        - {x: 272, y: 9}
+        - {x: 323, y: 18}
+        - {x: 323, y: 39}
+        - {x: 302, y: 59}
+    - name: yeux023
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1598
+        width: 604
+        height: 50
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -256, y: 59}
+        - {x: -281, y: 39}
+        - {x: -281, y: 19}
+        - {x: -229, y: 9}
+        - {x: -86, y: 9}
+        - {x: -59, y: 19}
+        - {x: -59, y: 51}
+        - {x: -105, y: 59}
+      - - {x: 138, y: 59}
+        - {x: 104, y: 40}
+        - {x: 101, y: 37}
+        - {x: 101, y: 17}
+        - {x: 138, y: 9}
+        - {x: 294, y: 9}
+        - {x: 323, y: 19}
+        - {x: 323, y: 55}
+        - {x: 301, y: 59}
+    - name: yeux024
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1546
+        width: 604
+        height: 49
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.20408164}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -243, y: 59}
+        - {x: -281, y: 51}
+        - {x: -281, y: 27}
+        - {x: -243, y: 10}
+        - {x: -87, y: 10}
+        - {x: -59, y: 15}
+        - {x: -59, y: 37}
+        - {x: -85, y: 59}
+      - - {x: 125, y: 59}
+        - {x: 101, y: 37}
+        - {x: 101, y: 21}
+        - {x: 125, y: 10}
+        - {x: 283, y: 10}
+        - {x: 323, y: 16}
+        - {x: 323, y: 58}
+        - {x: 317, y: 59}
+    - name: yeux025
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1496
+        width: 604
+        height: 48
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -214, y: 59}
+        - {x: -233, y: 55}
+        - {x: -256, y: 48}
+        - {x: -281, y: 35}
+        - {x: -281, y: 28}
+        - {x: -246, y: 11}
+        - {x: -67, y: 11}
+        - {x: -59, y: 21}
+        - {x: -59, y: 39}
+        - {x: -114, y: 59}
+      - - {x: 111, y: 59}
+        - {x: 101, y: 57}
+        - {x: 101, y: 13}
+        - {x: 122, y: 11}
+        - {x: 298, y: 11}
+        - {x: 323, y: 26}
+        - {x: 323, y: 42}
+        - {x: 310, y: 59}
+    - name: yeux026
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1447
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.23404256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -281, y: 58}
+        - {x: -281, y: 11}
+        - {x: -59, y: 11}
+        - {x: -59, y: 35}
+        - {x: -79, y: 58}
+      - - {x: 139, y: 58}
+        - {x: 126, y: 52}
+        - {x: 101, y: 33}
+        - {x: 101, y: 19}
+        - {x: 119, y: 11}
+        - {x: 275, y: 11}
+        - {x: 323, y: 17}
+        - {x: 323, y: 53}
+        - {x: 298, y: 58}
+    - name: yeux027
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1453
+        width: 604
+        height: 48
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.22916667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -217, y: 59}
+        - {x: -257, y: 48}
+        - {x: -281, y: 37}
+        - {x: -281, y: 11}
+        - {x: -59, y: 11}
+        - {x: -59, y: 35}
+        - {x: -115, y: 59}
+      - - {x: 101, y: 38}
+        - {x: 101, y: 18}
+        - {x: 120, y: 11}
+        - {x: 297, y: 11}
+        - {x: 323, y: 16}
+        - {x: 323, y: 38}
+        - {x: 296, y: 59}
+        - {x: 147, y: 59}
+        - {x: 126, y: 58}
+    - name: yeux028
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1404
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.25531915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -231, y: 59}
+        - {x: -281, y: 40}
+        - {x: -281, y: 26}
+        - {x: -256, y: 12}
+        - {x: -79, y: 12}
+        - {x: -59, y: 15}
+        - {x: -59, y: 41}
+        - {x: -127, y: 59}
+      - - {x: 138, y: 59}
+        - {x: 101, y: 41}
+        - {x: 101, y: 24}
+        - {x: 119, y: 12}
+        - {x: 323, y: 12}
+        - {x: 323, y: 51}
+        - {x: 291, y: 59}
+    - name: yeux029
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1398
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.25531915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -95, y: 59}
+        - {x: -281, y: 59}
+        - {x: -281, y: 13}
+        - {x: -273, y: 12}
+        - {x: -73, y: 12}
+        - {x: -59, y: 21}
+        - {x: -59, y: 34}
+        - {x: -72, y: 47}
+      - - {x: 153, y: 59}
+        - {x: 101, y: 37}
+        - {x: 101, y: 27}
+        - {x: 110, y: 19}
+        - {x: 139, y: 12}
+        - {x: 273, y: 12}
+        - {x: 323, y: 29}
+        - {x: 323, y: 40}
+        - {x: 273, y: 59}
+    - name: yeux030
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1397
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.25531915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -61, y: 38}
+        - {x: -97, y: 59}
+        - {x: -258, y: 59}
+        - {x: -280, y: 57}
+        - {x: -281, y: 53}
+        - {x: -281, y: 26}
+        - {x: -224, y: 12}
+        - {x: -111, y: 12}
+        - {x: -76, y: 19}
+        - {x: -59, y: 27}
+        - {x: -59, y: 33}
+      - - {x: 138, y: 59}
+        - {x: 101, y: 51}
+        - {x: 101, y: 22}
+        - {x: 127, y: 12}
+        - {x: 275, y: 12}
+        - {x: 323, y: 22}
+        - {x: 323, y: 42}
+        - {x: 305, y: 59}
+    - name: yeux031
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1355
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.27659574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -121, y: 59}
+        - {x: -127, y: 60}
+        - {x: -226, y: 60}
+        - {x: -280, y: 44}
+        - {x: -281, y: 39}
+        - {x: -281, y: 19}
+        - {x: -236, y: 13}
+        - {x: -79, y: 13}
+        - {x: -59, y: 23}
+        - {x: -59, y: 35}
+        - {x: -60, y: 37}
+      - - {x: 293, y: 60}
+        - {x: 126, y: 60}
+        - {x: 101, y: 36}
+        - {x: 101, y: 26}
+        - {x: 130, y: 13}
+        - {x: 268, y: 13}
+        - {x: 296, y: 18}
+        - {x: 323, y: 29}
+        - {x: 323, y: 39}
+    - name: yeux032
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1349
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.27659574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -242, y: 60}
+        - {x: -281, y: 50}
+        - {x: -281, y: 29}
+        - {x: -268, y: 20}
+        - {x: -247, y: 13}
+        - {x: -83, y: 13}
+        - {x: -59, y: 16}
+        - {x: -59, y: 40}
+        - {x: -100, y: 60}
+      - - {x: 151, y: 60}
+        - {x: 101, y: 45}
+        - {x: 101, y: 13}
+        - {x: 323, y: 13}
+        - {x: 323, y: 45}
+        - {x: 296, y: 60}
+    - name: yeux033
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1348
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.27659574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -247, y: 60}
+        - {x: -281, y: 38}
+        - {x: -281, y: 20}
+        - {x: -234, y: 13}
+        - {x: -81, y: 13}
+        - {x: -59, y: 24}
+        - {x: -59, y: 55}
+        - {x: -96, y: 60}
+      - - {x: 131, y: 60}
+        - {x: 101, y: 39}
+        - {x: 101, y: 14}
+        - {x: 111, y: 13}
+        - {x: 294, y: 13}
+        - {x: 323, y: 26}
+        - {x: 323, y: 54}
+        - {x: 294, y: 60}
+    - name: yeux034
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1306
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.27659574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -281, y: 29}
+        - {x: -256, y: 13}
+        - {x: -59, y: 13}
+        - {x: -59, y: 35}
+        - {x: -83, y: 55}
+        - {x: -92, y: 60}
+        - {x: -251, y: 60}
+        - {x: -281, y: 50}
+      - - {x: 130, y: 60}
+        - {x: 101, y: 54}
+        - {x: 101, y: 13}
+        - {x: 323, y: 13}
+        - {x: 323, y: 45}
+        - {x: 300, y: 60}
+    - name: yeux035
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1300
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.27659574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -96, y: 60}
+        - {x: -243, y: 60}
+        - {x: -281, y: 51}
+        - {x: -281, y: 17}
+        - {x: -248, y: 13}
+        - {x: -85, y: 13}
+        - {x: -66, y: 23}
+        - {x: -59, y: 28}
+        - {x: -59, y: 42}
+      - - {x: 143, y: 60}
+        - {x: 111, y: 48}
+        - {x: 101, y: 36}
+        - {x: 101, y: 21}
+        - {x: 117, y: 13}
+        - {x: 307, y: 13}
+        - {x: 323, y: 15}
+        - {x: 323, y: 50}
+        - {x: 274, y: 60}
+    - name: yeux036
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1299
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.27659574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -228, y: 60}
+        - {x: -281, y: 41}
+        - {x: -281, y: 27}
+        - {x: -251, y: 13}
+        - {x: -89, y: 13}
+        - {x: -59, y: 15}
+        - {x: -59, y: 38}
+        - {x: -118, y: 60}
+      - - {x: 129, y: 60}
+        - {x: 101, y: 40}
+        - {x: 101, y: 25}
+        - {x: 123, y: 13}
+        - {x: 273, y: 13}
+        - {x: 323, y: 25}
+        - {x: 323, y: 52}
+        - {x: 284, y: 60}
+    - name: yeux037
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1257
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.27659574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -264, y: 60}
+        - {x: -281, y: 56}
+        - {x: -281, y: 28}
+        - {x: -250, y: 13}
+        - {x: -91, y: 13}
+        - {x: -59, y: 16}
+        - {x: -59, y: 35}
+        - {x: -78, y: 60}
+      - - {x: 284, y: 59}
+        - {x: 276, y: 60}
+        - {x: 165, y: 60}
+        - {x: 105, y: 40}
+        - {x: 101, y: 32}
+        - {x: 101, y: 26}
+        - {x: 107, y: 23}
+        - {x: 145, y: 13}
+        - {x: 262, y: 13}
+        - {x: 306, y: 22}
+        - {x: 323, y: 30}
+        - {x: 323, y: 37}
+    - name: yeux038
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1251
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.25531915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -275, y: 59}
+        - {x: -281, y: 48}
+        - {x: -281, y: 22}
+        - {x: -253, y: 12}
+        - {x: -94, y: 12}
+        - {x: -59, y: 19}
+        - {x: -59, y: 59}
+      - - {x: 148, y: 59}
+        - {x: 106, y: 36}
+        - {x: 101, y: 33}
+        - {x: 101, y: 18}
+        - {x: 135, y: 12}
+        - {x: 282, y: 12}
+        - {x: 323, y: 28}
+        - {x: 323, y: 53}
+        - {x: 289, y: 59}
+    - name: yeux039
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1250
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.25531915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -261, y: 59}
+        - {x: -281, y: 55}
+        - {x: -281, y: 12}
+        - {x: -59, y: 12}
+        - {x: -59, y: 39}
+        - {x: -91, y: 59}
+      - - {x: 138, y: 59}
+        - {x: 101, y: 42}
+        - {x: 101, y: 22}
+        - {x: 126, y: 12}
+        - {x: 286, y: 12}
+        - {x: 323, y: 18}
+        - {x: 323, y: 46}
+        - {x: 265, y: 59}
+    - name: yeux040
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1208
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.25531915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -258, y: 59}
+        - {x: -281, y: 43}
+        - {x: -281, y: 12}
+        - {x: -59, y: 12}
+        - {x: -59, y: 48}
+        - {x: -99, y: 59}
+      - - {x: 140, y: 59}
+        - {x: 123, y: 50}
+        - {x: 101, y: 34}
+        - {x: 101, y: 19}
+        - {x: 114, y: 12}
+        - {x: 283, y: 12}
+        - {x: 323, y: 18}
+        - {x: 323, y: 53}
+        - {x: 292, y: 59}
+    - name: yeux041
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1202
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.25531915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -112, y: 59}
+        - {x: -248, y: 59}
+        - {x: -281, y: 40}
+        - {x: -281, y: 24}
+        - {x: -231, y: 12}
+        - {x: -107, y: 12}
+        - {x: -77, y: 19}
+        - {x: -59, y: 26}
+        - {x: -59, y: 47}
+      - - {x: 101, y: 59}
+        - {x: 101, y: 15}
+        - {x: 123, y: 12}
+        - {x: 302, y: 12}
+        - {x: 323, y: 25}
+        - {x: 323, y: 39}
+        - {x: 310, y: 59}
+    - name: yeux042
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1201
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.23404256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -281, y: 58}
+        - {x: -281, y: 23}
+        - {x: -232, y: 11}
+        - {x: -86, y: 11}
+        - {x: -77, y: 12}
+        - {x: -59, y: 26}
+        - {x: -59, y: 45}
+        - {x: -71, y: 58}
+      - - {x: 117, y: 58}
+        - {x: 101, y: 44}
+        - {x: 101, y: 15}
+        - {x: 104, y: 11}
+        - {x: 323, y: 11}
+        - {x: 323, y: 58}
+    - name: yeux043
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1159
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.23404256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 36}
+        - {x: -119, y: 58}
+        - {x: -229, y: 58}
+        - {x: -281, y: 39}
+        - {x: -281, y: 27}
+        - {x: -240, y: 13}
+        - {x: -208, y: 11}
+        - {x: -122, y: 11}
+        - {x: -105, y: 12}
+        - {x: -62, y: 22}
+        - {x: -59, y: 25}
+      - - {x: 141, y: 58}
+        - {x: 101, y: 38}
+        - {x: 101, y: 23}
+        - {x: 131, y: 11}
+        - {x: 280, y: 11}
+        - {x: 323, y: 17}
+        - {x: 323, y: 50}
+        - {x: 280, y: 58}
+    - name: yeux044
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1153
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.23404256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -276, y: 58}
+        - {x: -281, y: 57}
+        - {x: -281, y: 12}
+        - {x: -272, y: 11}
+        - {x: -60, y: 11}
+        - {x: -59, y: 12}
+        - {x: -59, y: 45}
+        - {x: -77, y: 58}
+      - - {x: 136, y: 58}
+        - {x: 101, y: 51}
+        - {x: 101, y: 11}
+        - {x: 317, y: 11}
+        - {x: 323, y: 26}
+        - {x: 323, y: 41}
+        - {x: 303, y: 58}
+    - name: yeux045
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1152
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.23404256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -281, y: 58}
+        - {x: -281, y: 18}
+        - {x: -260, y: 11}
+        - {x: -88, y: 11}
+        - {x: -59, y: 16}
+        - {x: -59, y: 58}
+      - - {x: 112, y: 58}
+        - {x: 101, y: 38}
+        - {x: 101, y: 19}
+        - {x: 125, y: 11}
+        - {x: 279, y: 11}
+        - {x: 323, y: 17}
+        - {x: 323, y: 58}
+    - name: yeux046
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1446
+        width: 604
+        height: 48
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.20833333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -246, y: 58}
+        - {x: -281, y: 41}
+        - {x: -281, y: 27}
+        - {x: -261, y: 10}
+        - {x: -82, y: 10}
+        - {x: -59, y: 24}
+        - {x: -59, y: 44}
+        - {x: -111, y: 58}
+      - - {x: 323, y: 58}
+        - {x: 112, y: 58}
+        - {x: 101, y: 41}
+        - {x: 101, y: 20}
+        - {x: 136, y: 10}
+        - {x: 251, y: 10}
+        - {x: 269, y: 12}
+        - {x: 300, y: 19}
+        - {x: 323, y: 27}
+    - name: yeux047
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1110
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.23404256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -139, y: 58}
+        - {x: -229, y: 58}
+        - {x: -281, y: 38}
+        - {x: -281, y: 26}
+        - {x: -250, y: 11}
+        - {x: -84, y: 11}
+        - {x: -59, y: 13}
+        - {x: -59, y: 33}
+        - {x: -94, y: 50}
+      - - {x: 124, y: 58}
+        - {x: 101, y: 38}
+        - {x: 101, y: 12}
+        - {x: 109, y: 11}
+        - {x: 303, y: 11}
+        - {x: 323, y: 25}
+        - {x: 323, y: 51}
+        - {x: 286, y: 58}
+    - name: yeux048
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1104
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.23404256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -268, y: 58}
+        - {x: -281, y: 40}
+        - {x: -281, y: 26}
+        - {x: -274, y: 11}
+        - {x: -59, y: 11}
+        - {x: -59, y: 54}
+        - {x: -85, y: 58}
+      - - {x: 143, y: 58}
+        - {x: 101, y: 37}
+        - {x: 101, y: 24}
+        - {x: 104, y: 20}
+        - {x: 133, y: 11}
+        - {x: 274, y: 11}
+        - {x: 323, y: 28}
+        - {x: 323, y: 36}
+        - {x: 283, y: 58}
+    - name: yeux049
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1103
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.23404256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -281, y: 58}
+        - {x: -281, y: 11}
+        - {x: -59, y: 11}
+        - {x: -59, y: 35}
+        - {x: -79, y: 58}
+      - - {x: 139, y: 58}
+        - {x: 126, y: 52}
+        - {x: 101, y: 33}
+        - {x: 101, y: 19}
+        - {x: 119, y: 11}
+        - {x: 275, y: 11}
+        - {x: 323, y: 17}
+        - {x: 323, y: 53}
+        - {x: 298, y: 58}
+    - name: yeux050
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1010
+        width: 604
+        height: 43
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.3255814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -258, y: 57}
+        - {x: -281, y: 44}
+        - {x: -281, y: 14}
+        - {x: -59, y: 14}
+        - {x: -59, y: 47}
+        - {x: -98, y: 57}
+      - - {x: 136, y: 57}
+        - {x: 101, y: 39}
+        - {x: 101, y: 14}
+        - {x: 323, y: 14}
+        - {x: 323, y: 50}
+        - {x: 286, y: 57}
+    - name: yeux051
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 926
+        width: 604
+        height: 41
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.36585367}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -251, y: 56}
+        - {x: -281, y: 52}
+        - {x: -281, y: 28}
+        - {x: -247, y: 15}
+        - {x: -75, y: 15}
+        - {x: -59, y: 16}
+        - {x: -59, y: 39}
+        - {x: -81, y: 56}
+      - - {x: 134, y: 56}
+        - {x: 101, y: 35}
+        - {x: 101, y: 28}
+        - {x: 103, y: 24}
+        - {x: 120, y: 15}
+        - {x: 312, y: 15}
+        - {x: 323, y: 16}
+        - {x: 323, y: 56}
+    - name: yeux052
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 841
+        width: 604
+        height: 38
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.4473684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102, y: 55}
+        - {x: -257, y: 55}
+        - {x: -281, y: 43}
+        - {x: -281, y: 29}
+        - {x: -246, y: 17}
+        - {x: -96, y: 17}
+        - {x: -61, y: 26}
+        - {x: -59, y: 27}
+        - {x: -59, y: 46}
+      - - {x: 131, y: 55}
+        - {x: 101, y: 43}
+        - {x: 101, y: 20}
+        - {x: 134, y: 17}
+        - {x: 284, y: 17}
+        - {x: 323, y: 30}
+        - {x: 323, y: 44}
+        - {x: 274, y: 55}
+    - name: yeux053
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 656
+        width: 604
+        height: 34
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.5882353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -267, y: 54}
+        - {x: -281, y: 40}
+        - {x: -281, y: 23}
+        - {x: -257, y: 20}
+        - {x: -73, y: 20}
+        - {x: -59, y: 27}
+        - {x: -59, y: 38}
+        - {x: -79, y: 54}
+      - - {x: 138, y: 54}
+        - {x: 101, y: 41}
+        - {x: 101, y: 30}
+        - {x: 105, y: 25}
+        - {x: 122, y: 20}
+        - {x: 305, y: 20}
+        - {x: 323, y: 22}
+        - {x: 323, y: 48}
+        - {x: 281, y: 54}
+    - name: yeux054
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 484
+        width: 604
+        height: 31
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.7096774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux055
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 293
+        width: 604
+        height: 28
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.85714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux056
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 122
+        width: 604
+        height: 25
+      alignment: 9
+      pivot: {x: 0.46523178, y: -1.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux057
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 777
+        width: 604
+        height: 24
+      alignment: 9
+      pivot: {x: 0.46523178, y: -1.0833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux058
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 95
+        width: 604
+        height: 25
+      alignment: 9
+      pivot: {x: 0.46523178, y: -1.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux059
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 68
+        width: 604
+        height: 25
+      alignment: 9
+      pivot: {x: 0.46523178, y: -1.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux060
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 41
+        width: 604
+        height: 25
+      alignment: 9
+      pivot: {x: 0.46523178, y: -1.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux061
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 14
+        width: 604
+        height: 25
+      alignment: 9
+      pivot: {x: 0.46523178, y: -1.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux062
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 149
+        width: 604
+        height: 26
+      alignment: 9
+      pivot: {x: 0.46523178, y: -1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux063
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 234
+        width: 604
+        height: 27
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.9259259}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux064
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 205
+        width: 604
+        height: 27
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.9259259}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux065
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 263
+        width: 604
+        height: 28
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.85714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux066
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 386
+        width: 604
+        height: 30
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.76666665}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux067
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 354
+        width: 604
+        height: 30
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.76666665}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux068
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 451
+        width: 604
+        height: 31
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.7096774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux069
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 418
+        width: 604
+        height: 31
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.7096774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: yeux070
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 585
+        width: 604
+        height: 33
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.6363636}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -249, y: 54}
+        - {x: -281, y: 48}
+        - {x: -281, y: 21}
+        - {x: -59, y: 21}
+        - {x: -59, y: 42}
+        - {x: -91, y: 54}
+      - - {x: 121, y: 54}
+        - {x: 101, y: 41}
+        - {x: 101, y: 21}
+        - {x: 323, y: 21}
+        - {x: 323, y: 49}
+        - {x: 293, y: 54}
+    - name: yeux071
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 550
+        width: 604
+        height: 33
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.6363636}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -259, y: 54}
+        - {x: -281, y: 51}
+        - {x: -281, y: 21}
+        - {x: -59, y: 21}
+        - {x: -59, y: 41}
+        - {x: -85, y: 54}
+      - - {x: 133, y: 54}
+        - {x: 101, y: 42}
+        - {x: 101, y: 26}
+        - {x: 102, y: 23}
+        - {x: 136, y: 21}
+        - {x: 288, y: 21}
+        - {x: 323, y: 29}
+        - {x: 323, y: 50}
+        - {x: 293, y: 54}
+    - name: yeux072
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 620
+        width: 604
+        height: 34
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.5882353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -92, y: 54}
+        - {x: -243, y: 54}
+        - {x: -281, y: 48}
+        - {x: -281, y: 32}
+        - {x: -267, y: 27}
+        - {x: -226, y: 20}
+        - {x: -108, y: 20}
+        - {x: -61, y: 27}
+        - {x: -59, y: 29}
+        - {x: -59, y: 40}
+      - - {x: 139, y: 54}
+        - {x: 101, y: 42}
+        - {x: 101, y: 29}
+        - {x: 126, y: 20}
+        - {x: 295, y: 20}
+        - {x: 323, y: 23}
+        - {x: 323, y: 50}
+        - {x: 293, y: 54}
+    - name: yeux073
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 728
+        width: 604
+        height: 35
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.54285717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -105, y: 54}
+        - {x: -260, y: 54}
+        - {x: -281, y: 44}
+        - {x: -281, y: 29}
+        - {x: -234, y: 19}
+        - {x: -114, y: 19}
+        - {x: -60, y: 28}
+        - {x: -59, y: 29}
+        - {x: -59, y: 44}
+      - - {x: 141, y: 54}
+        - {x: 107, y: 43}
+        - {x: 101, y: 37}
+        - {x: 101, y: 28}
+        - {x: 138, y: 19}
+        - {x: 265, y: 19}
+        - {x: 323, y: 29}
+        - {x: 323, y: 49}
+        - {x: 283, y: 54}
+    - name: yeux074
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 803
+        width: 604
+        height: 36
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.5277778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -252, y: 55}
+        - {x: -281, y: 45}
+        - {x: -281, y: 30}
+        - {x: -272, y: 19}
+        - {x: -59, y: 19}
+        - {x: -59, y: 46}
+        - {x: -110, y: 55}
+      - - {x: 153, y: 55}
+        - {x: 101, y: 46}
+        - {x: 101, y: 19}
+        - {x: 309, y: 19}
+        - {x: 323, y: 30}
+        - {x: 323, y: 43}
+        - {x: 288, y: 55}
+    - name: yeux075
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 803
+        width: 604
+        height: 37
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.4864865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -250, y: 55}
+        - {x: -281, y: 49}
+        - {x: -281, y: 18}
+        - {x: -59, y: 18}
+        - {x: -59, y: 40}
+        - {x: -81, y: 55}
+      - - {x: 115, y: 55}
+        - {x: 101, y: 53}
+        - {x: 101, y: 18}
+        - {x: 323, y: 18}
+        - {x: 323, y: 42}
+        - {x: 309, y: 55}
+    - name: yeux076
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 802
+        width: 604
+        height: 37
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.4864865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -240, y: 55}
+        - {x: -281, y: 47}
+        - {x: -281, y: 18}
+        - {x: -59, y: 18}
+        - {x: -59, y: 42}
+        - {x: -93, y: 55}
+      - - {x: 132, y: 55}
+        - {x: 101, y: 42}
+        - {x: 101, y: 26}
+        - {x: 106, y: 18}
+        - {x: 323, y: 18}
+        - {x: 323, y: 49}
+        - {x: 292, y: 55}
+    - name: yeux077
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 841
+        width: 604
+        height: 38
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.4473684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -108, y: 55}
+        - {x: -231, y: 55}
+        - {x: -281, y: 42}
+        - {x: -281, y: 22}
+        - {x: -246, y: 17}
+        - {x: -86, y: 17}
+        - {x: -61, y: 27}
+        - {x: -59, y: 28}
+        - {x: -59, y: 39}
+      - - {x: 117, y: 55}
+        - {x: 105, y: 54}
+        - {x: 101, y: 34}
+        - {x: 101, y: 20}
+        - {x: 137, y: 17}
+        - {x: 279, y: 17}
+        - {x: 323, y: 29}
+        - {x: 323, y: 39}
+        - {x: 300, y: 55}
+    - name: yeux078
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 881
+        width: 604
+        height: 40
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -275, y: 56}
+        - {x: -281, y: 42}
+        - {x: -281, y: 27}
+        - {x: -244, y: 16}
+        - {x: -102, y: 16}
+        - {x: -59, y: 21}
+        - {x: -59, y: 38}
+        - {x: -77, y: 56}
+      - - {x: 296, y: 56}
+        - {x: 148, y: 56}
+        - {x: 101, y: 44}
+        - {x: 101, y: 29}
+        - {x: 106, y: 26}
+        - {x: 131, y: 21}
+        - {x: 142, y: 19}
+        - {x: 163, y: 16}
+        - {x: 253, y: 16}
+        - {x: 302, y: 24}
+        - {x: 323, y: 29}
+        - {x: 323, y: 43}
+    - name: yeux079
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 842
+        width: 604
+        height: 40
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -269, y: 56}
+        - {x: -281, y: 53}
+        - {x: -281, y: 22}
+        - {x: -229, y: 16}
+        - {x: -83, y: 16}
+        - {x: -59, y: 25}
+        - {x: -59, y: 42}
+        - {x: -84, y: 56}
+      - - {x: 120, y: 56}
+        - {x: 101, y: 53}
+        - {x: 101, y: 18}
+        - {x: 115, y: 16}
+        - {x: 298, y: 16}
+        - {x: 323, y: 27}
+        - {x: 323, y: 43}
+        - {x: 295, y: 56}
+    - name: yeux080
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 923
+        width: 604
+        height: 41
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.36585367}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -281, y: 56}
+        - {x: -281, y: 19}
+        - {x: -244, y: 15}
+        - {x: -83, y: 15}
+        - {x: -59, y: 27}
+        - {x: -59, y: 43}
+        - {x: -62, y: 56}
+      - - {x: 121, y: 56}
+        - {x: 101, y: 40}
+        - {x: 101, y: 22}
+        - {x: 102, y: 20}
+        - {x: 145, y: 15}
+        - {x: 279, y: 15}
+        - {x: 323, y: 27}
+        - {x: 323, y: 50}
+        - {x: 296, y: 56}
+    - name: yeux081
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 923
+        width: 604
+        height: 41
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.36585367}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -80, y: 56}
+        - {x: -274, y: 56}
+        - {x: -281, y: 55}
+        - {x: -281, y: 27}
+        - {x: -229, y: 15}
+        - {x: -90, y: 15}
+        - {x: -59, y: 27}
+        - {x: -59, y: 36}
+        - {x: -60, y: 37}
+      - - {x: 118, y: 56}
+        - {x: 101, y: 52}
+        - {x: 101, y: 15}
+        - {x: 323, y: 15}
+        - {x: 323, y: 42}
+        - {x: 301, y: 56}
+    - name: yeux082
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 966
+        width: 604
+        height: 42
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.35714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -227, y: 57}
+        - {x: -281, y: 43}
+        - {x: -281, y: 27}
+        - {x: -244, y: 15}
+        - {x: -94, y: 15}
+        - {x: -59, y: 19}
+        - {x: -59, y: 40}
+        - {x: -100, y: 57}
+      - - {x: 127, y: 57}
+        - {x: 101, y: 35}
+        - {x: 101, y: 26}
+        - {x: 123, y: 15}
+        - {x: 299, y: 15}
+        - {x: 323, y: 29}
+        - {x: 323, y: 40}
+        - {x: 299, y: 57}
+    - name: yeux083
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 966
+        width: 604
+        height: 42
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.35714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60, y: 47}
+        - {x: -109, y: 57}
+        - {x: -252, y: 57}
+        - {x: -281, y: 41}
+        - {x: -281, y: 29}
+        - {x: -278, y: 27}
+        - {x: -250, y: 21}
+        - {x: -223, y: 15}
+        - {x: -106, y: 15}
+        - {x: -69, y: 23}
+        - {x: -59, y: 28}
+        - {x: -59, y: 39}
+      - - {x: 261, y: 57}
+        - {x: 169, y: 57}
+        - {x: 112, y: 41}
+        - {x: 101, y: 34}
+        - {x: 101, y: 29}
+        - {x: 105, y: 24}
+        - {x: 145, y: 15}
+        - {x: 276, y: 15}
+        - {x: 323, y: 27}
+        - {x: 323, y: 38}
+        - {x: 304, y: 47}
+    - name: yeux084
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 969
+        width: 604
+        height: 43
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.3255814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -238, y: 57}
+        - {x: -281, y: 48}
+        - {x: -281, y: 14}
+        - {x: -83, y: 14}
+        - {x: -59, y: 28}
+        - {x: -59, y: 41}
+        - {x: -92, y: 57}
+      - - {x: 120, y: 57}
+        - {x: 101, y: 36}
+        - {x: 101, y: 25}
+        - {x: 140, y: 14}
+        - {x: 270, y: 14}
+        - {x: 323, y: 26}
+        - {x: 323, y: 57}
+    - name: yeux085
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1010
+        width: 604
+        height: 44
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.29545453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -262, y: 57}
+        - {x: -281, y: 42}
+        - {x: -281, y: 23}
+        - {x: -242, y: 13}
+        - {x: -102, y: 13}
+        - {x: -59, y: 20}
+        - {x: -59, y: 50}
+        - {x: -90, y: 57}
+      - - {x: 130, y: 57}
+        - {x: 101, y: 39}
+        - {x: 101, y: 23}
+        - {x: 121, y: 13}
+        - {x: 278, y: 13}
+        - {x: 323, y: 19}
+        - {x: 323, y: 54}
+        - {x: 304, y: 57}
+    - name: yeux086
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1014
+        width: 604
+        height: 45
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.2888889}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -269, y: 58}
+        - {x: -281, y: 57}
+        - {x: -281, y: 25}
+        - {x: -248, y: 13}
+        - {x: -84, y: 13}
+        - {x: -59, y: 15}
+        - {x: -59, y: 38}
+        - {x: -82, y: 58}
+      - - {x: 271, y: 58}
+        - {x: 170, y: 58}
+        - {x: 158, y: 55}
+        - {x: 104, y: 37}
+        - {x: 101, y: 34}
+        - {x: 101, y: 24}
+        - {x: 126, y: 13}
+        - {x: 295, y: 13}
+        - {x: 323, y: 28}
+        - {x: 323, y: 37}
+        - {x: 298, y: 49}
+    - name: yeux087
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1056
+        width: 604
+        height: 46
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.26086956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -120, y: 58}
+        - {x: -229, y: 58}
+        - {x: -281, y: 40}
+        - {x: -281, y: 28}
+        - {x: -254, y: 12}
+        - {x: -80, y: 12}
+        - {x: -59, y: 26}
+        - {x: -59, y: 33}
+        - {x: -60, y: 37}
+      - - {x: 131, y: 58}
+        - {x: 101, y: 38}
+        - {x: 101, y: 22}
+        - {x: 127, y: 12}
+        - {x: 276, y: 12}
+        - {x: 323, y: 20}
+        - {x: 323, y: 53}
+        - {x: 298, y: 58}
+    - name: yeux088
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1055
+        width: 604
+        height: 46
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.26086956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -257, y: 58}
+        - {x: -281, y: 40}
+        - {x: -281, y: 15}
+        - {x: -251, y: 12}
+        - {x: -81, y: 12}
+        - {x: -59, y: 24}
+        - {x: -59, y: 53}
+        - {x: -93, y: 58}
+      - - {x: 101, y: 58}
+        - {x: 101, y: 13}
+        - {x: 108, y: 12}
+        - {x: 297, y: 12}
+        - {x: 323, y: 22}
+        - {x: 323, y: 41}
+        - {x: 309, y: 58}
+    - name: yeux089
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1061
+        width: 604
+        height: 47
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.23404256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -218, y: 58}
+        - {x: -249, y: 51}
+        - {x: -281, y: 36}
+        - {x: -281, y: 24}
+        - {x: -249, y: 11}
+        - {x: -89, y: 11}
+        - {x: -59, y: 17}
+        - {x: -59, y: 35}
+        - {x: -115, y: 58}
+      - - {x: 132, y: 58}
+        - {x: 101, y: 38}
+        - {x: 101, y: 25}
+        - {x: 105, y: 20}
+        - {x: 117, y: 11}
+        - {x: 323, y: 11}
+        - {x: 323, y: 53}
+        - {x: 288, y: 58}
+    - name: yeux090
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1503
+        width: 604
+        height: 49
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.20408164}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -258, y: 59}
+        - {x: -281, y: 41}
+        - {x: -281, y: 26}
+        - {x: -263, y: 10}
+        - {x: -59, y: 10}
+        - {x: -59, y: 58}
+        - {x: -65, y: 59}
+      - - {x: 169, y: 59}
+        - {x: 126, y: 53}
+        - {x: 101, y: 33}
+        - {x: 101, y: 21}
+        - {x: 131, y: 10}
+        - {x: 275, y: 10}
+        - {x: 323, y: 19}
+        - {x: 323, y: 40}
+        - {x: 279, y: 59}
+    - name: yeux091
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1496
+        width: 604
+        height: 49
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.20408164}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -255, y: 59}
+        - {x: -281, y: 42}
+        - {x: -281, y: 25}
+        - {x: -262, y: 10}
+        - {x: -59, y: 10}
+        - {x: -59, y: 53}
+        - {x: -87, y: 59}
+      - - {x: 139, y: 59}
+        - {x: 101, y: 40}
+        - {x: 101, y: 20}
+        - {x: 133, y: 10}
+        - {x: 269, y: 10}
+        - {x: 301, y: 14}
+        - {x: 323, y: 28}
+        - {x: 323, y: 47}
+        - {x: 279, y: 59}
+    - name: yeux092
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1597
+        width: 604
+        height: 50
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -230, y: 59}
+        - {x: -281, y: 37}
+        - {x: -281, y: 27}
+        - {x: -256, y: 9}
+        - {x: -59, y: 9}
+        - {x: -59, y: 35}
+        - {x: -112, y: 59}
+      - - {x: 159, y: 59}
+        - {x: 117, y: 52}
+        - {x: 101, y: 34}
+        - {x: 101, y: 18}
+        - {x: 122, y: 9}
+        - {x: 272, y: 9}
+        - {x: 323, y: 18}
+        - {x: 323, y: 39}
+        - {x: 278, y: 59}
+    - name: yeux093
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 1770
+        width: 605
+        height: 50
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -237, y: 59}
+        - {x: -282, y: 38}
+        - {x: -282, y: 27}
+        - {x: -260, y: 16}
+        - {x: -222, y: 9}
+        - {x: -95, y: 9}
+        - {x: -59, y: 24}
+        - {x: -59, y: 37}
+        - {x: -114, y: 59}
+      - - {x: 133, y: 59}
+        - {x: 131, y: 58}
+        - {x: 101, y: 33}
+        - {x: 101, y: 17}
+        - {x: 117, y: 9}
+        - {x: 300, y: 9}
+        - {x: 323, y: 25}
+        - {x: 323, y: 51}
+        - {x: 289, y: 59}
+    - name: yeux094
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1649
+        width: 604
+        height: 52
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.15384616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -250, y: 60}
+        - {x: -281, y: 53}
+        - {x: -281, y: 22}
+        - {x: -226, y: 8}
+        - {x: -106, y: 8}
+        - {x: -59, y: 22}
+        - {x: -59, y: 38}
+        - {x: -93, y: 60}
+      - - {x: 153, y: 60}
+        - {x: 106, y: 39}
+        - {x: 101, y: 32}
+        - {x: 101, y: 21}
+        - {x: 144, y: 8}
+        - {x: 283, y: 8}
+        - {x: 323, y: 27}
+        - {x: 323, y: 38}
+        - {x: 282, y: 60}
+    - name: yeux095
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1605
+        width: 604
+        height: 52
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.15384616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -243, y: 60}
+        - {x: -268, y: 48}
+        - {x: -281, y: 34}
+        - {x: -281, y: 17}
+        - {x: -269, y: 8}
+        - {x: -59, y: 8}
+        - {x: -59, y: 48}
+        - {x: -115, y: 60}
+      - - {x: 138, y: 60}
+        - {x: 101, y: 38}
+        - {x: 101, y: 20}
+        - {x: 127, y: 8}
+        - {x: 291, y: 8}
+        - {x: 323, y: 13}
+        - {x: 323, y: 52}
+        - {x: 286, y: 60}
+    - name: yeux096
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1820
+        width: 605
+        height: 53
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.13207547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 32}
+        - {x: -92, y: 50}
+        - {x: -128, y: 60}
+        - {x: -231, y: 60}
+        - {x: -240, y: 59}
+        - {x: -282, y: 36}
+        - {x: -282, y: 27}
+        - {x: -274, y: 23}
+        - {x: -266, y: 20}
+        - {x: -239, y: 12}
+        - {x: -210, y: 8}
+        - {x: -202, y: 7}
+        - {x: -123, y: 7}
+        - {x: -91, y: 12}
+        - {x: -62, y: 20}
+        - {x: -59, y: 25}
+      - - {x: 103, y: 60}
+        - {x: 101, y: 53}
+        - {x: 101, y: 19}
+        - {x: 124, y: 7}
+        - {x: 288, y: 7}
+        - {x: 323, y: 13}
+        - {x: 323, y: 60}
+    - name: yeux097
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 1874
+        width: 605
+        height: 54
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.11111111}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -252, y: 60}
+        - {x: -282, y: 43}
+        - {x: -282, y: 22}
+        - {x: -237, y: 6}
+        - {x: -84, y: 6}
+        - {x: -76, y: 7}
+        - {x: -59, y: 18}
+        - {x: -59, y: 40}
+        - {x: -123, y: 60}
+      - - {x: 281, y: 60}
+        - {x: 172, y: 60}
+        - {x: 131, y: 55}
+        - {x: 101, y: 32}
+        - {x: 101, y: 6}
+        - {x: 323, y: 6}
+        - {x: 323, y: 35}
+        - {x: 309, y: 53}
+    - name: yeux098
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1704
+        width: 604
+        height: 54
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.11111111}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -257, y: 60}
+        - {x: -281, y: 55}
+        - {x: -281, y: 19}
+        - {x: -227, y: 6}
+        - {x: -111, y: 6}
+        - {x: -76, y: 9}
+        - {x: -59, y: 23}
+        - {x: -59, y: 41}
+        - {x: -85, y: 60}
+      - - {x: 138, y: 60}
+        - {x: 101, y: 37}
+        - {x: 101, y: 20}
+        - {x: 130, y: 6}
+        - {x: 280, y: 6}
+        - {x: 323, y: 14}
+        - {x: 323, y: 52}
+        - {x: 292, y: 60}
+    - name: yeux099
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1703
+        width: 604
+        height: 55
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.09090909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -243, y: 60}
+        - {x: -281, y: 52}
+        - {x: -281, y: 5}
+        - {x: -61, y: 5}
+        - {x: -59, y: 8}
+        - {x: -59, y: 37}
+        - {x: -103, y: 60}
+      - - {x: 299, y: 60}
+        - {x: 135, y: 60}
+        - {x: 101, y: 38}
+        - {x: 101, y: 12}
+        - {x: 105, y: 5}
+        - {x: 319, y: 5}
+        - {x: 323, y: 14}
+        - {x: 323, y: 52}
+        - {x: 320, y: 57}
+    - name: yeux100
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1931
+        width: 605
+        height: 55
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.09090909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -253, y: 60}
+        - {x: -264, y: 53}
+        - {x: -282, y: 33}
+        - {x: -282, y: 19}
+        - {x: -250, y: 5}
+        - {x: -94, y: 5}
+        - {x: -59, y: 9}
+        - {x: -59, y: 51}
+        - {x: -97, y: 60}
+      - - {x: 323, y: 39}
+        - {x: 271, y: 60}
+        - {x: 166, y: 60}
+        - {x: 101, y: 37}
+        - {x: 101, y: 20}
+        - {x: 142, y: 5}
+        - {x: 246, y: 5}
+        - {x: 274, y: 9}
+        - {x: 295, y: 14}
+        - {x: 323, y: 26}
+    - name: yeux101
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 1930
+        width: 605
+        height: 57
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.07017544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -256, y: 61}
+        - {x: -282, y: 42}
+        - {x: -282, y: 23}
+        - {x: -228, y: 4}
+        - {x: -105, y: 4}
+        - {x: -59, y: 20}
+        - {x: -59, y: 42}
+        - {x: -110, y: 61}
+      - - {x: 139, y: 61}
+        - {x: 129, y: 60}
+        - {x: 101, y: 36}
+        - {x: 101, y: 13}
+        - {x: 133, y: 4}
+        - {x: 286, y: 4}
+        - {x: 323, y: 25}
+        - {x: 323, y: 38}
+        - {x: 294, y: 61}
+    - name: yeux102
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1988
+        width: 605
+        height: 58
+      alignment: 9
+      pivot: {x: 0.4661157, y: -0.05172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -282, y: 61}
+        - {x: -282, y: 3}
+        - {x: -59, y: 3}
+        - {x: -59, y: 61}
+      - - {x: 101, y: 61}
+        - {x: 101, y: 9}
+        - {x: 135, y: 3}
+        - {x: 304, y: 3}
+        - {x: 323, y: 20}
+        - {x: 323, y: 61}
+    - name: yeux103
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1760
+        width: 604
+        height: 58
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.05172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -81, y: 60}
+        - {x: -94, y: 61}
+        - {x: -255, y: 61}
+        - {x: -281, y: 37}
+        - {x: -281, y: 22}
+        - {x: -230, y: 3}
+        - {x: -107, y: 3}
+        - {x: -62, y: 18}
+        - {x: -59, y: 23}
+        - {x: -59, y: 31}
+      - - {x: 150, y: 61}
+        - {x: 101, y: 47}
+        - {x: 101, y: 3}
+        - {x: 323, y: 3}
+        - {x: 323, y: 42}
+        - {x: 295, y: 61}
+    - name: yeux104
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1760
+        width: 604
+        height: 58
+      alignment: 9
+      pivot: {x: 0.46523178, y: -0.05172414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -81, y: 60}
+        - {x: -94, y: 61}
+        - {x: -255, y: 61}
+        - {x: -281, y: 37}
+        - {x: -281, y: 22}
+        - {x: -230, y: 3}
+        - {x: -107, y: 3}
+        - {x: -62, y: 18}
+        - {x: -59, y: 23}
+        - {x: -59, y: 31}
+      - - {x: 150, y: 61}
+        - {x: 101, y: 47}
+        - {x: 101, y: 3}
+        - {x: 323, y: 3}
+        - {x: 323, y: 42}
+        - {x: 295, y: 61}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

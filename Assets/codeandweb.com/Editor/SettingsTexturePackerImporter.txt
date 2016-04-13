@@ -3,9 +3,18 @@ importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 - Assets/Chapters/forest/spritesheets/chapter1.tpsheet
+- Assets/Chapters/forest/spritesheets/eyes_open.tpsheet
+- Assets/Chapters/forest/spritesheets/eyes_closing.tpsheet
+- Assets/Chapters/forest/spritesheets/eyes_idle.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Chapters/forest/spritesheets/chapter1.png
+- Assets/Chapters/forest/spritesheets/eyes_open.png
+- Assets/Chapters/forest/spritesheets/eyes_closing.png
+- Assets/Chapters/forest/spritesheets/eyes_idle.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
+- 
 - 

@@ -18,11 +18,17 @@ public class Scene_05_Leafs : MonoBehaviour {
 		set {
 			animator.SetInteger ("state", (int)value);
 			_currentAnimationState = value;
+
+			if (value == STATE_OPEN_SMALL)
+				Eyes.CurrentAnimationState = Scene_05_Eyes.STATE_OPEN;
+			else 
+				Eyes.CurrentAnimationState = Scene_05_Eyes.STATE_CLOSE;
 		}
 	}
 
 	public MicrophoneInput micInputToListen;
 	public float loudnessCap;
+	public Scene_05_Eyes Eyes;
 
 	// Use this for initialization
 	void Start () {
