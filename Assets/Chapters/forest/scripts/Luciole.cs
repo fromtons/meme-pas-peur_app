@@ -41,7 +41,7 @@ public class Luciole : MonoBehaviour {
 				audioSource.PlayOneShot(audioClip);
 
 
-				Chapter1Manager.checkLuciole();
+				Scene_04_Manager.checkLuciole();
 			}
 		}
 	} 
