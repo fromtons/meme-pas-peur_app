@@ -29,6 +29,7 @@ public class Scene_05_Leafs : MonoBehaviour {
 	public MicrophoneInput micInputToListen;
 	public float loudnessCap;
 	public Scene_05_Eyes Eyes;
+	public Scene_05_Bunny Bunny;
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +44,10 @@ public class Scene_05_Leafs : MonoBehaviour {
 
 	void OpenSmall() {
 		CurrentAnimationState = STATE_OPEN_SMALL;
+	}
+
+	void ToggleBunny() {
+		Bunny.CurrentAnimationState = Scene_05_Bunny.STATE_VISIBLE;
 	}
 	
 	// Update is called once per frame

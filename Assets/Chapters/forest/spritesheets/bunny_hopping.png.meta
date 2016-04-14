@@ -1,0 +1,310 @@
+fileFormatVersion: 2
+guid: 7250f243b660044059d527b945992702
+timeCreated: 1460670579
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: saut025
+    21300002: saut026
+    21300004: saut027
+    21300006: saut028
+    21300008: saut029
+    21300010: saut030
+    21300012: saut031
+    21300014: saut032
+    21300016: saut033
+    21300018: saut034
+    21300020: saut035
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: saut025
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 310
+        width: 242
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 1.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -74, y: -95}
+        - {x: -56, y: -109}
+        - {x: -49, y: -112}
+        - {x: -87, y: -152}
+        - {x: -106, y: -178}
+        - {x: -121, y: -214}
+        - {x: -121, y: -241}
+        - {x: -104, y: -248}
+        - {x: 121, y: -248}
+        - {x: 121, y: -128}
+        - {x: 104, y: -48}
+        - {x: -88, y: -48}
+        - {x: -85, y: -67}
+    - name: saut026
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 356
+        width: 239
+        height: 154
+      alignment: 9
+      pivot: {x: 0.50209206, y: 1.5779221}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -61, y: -133}
+        - {x: -50, y: -139}
+        - {x: -86, y: -165}
+        - {x: -109, y: -196}
+        - {x: -118, y: -213}
+        - {x: -120, y: -218}
+        - {x: -120, y: -233}
+        - {x: -96, y: -240}
+        - {x: -68, y: -243}
+        - {x: 119, y: -243}
+        - {x: 119, y: -166}
+        - {x: 101, y: -89}
+        - {x: -87, y: -89}
+        - {x: -78, y: -122}
+    - name: saut027
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 236
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5, y: 2.1944444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -97, y: -129}
+        - {x: -118, y: -202}
+        - {x: -118, y: -233}
+        - {x: -96, y: -237}
+        - {x: 90, y: -237}
+        - {x: 118, y: -233}
+        - {x: 118, y: -135}
+        - {x: 115, y: -129}
+    - name: saut028
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 245
+        width: 233
+        height: 63
+      alignment: 9
+      pivot: {x: 0.50214595, y: 3.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -76, y: -180}
+        - {x: -73, y: -184}
+        - {x: -57, y: -190}
+        - {x: -96, y: -202}
+        - {x: -117, y: -221}
+        - {x: -117, y: -228}
+        - {x: -114, y: -231}
+        - {x: 116, y: -231}
+        - {x: 116, y: -202}
+        - {x: 100, y: -168}
+        - {x: -81, y: -168}
+        - {x: -81, y: -173}
+    - name: saut029
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 320
+        width: 230
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 6.6764708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -90, y: -193}
+        - {x: -115, y: -217}
+        - {x: -115, y: -225}
+        - {x: -110, y: -227}
+        - {x: 115, y: -227}
+        - {x: 115, y: -212}
+        - {x: 96, y: -193}
+    - name: saut030
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 199
+        width: 210
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5, y: 2.067227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -78, y: -127}
+        - {x: -105, y: -208}
+        - {x: -105, y: -246}
+        - {x: 96, y: -246}
+        - {x: 105, y: -244}
+        - {x: 105, y: -127}
+    - name: saut031
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 7
+        width: 190
+        height: 215
+      alignment: 9
+      pivot: {x: 0.49473685, y: 0.9767442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -71, y: 5}
+        - {x: -64, y: -28}
+        - {x: -56, y: -50}
+        - {x: -80, y: -112}
+        - {x: -94, y: -157}
+        - {x: -94, y: -206}
+        - {x: -66, y: -210}
+        - {x: 74, y: -210}
+        - {x: 96, y: -201}
+        - {x: 96, y: -128}
+        - {x: 81, y: 5}
+    - name: saut032
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 201
+        width: 171
+        height: 309
+      alignment: 9
+      pivot: {x: 0.4853801, y: 0.5631068}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 60, y: 135}
+        - {x: 59, y: 134}
+        - {x: 36, y: 81}
+        - {x: -50, y: 135}
+        - {x: -69, y: 135}
+        - {x: -56, y: 19}
+        - {x: -83, y: -114}
+        - {x: -83, y: -159}
+        - {x: -61, y: -174}
+        - {x: 63, y: -174}
+        - {x: 88, y: -169}
+        - {x: 88, y: -61}
+        - {x: 78, y: -15}
+        - {x: 69, y: 135}
+    - name: saut033
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 112
+        width: 152
+        height: 398
+      alignment: 9
+      pivot: {x: 0.47368422, y: 0.3517588}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 68, y: 57}
+        - {x: 67, y: 171}
+        - {x: 62, y: 258}
+        - {x: -49, y: 258}
+        - {x: -49, y: 214}
+        - {x: -43, y: 168}
+        - {x: -31, y: 138}
+        - {x: -72, y: 9}
+        - {x: -72, y: -136}
+        - {x: -59, y: -140}
+        - {x: 68, y: -140}
+        - {x: 80, y: -124}
+        - {x: 80, y: 2}
+        - {x: 79, y: 14}
+    - name: saut034
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 224
+        width: 183
+        height: 286
+      alignment: 9
+      pivot: {x: 0.48087433, y: 0.44055945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 73, y: 160}
+        - {x: 62, y: 160}
+        - {x: -11, y: 112}
+        - {x: -54, y: 160}
+        - {x: -74, y: 160}
+        - {x: -63, y: 105}
+        - {x: -32, y: 63}
+        - {x: -88, y: 0}
+        - {x: -88, y: -126}
+        - {x: 45, y: -126}
+        - {x: 95, y: -111}
+        - {x: 95, y: -49}
+        - {x: 87, y: 16}
+    - name: saut035
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 20
+        width: 212
+        height: 179
+      alignment: 9
+      pivot: {x: 0.48584905, y: 0.6480447}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 83, y: 63}
+        - {x: -80, y: 63}
+        - {x: -103, y: -31}
+        - {x: -103, y: -113}
+        - {x: -71, y: -116}
+        - {x: 55, y: -116}
+        - {x: 109, y: -103}
+        - {x: 109, y: -74}
+        - {x: 100, y: -31}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
