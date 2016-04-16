@@ -1,0 +1,541 @@
+fileFormatVersion: 2
+guid: d4cb913f3ee3a4dd8bacd7c968e73096
+timeCreated: 1460814337
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Piri00
+    21300002: Piri01
+    21300004: Piri02
+    21300006: Piri03
+    21300008: Piri04
+    21300010: Piri05
+    21300012: Piri06
+    21300014: Piri07
+    21300016: Piri08
+    21300018: Piri09
+    21300020: Piri10
+    21300022: Piri11
+    21300024: Piri12
+    21300026: Piri13
+    21300028: Piri14
+    21300030: Piri15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Piri00
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 928
+        width: 245
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5346939, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 278}
+        - {x: -108, y: 278}
+        - {x: -131, y: 254}
+        - {x: -131, y: 17}
+        - {x: -104, y: 27}
+        - {x: -101, y: 30}
+        - {x: -101, y: 36}
+        - {x: -102, y: 46}
+        - {x: -76, y: 0}
+        - {x: 72, y: 0}
+        - {x: 114, y: 23}
+        - {x: 114, y: 234}
+        - {x: 109, y: 254}
+    - name: Piri01
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 928
+        width: 251
+        height: 278
+      alignment: 9
+      pivot: {x: 0.52589643, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 107, y: 159}
+        - {x: 106, y: 154}
+        - {x: 106, y: 152}
+        - {x: 104, y: 155}
+        - {x: 101, y: 155}
+        - {x: 99, y: 153}
+        - {x: 82, y: 229}
+        - {x: 35, y: 278}
+        - {x: -118, y: 278}
+        - {x: -132, y: 266}
+        - {x: -132, y: 34}
+        - {x: -107, y: 15}
+        - {x: -101, y: 30}
+        - {x: -101, y: 36}
+        - {x: -102, y: 46}
+        - {x: -81, y: 0}
+        - {x: 57, y: 0}
+        - {x: 119, y: 129}
+        - {x: 119, y: 158}
+        - {x: 114, y: 161}
+    - name: Piri02
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1208
+        width: 254
+        height: 278
+      alignment: 9
+      pivot: {x: 0.51968503, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 105, y: 153}
+        - {x: 94, y: 249}
+        - {x: -17, y: 278}
+        - {x: -131, y: 278}
+        - {x: -132, y: 270}
+        - {x: -132, y: 84}
+        - {x: -123, y: 29}
+        - {x: -107, y: 26}
+        - {x: -104, y: 27}
+        - {x: -101, y: 30}
+        - {x: -101, y: 36}
+        - {x: -102, y: 46}
+        - {x: -76, y: 0}
+        - {x: 34, y: 0}
+        - {x: 122, y: 123}
+        - {x: 122, y: 160}
+        - {x: 118, y: 160}
+    - name: Piri03
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1208
+        width: 257
+        height: 278
+      alignment: 9
+      pivot: {x: 0.51361865, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 2}
+        - {x: 11, y: 8}
+        - {x: 7, y: 10}
+        - {x: 124, y: 125}
+        - {x: 125, y: 128}
+        - {x: 125, y: 166}
+        - {x: 98, y: 249}
+        - {x: -11, y: 278}
+        - {x: -116, y: 278}
+        - {x: -132, y: 252}
+        - {x: -132, y: 52}
+        - {x: -128, y: 24}
+        - {x: -107, y: 26}
+        - {x: -104, y: 27}
+        - {x: -101, y: 30}
+        - {x: -101, y: 36}
+        - {x: -102, y: 46}
+        - {x: -69, y: 1}
+        - {x: -67, y: 0}
+        - {x: -43, y: 0}
+        - {x: -39, y: 10}
+        - {x: -27, y: 0}
+        - {x: 11, y: 0}
+    - name: Piri04
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1488
+        width: 261
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5095785, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 10}
+        - {x: 128, y: 122}
+        - {x: 128, y: 152}
+        - {x: 127, y: 154}
+        - {x: 106, y: 148}
+        - {x: 87, y: 225}
+        - {x: -36, y: 278}
+        - {x: -124, y: 278}
+        - {x: -133, y: 272}
+        - {x: -133, y: 8}
+        - {x: -101, y: 24}
+        - {x: -101, y: 36}
+        - {x: -73, y: 0}
+        - {x: 11, y: 0}
+        - {x: 12, y: 2}
+        - {x: 11, y: 8}
+    - name: Piri05
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1768
+        width: 262
+        height: 278
+      alignment: 9
+      pivot: {x: 0.50763357, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 2}
+        - {x: 11, y: 8}
+        - {x: 7, y: 10}
+        - {x: 125, y: 120}
+        - {x: 129, y: 129}
+        - {x: 129, y: 145}
+        - {x: 123, y: 147}
+        - {x: 113, y: 145}
+        - {x: 86, y: 229}
+        - {x: -47, y: 278}
+        - {x: -81, y: 278}
+        - {x: -87, y: 262}
+        - {x: -123, y: 214}
+        - {x: -128, y: 202}
+        - {x: -123, y: 188}
+        - {x: -133, y: 177}
+        - {x: -133, y: 52}
+        - {x: -129, y: 23}
+        - {x: -101, y: 24}
+        - {x: -101, y: 36}
+        - {x: -74, y: 0}
+        - {x: -45, y: 0}
+        - {x: -39, y: 4}
+        - {x: -25, y: 0}
+        - {x: 11, y: 0}
+    - name: Piri06
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1768
+        width: 265
+        height: 278
+      alignment: 9
+      pivot: {x: 0.50566036, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 0}
+        - {x: 11, y: 0}
+        - {x: 12, y: 2}
+        - {x: 11, y: 8}
+        - {x: 7, y: 10}
+        - {x: 58, y: 97}
+        - {x: 55, y: 100}
+        - {x: 58, y: 105}
+        - {x: 57, y: 105}
+        - {x: 58, y: 103}
+        - {x: 62, y: 99}
+        - {x: 75, y: 89}
+        - {x: 131, y: 120}
+        - {x: 131, y: 145}
+        - {x: 96, y: 243}
+        - {x: -6, y: 278}
+        - {x: -123, y: 278}
+        - {x: -134, y: 258}
+        - {x: -134, y: 16}
+        - {x: -107, y: 24}
+        - {x: -99, y: 29}
+        - {x: -70, y: 1}
+        - {x: -68, y: 0}
+        - {x: -49, y: 0}
+        - {x: -45, y: 1}
+        - {x: -40, y: 4}
+        - {x: -45, y: 32}
+    - name: Piri07
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1768
+        width: 265
+        height: 278
+      alignment: 9
+      pivot: {x: 0.50566036, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 0}
+        - {x: 11, y: 0}
+        - {x: 12, y: 2}
+        - {x: 11, y: 8}
+        - {x: 131, y: 67}
+        - {x: 131, y: 203}
+        - {x: 88, y: 274}
+        - {x: 60, y: 278}
+        - {x: -88, y: 278}
+        - {x: -134, y: 220}
+        - {x: -134, y: 64}
+        - {x: -124, y: 28}
+        - {x: -107, y: 24}
+        - {x: -99, y: 29}
+        - {x: -70, y: 1}
+        - {x: -68, y: 0}
+        - {x: -49, y: 0}
+        - {x: -45, y: 1}
+        - {x: -40, y: 4}
+        - {x: -45, y: 32}
+    - name: Piri08
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1488
+        width: 261
+        height: 278
+      alignment: 9
+      pivot: {x: 0.51341, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 127, y: 125}
+        - {x: 127, y: 152}
+        - {x: 124, y: 183}
+        - {x: 12, y: 278}
+        - {x: -98, y: 278}
+        - {x: -134, y: 235}
+        - {x: -134, y: 18}
+        - {x: -107, y: 24}
+        - {x: -99, y: 29}
+        - {x: -73, y: 0}
+        - {x: 14, y: 0}
+        - {x: 11, y: 10}
+        - {x: 125, y: 120}
+    - name: Piri09
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1488
+        width: 258
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5232558, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 4}
+        - {x: 123, y: 127}
+        - {x: 123, y: 148}
+        - {x: 120, y: 152}
+        - {x: 106, y: 148}
+        - {x: 81, y: 221}
+        - {x: 40, y: 253}
+        - {x: -17, y: 278}
+        - {x: -124, y: 278}
+        - {x: -135, y: 261}
+        - {x: -135, y: 17}
+        - {x: -80, y: 0}
+        - {x: -46, y: 0}
+        - {x: -37, y: 3}
+        - {x: -25, y: 0}
+        - {x: 15, y: 0}
+    - name: Piri10
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1208
+        width: 253
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5335968, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 118, y: 106}
+        - {x: 118, y: 222}
+        - {x: 56, y: 214}
+        - {x: 52, y: 208}
+        - {x: -42, y: 276}
+        - {x: -45, y: 278}
+        - {x: -85, y: 278}
+        - {x: -135, y: 229}
+        - {x: -135, y: 19}
+        - {x: -78, y: 0}
+        - {x: -46, y: 0}
+        - {x: -37, y: 3}
+        - {x: -25, y: 0}
+        - {x: 94, y: 0}
+    - name: Piri11
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1208
+        width: 248
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5483871, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 100, y: 158}
+        - {x: 93, y: 155}
+        - {x: 80, y: 167}
+        - {x: 73, y: 171}
+        - {x: 67, y: 170}
+        - {x: 63, y: 169}
+        - {x: 58, y: 167}
+        - {x: 89, y: 221}
+        - {x: -38, y: 278}
+        - {x: -85, y: 278}
+        - {x: -109, y: 253}
+        - {x: -136, y: 222}
+        - {x: -136, y: 0}
+        - {x: 79, y: 0}
+        - {x: 112, y: 108}
+        - {x: 112, y: 154}
+        - {x: 107, y: 160}
+    - name: Piri12
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 928
+        width: 242
+        height: 278
+      alignment: 9
+      pivot: {x: 0.55785125, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66, y: 209}
+        - {x: 56, y: 214}
+        - {x: 52, y: 208}
+        - {x: -34, y: 278}
+        - {x: -97, y: 278}
+        - {x: -135, y: 230}
+        - {x: -135, y: 0}
+        - {x: 15, y: 0}
+        - {x: 22, y: 4}
+        - {x: 107, y: 136}
+        - {x: 107, y: 165}
+    - name: Piri13
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 928
+        width: 236
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5677966, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 0}
+        - {x: 12, y: 0}
+        - {x: 45, y: 28}
+        - {x: 102, y: 117}
+        - {x: 102, y: 173}
+        - {x: 85, y: 169}
+        - {x: 76, y: 151}
+        - {x: 80, y: 167}
+        - {x: 75, y: 176}
+        - {x: 69, y: 211}
+        - {x: 56, y: 214}
+        - {x: 52, y: 208}
+        - {x: -28, y: 271}
+        - {x: -45, y: 278}
+        - {x: -82, y: 278}
+        - {x: -83, y: 276}
+        - {x: -134, y: 233}
+        - {x: -134, y: 120}
+        - {x: -122, y: 30}
+        - {x: -107, y: 24}
+        - {x: -99, y: 29}
+        - {x: -70, y: 1}
+        - {x: -68, y: 0}
+        - {x: -49, y: 0}
+        - {x: -45, y: 1}
+        - {x: -40, y: 4}
+        - {x: -45, y: 32}
+    - name: Piri14
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 1488
+        width: 228
+        height: 278
+      alignment: 9
+      pivot: {x: 0.5833333, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 2}
+        - {x: 11, y: 8}
+        - {x: 95, y: 85}
+        - {x: 95, y: 173}
+        - {x: 77, y: 163}
+        - {x: 71, y: 154}
+        - {x: 77, y: 164}
+        - {x: 87, y: 172}
+        - {x: 84, y: 229}
+        - {x: -47, y: 278}
+        - {x: -81, y: 278}
+        - {x: -87, y: 262}
+        - {x: -133, y: 232}
+        - {x: -133, y: 70}
+        - {x: -125, y: 27}
+        - {x: -101, y: 24}
+        - {x: -101, y: 36}
+        - {x: -73, y: 0}
+        - {x: -43, y: 0}
+        - {x: -39, y: 11}
+        - {x: -18, y: 0}
+        - {x: 11, y: 0}
+    - name: Piri15
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 648
+        width: 236
+        height: 278
+      alignment: 9
+      pivot: {x: 0.55932206, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 74, y: 173}
+        - {x: 87, y: 222}
+        - {x: 26, y: 240}
+        - {x: -45, y: 278}
+        - {x: -89, y: 278}
+        - {x: -132, y: 238}
+        - {x: -132, y: 0}
+        - {x: 27, y: 0}
+        - {x: 23, y: 31}
+        - {x: 104, y: 122}
+        - {x: 104, y: 176}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -30,12 +30,15 @@ public class OngletManager : MonoBehaviour {
 			RectTransform ongletTextRt = ((RectTransform)(ongletText.GetComponent<RectTransform> ()));
 
 			// Move it along
+			// Pastille
 			onglet.transform.parent = this.transform;
-			ongletRt.sizeDelta = new Vector2 (ongletsSize, ongletsSize);
-			ongletRt.anchoredPosition = new Vector2 ((ongletsSize*i)+ongletsSize/2, 0);
+			ongletRt.localScale = new Vector3 (1f, 1f, 1f); // Reset scale
+			ongletRt.sizeDelta = new Vector2 (ongletsSize, ongletsSize); // Size calculation
+			ongletRt.anchoredPosition = new Vector2 ((ongletsSize*i)+ongletsSize/2, 0); // Position calculation
+			// Text
 			ongletText.text = ""+(i+1);
-			ongletTextRt.sizeDelta = new Vector2 (ongletsSize, ongletsSize / 2);
-			ongletTextRt.anchoredPosition = new Vector2 (0, ongletsSize / 4);
+			ongletTextRt.sizeDelta = new Vector2 (ongletsSize, ongletsSize / 2); // Size calculation
+			ongletTextRt.anchoredPosition = new Vector2 (0, ongletsSize / 4); // Position calculation
 			ongletSl.sceneToLoad = scenesToLoad [i];
 			if (i != currentOnglet)
 				onglet.GetComponent<Image> ().color = new Color (1f,1f,1f,.5f);
