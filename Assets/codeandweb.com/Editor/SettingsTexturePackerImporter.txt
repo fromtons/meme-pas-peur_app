@@ -10,6 +10,7 @@ tpsheetFileNames:
 - Assets/Chapters/forest/spritesheets/owl_flying.tpsheet
 - Assets/Chapters/forest/spritesheets/baby_owl_blinking.tpsheet
 - Assets/Chapters/forest/spritesheets/piri_waving.tpsheet
+- Assets/Chapters/forest/spritesheets/brother_with_baby_owl.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Chapters/forest/spritesheets/eyes_open.png
@@ -20,8 +21,10 @@ textureFileNames:
 - Assets/Chapters/forest/spritesheets/owl_flying.png
 - Assets/Chapters/forest/spritesheets/baby_owl_blinking.png
 - Assets/Chapters/forest/spritesheets/piri_waving.png
+- Assets/Chapters/forest/spritesheets/brother_with_baby_owl.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
 - 
 - 
 - 

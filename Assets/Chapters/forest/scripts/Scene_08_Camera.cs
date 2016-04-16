@@ -44,6 +44,8 @@ public class Scene_08_Camera : MonoBehaviour {
 		beforeWrapper.SetActive(false);
 		afterWrapper.SetActive(true);
 
+		bloom.intensity = 0;
+
 		Hashtable tweenParams = new Hashtable();
 		tweenParams.Add("from", mask.color);
 		tweenParams.Add("to", new Color(0f,0f,0f,0f));
