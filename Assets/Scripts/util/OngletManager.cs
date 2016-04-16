@@ -14,10 +14,11 @@ public class OngletManager : MonoBehaviour {
 	float canvasWidth;
 	float ongletsSize;
 
+	Onglet nextOnglet;
+
 	// Use this for initialization
 	void Start () {
 		rt = GetComponent<RectTransform> ();
-		Debug.Log (rt.rect.width);
 		canvasWidth = rt.rect.width;
 		ongletsSize = canvasWidth / scenesToLoad.Count;
 
@@ -31,7 +32,7 @@ public class OngletManager : MonoBehaviour {
 
 			// Move it along
 			// Pastille
-			onglet.transform.parent = this.transform;
+			onglet.transform.SetParent(this.transform);
 			ongletRt.localScale = new Vector3 (1f, 1f, 1f); // Reset scale
 			ongletRt.sizeDelta = new Vector2 (ongletsSize, ongletsSize); // Size calculation
 			ongletRt.anchoredPosition = new Vector2 ((ongletsSize*i)+ongletsSize/2, 0); // Position calculation
@@ -40,9 +41,19 @@ public class OngletManager : MonoBehaviour {
 			ongletTextRt.sizeDelta = new Vector2 (ongletsSize, ongletsSize / 2); // Size calculation
 			ongletTextRt.anchoredPosition = new Vector2 (0, ongletsSize / 4); // Position calculation
 			ongletSl.sceneToLoad = scenesToLoad [i];
-			if (i != currentOnglet)
-				onglet.GetComponent<Image> ().color = new Color (1f,1f,1f,.5f);
+
+			if (i == currentOnglet)
+				onglet.GetComponent<Onglet> ().CurrentState = Onglet.STATE_CURRENT;
+			else 
+				onglet.GetComponent<Onglet> ().CurrentState = Onglet.STATE_DEFAULT;	
+
+			if (i == currentOnglet + 1)
+				nextOnglet = onglet.GetComponent<Onglet> ();
 		}
+	}
+
+	public void HighlightNextOnglet() {
+		nextOnglet.GetComponent<Onglet> ().CurrentState = Onglet.STATE_HIGHLIGHT;	
 	}
 	
 	// Update is called once per frame
