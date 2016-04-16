@@ -1,0 +1,276 @@
+fileFormatVersion: 2
+guid: cc39c2bcc953a41c3be7444c4346bd48
+timeCreated: 1460757920
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: hiboux00
+    21300002: hiboux01
+    21300004: hiboux02
+    21300006: hiboux03
+    21300008: hiboux04
+    21300010: hiboux05
+    21300012: hiboux06
+    21300014: hiboux07
+    21300016: hiboux08
+    21300018: hiboux09
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: hiboux00
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 4
+        width: 112
+        height: 99
+      alignment: 9
+      pivot: {x: -0.3125, y: -3.808081}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 147, y: 417}
+        - {x: 147, y: 447}
+        - {x: 133, y: 476}
+        - {x: 46, y: 476}
+        - {x: 41, y: 464}
+        - {x: 35, y: 439}
+        - {x: 35, y: 408}
+        - {x: 82, y: 377}
+        - {x: 108, y: 377}
+        - {x: 135, y: 392}
+        - {x: 144, y: 402}
+        - {x: 145, y: 406}
+    - name: hiboux01
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 105
+        width: 113
+        height: 100
+      alignment: 9
+      pivot: {x: -0.30973452, y: -3.78}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: 478}
+        - {x: 42, y: 465}
+        - {x: 43, y: 447}
+        - {x: 35, y: 437}
+        - {x: 35, y: 411}
+        - {x: 37, y: 404}
+        - {x: 81, y: 378}
+        - {x: 139, y: 378}
+        - {x: 148, y: 392}
+        - {x: 148, y: 478}
+    - name: hiboux02
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 309
+        width: 115
+        height: 99
+      alignment: 9
+      pivot: {x: -0.29565218, y: -3.838384}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: 479}
+        - {x: 34, y: 443}
+        - {x: 34, y: 412}
+        - {x: 41, y: 406}
+        - {x: 83, y: 380}
+        - {x: 123, y: 380}
+        - {x: 149, y: 404}
+        - {x: 149, y: 448}
+        - {x: 141, y: 479}
+    - name: hiboux03
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 206
+        width: 116
+        height: 100
+      alignment: 9
+      pivot: {x: -0.29310346, y: -3.81}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34, y: 407}
+        - {x: 79, y: 381}
+        - {x: 123, y: 381}
+        - {x: 150, y: 394}
+        - {x: 150, y: 466}
+        - {x: 147, y: 481}
+        - {x: 41, y: 481}
+        - {x: 34, y: 458}
+    - name: hiboux04
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 308
+        width: 117
+        height: 100
+      alignment: 9
+      pivot: {x: -0.2905983, y: -3.83}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 131, y: 483}
+        - {x: 125, y: 483}
+        - {x: 122, y: 479}
+        - {x: 102, y: 483}
+        - {x: 77, y: 483}
+        - {x: 73, y: 481}
+        - {x: 64, y: 483}
+        - {x: 38, y: 483}
+        - {x: 34, y: 456}
+        - {x: 34, y: 413}
+        - {x: 72, y: 383}
+        - {x: 117, y: 383}
+        - {x: 137, y: 387}
+        - {x: 149, y: 414}
+        - {x: 151, y: 421}
+        - {x: 151, y: 452}
+    - name: hiboux05
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 410
+        width: 119
+        height: 100
+      alignment: 9
+      pivot: {x: -0.27731094, y: -3.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: 411}
+        - {x: 57, y: 385}
+        - {x: 121, y: 385}
+        - {x: 152, y: 404}
+        - {x: 152, y: 467}
+        - {x: 148, y: 485}
+        - {x: 36, y: 485}
+        - {x: 33, y: 463}
+    - name: hiboux06
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 105
+        width: 117
+        height: 99
+      alignment: 9
+      pivot: {x: -0.2905983, y: -3.909091}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38, y: 486}
+        - {x: 34, y: 457}
+        - {x: 34, y: 417}
+        - {x: 72, y: 387}
+        - {x: 125, y: 387}
+        - {x: 140, y: 390}
+        - {x: 151, y: 420}
+        - {x: 151, y: 464}
+        - {x: 133, y: 486}
+    - name: hiboux07
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 207
+        width: 116
+        height: 99
+      alignment: 9
+      pivot: {x: -0.29310346, y: -3.8888888}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 142, y: 484}
+        - {x: 39, y: 484}
+        - {x: 34, y: 458}
+        - {x: 34, y: 416}
+        - {x: 76, y: 385}
+        - {x: 114, y: 385}
+        - {x: 136, y: 394}
+        - {x: 150, y: 423}
+        - {x: 150, y: 446}
+    - name: hiboux08
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 411
+        width: 115
+        height: 99
+      alignment: 9
+      pivot: {x: -0.29565218, y: -3.868687}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38, y: 482}
+        - {x: 34, y: 464}
+        - {x: 34, y: 412}
+        - {x: 81, y: 384}
+        - {x: 83, y: 383}
+        - {x: 118, y: 383}
+        - {x: 149, y: 397}
+        - {x: 149, y: 460}
+        - {x: 145, y: 482}
+    - name: hiboux09
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 113
+        height: 100
+      alignment: 9
+      pivot: {x: -0.30973452, y: -3.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: 480}
+        - {x: 38, y: 469}
+        - {x: 35, y: 450}
+        - {x: 35, y: 412}
+        - {x: 79, y: 380}
+        - {x: 129, y: 380}
+        - {x: 148, y: 399}
+        - {x: 148, y: 468}
+        - {x: 141, y: 480}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

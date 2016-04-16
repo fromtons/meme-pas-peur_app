@@ -1,0 +1,15 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: baby_owl_blinking.png (64 x 128)
+# $TexturePacker:SmartUpdate:062c2fb872c8aa2d6cdb8ebb4711a28c:734761a3241c73b7b15738557974df12:6b7318ab515ee782e2a9e7559fef365f$
+#
+
+bébé_hiboux00;2;89;37;37;-3.6486486486486487;-8.864864864864865
+bébé_hiboux02;2;50;37;37;-3.6486486486486487;-8.864864864864865
+bébé_hiboux04;2;50;37;37;-3.6486486486486487;-8.864864864864865
+bébé_hiboux06;2;89;37;37;-3.6486486486486487;-8.864864864864865
+bébé_hiboux08;2;89;37;37;-3.6486486486486487;-8.864864864864865

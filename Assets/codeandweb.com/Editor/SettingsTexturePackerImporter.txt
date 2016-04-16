@@ -7,6 +7,8 @@ tpsheetFileNames:
 - Assets/Chapters/forest/spritesheets/eyes_closing.tpsheet
 - Assets/Chapters/forest/spritesheets/bunny_hopping.tpsheet
 - Assets/Chapters/forest/spritesheets/eyes_idle.tpsheet
+- Assets/Chapters/forest/spritesheets/owl_flying.tpsheet
+- Assets/Chapters/forest/spritesheets/baby_owl_blinking.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Chapters/forest/spritesheets/eyes_open.png
@@ -14,8 +16,12 @@ textureFileNames:
 - Assets/Chapters/forest/spritesheets/eyes_closing.png
 - Assets/Chapters/forest/spritesheets/bunny_hopping.png
 - Assets/Chapters/forest/spritesheets/eyes_idle.png
+- Assets/Chapters/forest/spritesheets/owl_flying.png
+- Assets/Chapters/forest/spritesheets/baby_owl_blinking.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
 - 
 - 
 - 
