@@ -45,13 +45,16 @@ public class Scene_07_Brother : MonoBehaviour {
 	bool insistRevealed = true;
 	int insistRevealdCpt = 0;
 
+	TalkEventManager.TalkEvent onTalkEnded;
+
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator> ();
 		hiddenBy_BC = hiddenBy.GetComponent<BoxCollider2D> ();
 		boxCollider = this.GetComponent<BoxCollider2D> ();
 
-		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
+		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
+		TalkEventManager.TalkEnded += onTalkEnded;
 		StartCoroutine (Insist ());
 	}
 
@@ -111,5 +114,9 @@ public class Scene_07_Brother : MonoBehaviour {
 
 		if (CurrentAnimationState == STATE_REVEAL && micInputToListen.loudness > loudnessCap)
 			CurrentAnimationState = STATE_BOUNCE_TO_FRONT;
+	}
+
+	void OnDestroy() {
+		TalkEventManager.TalkEnded -= onTalkEnded;
 	}
 }

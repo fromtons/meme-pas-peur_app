@@ -10,6 +10,9 @@ public class OngletManager : MonoBehaviour {
 	public int currentOnglet = 0;
 	public List<string> scenesToLoad;
 	public GameObject prefab;
+	public GameObject loadingScreenPrefab;
+
+	GameObject loadingScreen;
 
 	RectTransform rt;
 
@@ -31,13 +34,21 @@ public class OngletManager : MonoBehaviour {
 		canvasWidth = rt.rect.width;
 		ongletsSize = canvasWidth / scenesToLoad.Count;
 
+		loadingScreen = Instantiate (loadingScreenPrefab);
+		loadingScreen.transform.SetParent(this.transform);
+		loadingScreen.GetComponent<RectTransform> ().localScale = new Vector3 (1f, 1f, 1f);
+		loadingScreen.GetComponent<RectTransform> ().sizeDelta = new Vector2 (rt.rect.width, rt.rect.height);
+		loadingScreen.GetComponent<RectTransform> ().anchoredPosition = new Vector2 (0f, 0f);
+
 		for (int i = 0; i < scenesToLoad.Count; i++) {
 			// Get the onglet
 			GameObject onglet = (GameObject) Instantiate(prefab);
+			Onglet ongletScript = (Onglet)onglet.GetComponent<Onglet> ();
 			RectTransform ongletRt = ((RectTransform)onglet.GetComponent<RectTransform> ());
 			SceneLoader ongletSl = ((SceneLoader) onglet.GetComponent<SceneLoader> ());
 			UnityEngine.UI.Text ongletText = onglet.GetComponent<Onglet> ().textObject.GetComponent<UnityEngine.UI.Text> ();
 			RectTransform ongletTextRt = ((RectTransform)(ongletText.GetComponent<RectTransform> ()));
+			ongletScript.GetComponent<SceneLoader> ().loadingScreen = loadingScreen;
 
 			// Move it along
 			// Pastille
@@ -52,13 +63,15 @@ public class OngletManager : MonoBehaviour {
 			ongletSl.sceneToLoad = scenesToLoad [i];
 
 			if (i == currentOnglet)
-				onglet.GetComponent<Onglet> ().CurrentState = Onglet.STATE_CURRENT;
+				ongletScript.CurrentState = Onglet.STATE_CURRENT;
 			else 
-				onglet.GetComponent<Onglet> ().CurrentState = Onglet.STATE_DEFAULT;	
+				ongletScript.CurrentState = Onglet.STATE_DEFAULT;	
 
 			if (i == currentOnglet + 1)
-				nextOnglet = onglet.GetComponent<Onglet> ();
+				nextOnglet = ongletScript;
 		}
+
+		loadingScreen.transform.SetSiblingIndex (999);
 	}
 
 	public void HighlightNextOnglet() {

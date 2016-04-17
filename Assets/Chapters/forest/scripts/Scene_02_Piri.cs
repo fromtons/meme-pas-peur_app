@@ -35,6 +35,8 @@ public class Scene_02_Piri : MonoBehaviour {
 
 	Vector3 initialPosition;
 
+	TalkEventManager.TalkEvent onTalkEnded;
+
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator>();
@@ -42,7 +44,8 @@ public class Scene_02_Piri : MonoBehaviour {
 		initialPosition = this.gameObject.transform.position;
 
 		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 0, Autoplay = false });
-		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);	
+		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);	
+		TalkEventManager.TalkEnded += onTalkEnded;
 	}
 	
 	// Update is called once per frame
@@ -82,5 +85,9 @@ public class Scene_02_Piri : MonoBehaviour {
 		iTween.MoveTo (this.gameObject, ht);
 
 		OngletManager.instance.HighlightNextOnglet ();
+	}
+
+	void OnDestroy() {
+		TalkEventManager.TalkEnded -= onTalkEnded;
 	}
 }

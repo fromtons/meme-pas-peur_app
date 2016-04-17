@@ -12,6 +12,7 @@ public class Scene_09_Interview : MonoBehaviour {
 	bool scared;
 	string highlightMoment;
 
+	TalkEventManager.TalkEvent onTalkEnded;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +21,8 @@ public class Scene_09_Interview : MonoBehaviour {
 		question1Wrapper.SetActive (false);
 		question2Wrapper.SetActive (false);
 
-		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
+		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
+		TalkEventManager.TalkEnded += onTalkEnded;
 		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "brother", AudioClipId = 0, Autoplay = false });
 	}
 
@@ -108,5 +110,9 @@ public class Scene_09_Interview : MonoBehaviour {
 			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 5, Autoplay = true }); // scared piri
 		else
 			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 6, Autoplay = true }); // brave piri
+	}
+
+	void OnDestroy() {
+		TalkEventManager.TalkEnded -= onTalkEnded;
 	}
 }

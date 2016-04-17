@@ -35,6 +35,9 @@ public class Talker : MonoBehaviour {
 		get { return audioClipsPlayed; }
 	}
 
+	TalkEventManager.TalkEvent onTalkSet;
+	TalkEventManager.TalkEvent onTalkStop;
+
 	// Use this for initialization
 	void Awake () {
 		// Fill the components
@@ -43,8 +46,10 @@ public class Talker : MonoBehaviour {
 		sprite = this.GetComponent<SpriteRenderer> ();
 
 		// Subscribe to talkset events
-		TalkEventManager.TalkSet+= new TalkEventManager.TalkEvent(OnTalkSet);
-		TalkEventManager.TalkStop += new TalkEventManager.TalkEvent (OnTalkStop);
+		onTalkSet = new TalkEventManager.TalkEvent(OnTalkSet);
+		onTalkStop = new TalkEventManager.TalkEvent (OnTalkStop);
+		TalkEventManager.TalkSet += onTalkSet;
+		TalkEventManager.TalkStop += onTalkStop;
 
 		// Fill the list of played audioclips
 		audioClipsPlayed = new List<bool> ();
@@ -138,5 +143,10 @@ public class Talker : MonoBehaviour {
 				PlayCurrentClip ();
 			}
 		}
+	}
+
+	void OnDestroy() {
+		TalkEventManager.TalkSet -= this.onTalkSet;
+		TalkEventManager.TalkStop -= this.onTalkStop;
 	}
 }

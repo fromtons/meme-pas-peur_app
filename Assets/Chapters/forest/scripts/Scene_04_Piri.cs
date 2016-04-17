@@ -31,6 +31,8 @@ public class Scene_04_Piri : MonoBehaviour {
 	int insistCpt=0;
 	bool insist = true;
 
+	TalkEventManager.TalkEvent onTalkEnded;
+
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator>();
@@ -55,7 +57,8 @@ public class Scene_04_Piri : MonoBehaviour {
 		this.gameObject.transform.localScale = new Vector3 (initialScale.x, initialScale.y, initialScale.z);;
 
 		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 0, Autoplay = false });
-		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
+		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
+		TalkEventManager.TalkEnded += onTalkEnded;
 	}
 
 	void OnTalkEnded(TalkEventArgs eventArgs) {
@@ -80,9 +83,8 @@ public class Scene_04_Piri : MonoBehaviour {
 		state = STATE_IDLE;
 		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true });
 	}
-
-	// Update is called once per frame
-	void Update () {
-
+		
+	void OnDestroy () {
+		TalkEventManager.TalkEnded -= onTalkEnded;
 	}
 }

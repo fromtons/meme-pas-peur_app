@@ -13,6 +13,8 @@ public class Scene_08_Camera : MonoBehaviour {
 	public GameObject beforeWrapper;
 	public GameObject afterWrapper;
 
+	TalkEventManager.TalkEvent onTalkEnded;
+
 	// Use this for initialization
 	void Start () {
 		bloom = this.GetComponent<BloomOptimized> ();
@@ -24,7 +26,8 @@ public class Scene_08_Camera : MonoBehaviour {
 		ht.Add ("onupdate", "OnBloomUpdate");
 		iTween.ValueTo (gameObject, ht);
 
-		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
+		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
+		TalkEventManager.TalkEnded += onTalkEnded;
 	}
 
 	void OnTalkEnded(TalkEventArgs e) {
@@ -78,9 +81,8 @@ public class Scene_08_Camera : MonoBehaviour {
 	void OnBloomUpdate(float value) {
 		bloom.intensity = value;
 	}
-
-	// Update is called once per frame
-	void Update () {
-	
+		
+	void OnDestroy () {
+		TalkEventManager.TalkEnded -= onTalkEnded;
 	}
 }

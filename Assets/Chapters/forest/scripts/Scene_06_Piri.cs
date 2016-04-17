@@ -29,13 +29,16 @@ public class Scene_06_Piri : MonoBehaviour {
 	int insistCpt = 0;
 	bool insist = true;
 
+	TalkEventManager.TalkEvent onTalkEnded;
+
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator> ();
 		initialScale = this.transform.localScale;
 
 		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID="piri", AudioClipId=0, Autoplay=false });
-		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
+		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
+		TalkEventManager.TalkEnded += onTalkEnded;
 	}
 
 	void Update() {
@@ -104,5 +107,9 @@ public class Scene_06_Piri : MonoBehaviour {
 
 	void OnGUI () {
 		GUILayout.Label("Gyro reading: " + Input.gyro.attitude.ToString());
+	}
+
+	void OnDestroy() {
+		TalkEventManager.TalkEnded -= onTalkEnded;
 	}
 }

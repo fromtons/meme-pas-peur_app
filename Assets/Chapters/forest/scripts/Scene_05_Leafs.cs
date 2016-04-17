@@ -36,12 +36,15 @@ public class Scene_05_Leafs : MonoBehaviour {
 	int insistCpt = 0;
 	bool insist = true;
 
+	TalkEventManager.TalkEvent onTalkEnded;
+
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator> ();
 		StartCoroutine (TimeWaiter ());
 
-		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
+		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
+		TalkEventManager.TalkEnded += onTalkEnded;
 	}
 
 	IEnumerator TimeWaiter() {
@@ -83,5 +86,9 @@ public class Scene_05_Leafs : MonoBehaviour {
 				CurrentAnimationState = STATE_OPEN_WIDE;
 			}
 		}
+	}
+
+	void OnDestroy() {
+		TalkEventManager.TalkEnded -= onTalkEnded;
 	}
 }

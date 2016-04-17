@@ -28,6 +28,8 @@ public class Scene_03_Piri : MonoBehaviour {
 
 	int insistCpt=0;
 
+	TalkEventManager.TalkEvent onTalkEnded;
+
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator>();
@@ -48,7 +50,8 @@ public class Scene_03_Piri : MonoBehaviour {
 		state = STATE_SAD;
 
 		TalkEventManager.TriggerTalkSet(new TalkEventArgs { ID = "piri", AudioClipId = 0, Autoplay = true });
-		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
+		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);;
+		TalkEventManager.TalkEnded += onTalkEnded;
 	}
 
 	void OnTalkEnded(TalkEventArgs eventArgs) {
@@ -66,8 +69,7 @@ public class Scene_03_Piri : MonoBehaviour {
 		insistCpt++;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void OnDestroy() {
+		TalkEventManager.TalkEnded -= this.onTalkEnded;
 	}
 }
