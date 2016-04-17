@@ -25,7 +25,8 @@ public class Talker : MonoBehaviour {
 		get { return isNew; }
 		set { 
 			isNew = value; 
-			newMessageUi.SetActive (isNew);
+			if (newMessageUi)
+				newMessageUi.SetActive (isNew);
 		}
 	}
 	List<bool> audioClipsPlayed;
@@ -49,13 +50,15 @@ public class Talker : MonoBehaviour {
 			audioClipsPlayed.Add (false);
 		}
 
-		// Adds the UI part
-		newMessageUi = Instantiate (newMessageUiPrefab);
-		newMessageUi.transform.SetParent (this.transform);
-		newMessageUi.SetActive (false);
-		// Try to position it according to sprite bounds
-		if (sprite)
-			newMessageUi.transform.position = new Vector3 (sprite.bounds.center.x + sprite.bounds.size.x / 2, sprite.bounds.center.y + sprite.bounds.size.y / 2, sprite.bounds.center.z);
+		if (newMessageUiPrefab) {
+			// Adds the UI part
+			newMessageUi = Instantiate (newMessageUiPrefab);
+			newMessageUi.transform.SetParent (this.transform);
+			newMessageUi.SetActive (false);
+			// Try to position it according to sprite bounds
+			if (sprite)
+				newMessageUi.transform.position = new Vector3 (sprite.bounds.center.x + sprite.bounds.size.x / 2, sprite.bounds.center.y + sprite.bounds.size.y / 2, sprite.bounds.center.z);
+		}
 	}
 
 	// toggles the UI + arm the new clip 

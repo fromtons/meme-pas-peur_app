@@ -33,4 +33,8 @@ public class Scene_05_Bunny : MonoBehaviour {
 		yield return new WaitForSeconds (5f);
 		CurrentAnimationState = STATE_HOPPING;
 	}
+
+	void FinishedHopping() {
+		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 2, Autoplay = true });	
+	}
 }

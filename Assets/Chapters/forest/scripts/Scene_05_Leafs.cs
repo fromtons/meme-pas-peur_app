@@ -23,6 +23,8 @@ public class Scene_05_Leafs : MonoBehaviour {
 				Eyes.CurrentAnimationState = Scene_05_Eyes.STATE_OPEN;
 			else 
 				Eyes.CurrentAnimationState = Scene_05_Eyes.STATE_CLOSE;
+
+			if(value == STATE_OPEN_WIDE) insist = false;
 		}
 	}
 
@@ -31,19 +33,43 @@ public class Scene_05_Leafs : MonoBehaviour {
 	public Scene_05_Eyes Eyes;
 	public Scene_05_Bunny Bunny;
 
+	int insistCpt = 0;
+	bool insist = true;
+
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator> ();
 		StartCoroutine (TimeWaiter ());
+
+		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
 	}
 
 	IEnumerator TimeWaiter() {
-		yield return new WaitForSeconds(6f);
+		yield return new WaitForSeconds (1f);
+		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 0, Autoplay = true });
+		yield return new WaitForSeconds(5f);
 		OpenSmall ();
 	}
 
 	void OpenSmall() {
 		CurrentAnimationState = STATE_OPEN_SMALL;
+		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true });
+	}
+
+	void OnTalkEnded(TalkEventArgs e) {
+		if (e.ID == "piri") {
+			if (e.AudioClipId != 0 && e.AudioClipId != 2)
+				StartCoroutine (Insist ());
+			else if(e.AudioClipId == 2) 
+				OngletManager.instance.HighlightNextOnglet ();
+		}
+	}
+
+	IEnumerator Insist() {
+		yield return new WaitForSeconds (3f);
+		if(insist)
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = (insistCpt % 3)+3, Autoplay = true });
+		insistCpt++;
 	}
 
 	void ToggleBunny() {
