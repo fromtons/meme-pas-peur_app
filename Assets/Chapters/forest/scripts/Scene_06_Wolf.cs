@@ -4,8 +4,8 @@ using System.Collections;
 public class Scene_06_Wolf : MonoBehaviour {
 	protected Animator animator;
 
-	protected const uint STATE_SLEEPING = 0;
-	protected const uint STATE_AWAKEN = 1;
+	public static uint STATE_SLEEPING = 0;
+	public static uint STATE_AWAKEN = 1;
 
 	protected uint _currentAnimationState = STATE_SLEEPING;
 	public uint CurrentAnimationState {
@@ -16,8 +16,12 @@ public class Scene_06_Wolf : MonoBehaviour {
 		set {
 			animator.SetInteger ("state", (int)value);
 			_currentAnimationState = value;
+
+			nbOfFramesSinceAwakened = 0;
 		}
 	}
+
+	int nbOfFramesSinceAwakened = 0;
 
 	public MicrophoneInput micInputToListen;
 	public float loudnessCap = 5f;
@@ -27,8 +31,12 @@ public class Scene_06_Wolf : MonoBehaviour {
 	}
 
 	void Update() {
-		if (CurrentAnimationState == STATE_AWAKEN)
-			CurrentAnimationState = STATE_SLEEPING;
+		if (CurrentAnimationState == STATE_AWAKEN) {
+			if(nbOfFramesSinceAwakened>0)
+				CurrentAnimationState = STATE_SLEEPING;
+
+			nbOfFramesSinceAwakened++;
+		}
 
 		if (micInputToListen.loudness > loudnessCap) {
 			CurrentAnimationState = STATE_AWAKEN;

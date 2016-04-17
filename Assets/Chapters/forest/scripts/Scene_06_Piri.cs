@@ -9,10 +9,10 @@ public class Scene_06_Piri : MonoBehaviour {
 	public static int STATE_PROFILE_WALK = 1;
 	public static int STATE_SAD = 2;
 	public static int STATE_PROFILE_WALK_SAD = 3;
-	int _state = STATE_IDLE;
+	//int _state = STATE_IDLE;
 	public int state {
 		set {
-			_state = value;
+			//_state = value;
 			animator.SetInteger("state", value);
 		}
 	}
@@ -20,14 +20,22 @@ public class Scene_06_Piri : MonoBehaviour {
 	public float speed = 0f;
 	public GameObject target;
 
+	public Scene_06_Wolf wolf;
+
 	Vector3 initialScale;
 	float gyroSign;
-	bool freeze = false;
+	bool freeze = true;
+
+	int insistCpt = 0;
+	bool insist = true;
 
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator> ();
 		initialScale = this.transform.localScale;
+
+		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID="piri", AudioClipId=0, Autoplay=false });
+		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
 	}
 
 	void Update() {
@@ -37,12 +45,22 @@ public class Scene_06_Piri : MonoBehaviour {
 		#endif
 		animator.SetFloat ("speed", speed*4);
 
+		if (Mathf.Abs (speed) > 0.3 && wolf.CurrentAnimationState!=Scene_06_Wolf.STATE_AWAKEN)
+			wolf.CurrentAnimationState = Scene_06_Wolf.STATE_AWAKEN;
+
 		// Is moving or not management
-		if (!freeze && (speed < -0.1f || speed > 0.1f)) {
-			this.transform.Translate (new Vector3(4f,0f,0f) * speed * Time.deltaTime);
+		if (!freeze && wolf.CurrentAnimationState != Scene_06_Wolf.STATE_AWAKEN && (speed < -0.1f || speed > 0.1f)) {
+			insist = false;
+			this.transform.Translate (new Vector3 (4f, 0f, 0f) * speed * Time.deltaTime);
 			state = STATE_PROFILE_WALK;
-		} else
+
+		} else {
 			state = STATE_IDLE;
+			if (!freeze && wolf.CurrentAnimationState == Scene_06_Wolf.STATE_AWAKEN) {
+				freeze = true;
+				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 4, Autoplay = true });	
+			}
+		}
 
 		// Orientation management
 		if (speed < 0) {
@@ -52,9 +70,36 @@ public class Scene_06_Piri : MonoBehaviour {
 		}
 	}
 
+	void OnTalkEnded(TalkEventArgs e) {
+		if (e.ID == "piri") {
+			if (e.AudioClipId == 0)
+				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true });
+			else if (e.AudioClipId != 4) {
+				StartCoroutine (Insist ());
+			} else {
+				freeze = false;
+			}
+
+			if (e.AudioClipId == 1) {
+				freeze = false;
+			}
+		}
+	}
+
+	IEnumerator Insist() {
+		yield return new WaitForSeconds (5f);
+		if(insist)
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID="piri", AudioClipId= (insistCpt%2)+2, Autoplay=true });
+		insistCpt++;
+	}
+
 	void OnTriggerEnter2D(Collider2D other) {        
-		if (other.gameObject == target)
-			freeze = true;      
+		if (other.gameObject == target) {
+			freeze = true;
+			OngletManager.instance.HighlightNextOnglet ();
+		} else {
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID="piri", AudioClipId=5, Autoplay=true });	
+		}
 	}
 
 	void OnGUI () {
