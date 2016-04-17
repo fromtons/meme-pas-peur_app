@@ -20,8 +20,11 @@ public class OngletManager : MonoBehaviour {
 	float ongletsSize;
 
 	Onglet nextOnglet;
+	AudioSource audioSource;
 
 	void Awake() {
+		audioSource = this.GetComponent<AudioSource> ();
+
 		if (!instance)
 			instance = this;
 		else
@@ -75,6 +78,8 @@ public class OngletManager : MonoBehaviour {
 	}
 
 	public void HighlightNextOnglet() {
+		audioSource.time = 0f;
+		audioSource.Play ();
 		nextOnglet.GetComponent<Onglet> ().CurrentState = Onglet.STATE_HIGHLIGHT;	
 	}
 }
