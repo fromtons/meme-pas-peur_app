@@ -4,6 +4,7 @@ using System.Collections;
 public class MouthManager : MonoBehaviour {
 
 	public float speedTalk = .2f;
+	public float closeScaleY = 0.01f;
 
 	bool keepTalking = false;
 
@@ -27,7 +28,7 @@ public class MouthManager : MonoBehaviour {
 
 	void close() {
 		Hashtable ht = new Hashtable ();
-		ht.Add("scale", new Vector3(initialScale.x, 0.01f, initialScale.x));
+		ht.Add("scale", new Vector3(initialScale.x, closeScaleY, initialScale.x));
 		ht.Add("time", speedTalk);
 		if(keepTalking)
 			ht.Add("oncomplete", "open");

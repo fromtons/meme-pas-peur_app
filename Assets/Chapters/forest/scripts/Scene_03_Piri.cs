@@ -13,13 +13,20 @@ public class Scene_03_Piri : MonoBehaviour {
 	public static int STATE_PROFILE_WALK = 1;
 	public static int STATE_SAD = 2;
 	public static int STATE_PROFILE_WALK_SAD = 3;
-	int _state = STATE_IDLE;
+	//int _state = STATE_IDLE;
 	public int state {
 		set {
-			_state = value;
+			//_state = value;
 			animator.SetInteger("state", value);
+
+			if (STATE_SAD == value || STATE_IDLE == value)
+				this.GetComponent<Talker> ().mouthManager.gameObject.SetActive (true);
+			else 
+				this.GetComponent<Talker> ().mouthManager.gameObject.SetActive (false);
 		}
 	}
+
+	int insistCpt=0;
 
 	// Use this for initialization
 	void Start () {
@@ -39,6 +46,24 @@ public class Scene_03_Piri : MonoBehaviour {
 
 	void OnAnimationComplete() {
 		state = STATE_SAD;
+
+		TalkEventManager.TriggerTalkSet(new TalkEventArgs { ID = "piri", AudioClipId = 0, Autoplay = true });
+		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
+	}
+
+	void OnTalkEnded(TalkEventArgs eventArgs) {
+		if (eventArgs.ID == "piri") {
+			if (eventArgs.AudioClipId == 0)
+				OngletManager.instance.HighlightNextOnglet ();
+
+			StartCoroutine (Insist ());
+		}
+	}
+
+	IEnumerator Insist() {
+		yield return new WaitForSeconds (8f);
+		TalkEventManager.TriggerTalkSet(new TalkEventArgs { ID = "piri", AudioClipId = ((insistCpt % 2)+1), Autoplay = true });
+		insistCpt++;
 	}
 	
 	// Update is called once per frame
