@@ -27,6 +27,7 @@ public class Scene_02_Piri : MonoBehaviour {
 	public GameObject mouthToHide;
 	public GameObject listenTo;
 	public float walkAwayDuration = 2f;
+	bool finishedTalking = false;
 
 	BoxCollider2D listenToCollider;
 	bool clicked = false;
@@ -38,6 +39,9 @@ public class Scene_02_Piri : MonoBehaviour {
 		animator = this.GetComponent<Animator>();
 		listenToCollider = listenTo.GetComponent<BoxCollider2D> ();
 		initialPosition = this.gameObject.transform.position;
+
+		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 0, Autoplay = false });
+		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);	
 	}
 	
 	// Update is called once per frame
@@ -46,12 +50,18 @@ public class Scene_02_Piri : MonoBehaviour {
 	}
 
 	void CheckTarget() {
-		if (Input.GetMouseButtonDown(0) && !clicked) {
+		if (Input.GetMouseButtonDown(0) && !clicked && finishedTalking) {
 			Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
 			if (hitCollider == listenToCollider) {
 				TriggerAnimation ();
 			}
+		}
+	}
+
+	void OnTalkEnded(TalkEventArgs eventArgs) {
+		if (eventArgs.ID == "piri" && eventArgs.AudioClipId == 0) {
+			finishedTalking = true;
 		}
 	}
 

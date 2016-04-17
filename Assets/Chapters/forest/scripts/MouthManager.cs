@@ -13,7 +13,7 @@ public class MouthManager : MonoBehaviour {
 	void Start () {
 		initialScale = this.transform.localScale;
 
-		toggle ();
+		close ();
 	}
 
 	void open() {
