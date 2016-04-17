@@ -29,6 +29,7 @@ public class Talker : MonoBehaviour {
 				newMessageUi.SetActive (isNew);
 		}
 	}
+	// TODO - Check if the public getter here is still usefull (dont think so)
 	List<bool> audioClipsPlayed;
 	public List<bool> AudioClipsPlayed {
 		get { return audioClipsPlayed; }
@@ -43,6 +44,7 @@ public class Talker : MonoBehaviour {
 
 		// Subscribe to talkset events
 		TalkEventManager.TalkSet+= new TalkEventManager.TalkEvent(OnTalkSet);
+		TalkEventManager.TalkStop += new TalkEventManager.TalkEvent (OnTalkStop);
 
 		// Fill the list of played audioclips
 		audioClipsPlayed = new List<bool> ();
@@ -63,6 +65,9 @@ public class Talker : MonoBehaviour {
 
 	// toggles the UI + arm the new clip 
 	void SetCurrentClip(int newClipId, bool autoplay) {
+		// We consider that if we change current clip while another one was playing, this has been played, so we stop it cleanly.
+		if(audioSource.isPlaying && currentClipId!=newClipId && !AudioClipsPlayed[currentClipId]) StopCurrent ();
+
 		IsNew = true;
 		currentClipId = newClipId;
 		audioSource.Stop ();
@@ -89,7 +94,18 @@ public class Talker : MonoBehaviour {
 
 	// Waits for the current clip to end playing
 	IEnumerator WaitForClipEnd() {
+		// We have to store it in a variable because currentClipId may change between this call and the delay below. 
+		// Of course we don't want to stop a clip we weren't waiting for. That's why we store it in a local var.
+		int clipIdWeWaitFor = currentClipId;
+
 		yield return new WaitForSeconds (audioSource.clip.length);
+		if(!audioClipsPlayed[clipIdWeWaitFor])
+			StopCurrent ();
+	}
+
+	// Allows to really stop the current clip -> we are available for another play immediately, without side effects
+	void StopCurrent() {
+		audioSource.Stop ();
 		audioClipsPlayed [currentClipId] = true;
 
 		if (mouthManager)
@@ -102,6 +118,12 @@ public class Talker : MonoBehaviour {
 	void OnTalkSet(TalkEventArgs eventArgs) {
 		if (eventArgs.ID == this.ID) {
 			SetCurrentClip (eventArgs.AudioClipId, eventArgs.Autoplay);
+		}
+	}
+
+	void OnTalkStop(TalkEventArgs eventArgs) {
+		if (eventArgs.ID == this.ID) {
+			StopCurrent ();
 		}
 	}
 	

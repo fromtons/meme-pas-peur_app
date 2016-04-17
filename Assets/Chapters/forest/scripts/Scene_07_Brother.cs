@@ -22,8 +22,10 @@ public class Scene_07_Brother : MonoBehaviour {
 
 			if (value == STATE_REVEAL) {
 				insist = false;
-				StartCoroutine (InsistRevealed ());
+				TalkEventManager.TriggerTalkStop (new TalkEventArgs { ID = "piri" });
+				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 3, Autoplay = true });
 			} else if (value == STATE_BOUNCE_TO_FRONT) {
+				TalkEventManager.TriggerTalkStop (new TalkEventArgs { ID = "piri" });
 				insistRevealed = false;
 			}
 		}
@@ -81,7 +83,7 @@ public class Scene_07_Brother : MonoBehaviour {
 	IEnumerator InsistRevealed() {
 		yield return new WaitForSeconds (5f);
 		if(insistRevealed)
-			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = (insistRevealdCpt % 2)+3, Autoplay = true });
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 4, Autoplay = true });
 		insistRevealdCpt++;
 	}
 
