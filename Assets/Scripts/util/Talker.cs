@@ -34,7 +34,7 @@ public class Talker : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		// Fill the components
 		audioSource = this.GetComponent<AudioSource> ();
 		collider = this.GetComponent<BoxCollider2D> ();
