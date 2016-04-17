@@ -65,5 +65,7 @@ public class Scene_02_Piri : MonoBehaviour {
 		ht.Add ("time", 2f);
 		ht.Add ("easetype", "linear");
 		iTween.MoveTo (this.gameObject, ht);
+
+		OngletManager.instance.HighlightNextOnglet ();
 	}
 }

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 public class OngletManager : MonoBehaviour {
 
+	public static OngletManager instance = null;
+
 	public int currentOnglet = 0;
 	public List<string> scenesToLoad;
 	public GameObject prefab;
@@ -15,6 +17,13 @@ public class OngletManager : MonoBehaviour {
 	float ongletsSize;
 
 	Onglet nextOnglet;
+
+	void Awake() {
+		if (!instance)
+			instance = this;
+		else
+			Destroy (gameObject);
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -54,10 +63,5 @@ public class OngletManager : MonoBehaviour {
 
 	public void HighlightNextOnglet() {
 		nextOnglet.GetComponent<Onglet> ().CurrentState = Onglet.STATE_HIGHLIGHT;	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }
