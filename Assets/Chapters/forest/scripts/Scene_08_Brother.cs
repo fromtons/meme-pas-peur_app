@@ -26,12 +26,14 @@ public class Scene_08_Brother : MonoBehaviour {
 	void Start () {
 		animator = this.GetComponent<Animator> ();
 
-		StartCoroutine (LaunchAnimation());
+		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "brother_before", AudioClipId = 0, Autoplay = false });
+		TalkEventManager.TalkBegin += new TalkEventManager.TalkEvent (OnTalkBegin);
 	}
 
-	IEnumerator LaunchAnimation() {
-		yield return new WaitForSeconds (delay);
-		CurrentAnimationState = STATE_WITH_BABY_OWL;
+	void OnTalkBegin(TalkEventArgs e) {
+		if (e.ID == "brother_before") {
+			CurrentAnimationState = STATE_WITH_BABY_OWL;		
+		}
 	}
 	
 	// Update is called once per frame

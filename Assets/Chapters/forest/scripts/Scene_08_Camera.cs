@@ -7,7 +7,7 @@ using UnityStandardAssets.ImageEffects;
 public class Scene_08_Camera : MonoBehaviour {
 
 	public RawImage mask;
-	public float delayBeforeMask = 10f;
+	public float delayBeforeMask = 1f;
 	BloomOptimized bloom;
 
 	public GameObject beforeWrapper;
@@ -16,15 +16,24 @@ public class Scene_08_Camera : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		bloom = this.GetComponent<BloomOptimized> ();
-
-		StartCoroutine (LaunchAnimation ());
-
+	
 		Hashtable ht = new Hashtable ();
-		ht.Add("from", 2.5);
-		ht.Add("to", bloom.intensity);
-		ht.Add("time", 3);
-		ht.Add("onupdate", "OnBloomUpdate");
+		ht.Add ("from", 2.5);
+		ht.Add ("to", bloom.intensity);
+		ht.Add ("time", 3);
+		ht.Add ("onupdate", "OnBloomUpdate");
 		iTween.ValueTo (gameObject, ht);
+
+		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
+	}
+
+	void OnTalkEnded(TalkEventArgs e) {
+		if (e.ID == "brother_before") {
+			StartCoroutine (LaunchAnimation ());
+		}
+		else if (e.ID == "brother_after") {
+			OngletManager.instance.HighlightNextOnglet ();
+		}
 	}
 
 	IEnumerator LaunchAnimation() {
@@ -35,12 +44,12 @@ public class Scene_08_Camera : MonoBehaviour {
 		tweenParams.Add("to", Color.black);
 		tweenParams.Add("time", 1.5);
 		tweenParams.Add("onupdate", "OnColorUpdated");
-		tweenParams.Add ("oncomplete", "OnFadeComplete");
+		tweenParams.Add ("oncomplete", "OnFadeMiddle");
 		tweenParams.Add ("oncompletetarget", this.gameObject);
 		iTween.ValueTo(gameObject, tweenParams);
 	}
 
-	void OnFadeComplete() {
+	void OnFadeMiddle() {
 		beforeWrapper.SetActive(false);
 		afterWrapper.SetActive(true);
 
@@ -53,7 +62,12 @@ public class Scene_08_Camera : MonoBehaviour {
 		tweenParams.Add("delay", 0.5);
 		tweenParams.Add("onupdate", "OnColorUpdated");
 		tweenParams.Add ("oncomplete", "OnFadeComplete");
+		tweenParams.Add ("oncompletetarget", this.gameObject);
 		iTween.ValueTo(gameObject, tweenParams);
+	}
+
+	void OnFadeComplete() {
+		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID="brother_after", AudioClipId = 0, Autoplay = true });
 	}
 
 	void OnColorUpdated(Color color)

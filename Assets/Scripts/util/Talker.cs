@@ -11,6 +11,7 @@ public class Talker : MonoBehaviour {
 	public List<AudioClip> audioClips;
 	public MouthManager mouthManager;
 	public GameObject newMessageUiPrefab;
+	public GameObject newMessageUi;
 
 	// Gameobject Components
 	AudioSource audioSource;
@@ -18,7 +19,6 @@ public class Talker : MonoBehaviour {
 	SpriteRenderer sprite;
 
 	// Talker related
-	GameObject newMessageUi;
 	int currentClipId = 0;
 	bool isNew = false;
 	public bool IsNew {
@@ -52,7 +52,7 @@ public class Talker : MonoBehaviour {
 			audioClipsPlayed.Add (false);
 		}
 
-		if (newMessageUiPrefab) {
+		if (newMessageUiPrefab && !newMessageUi) {
 			// Adds the UI part
 			newMessageUi = Instantiate (newMessageUiPrefab);
 			newMessageUi.transform.SetParent (this.transform);
