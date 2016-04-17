@@ -19,6 +19,13 @@ public class Scene_07_Brother : MonoBehaviour {
 		set {
 			animator.SetInteger ("state", (int)value);
 			_currentAnimationState = value;
+
+			if (value == STATE_REVEAL) {
+				insist = false;
+				StartCoroutine (InsistRevealed ());
+			} else if (value == STATE_BOUNCE_TO_FRONT) {
+				insistRevealed = false;
+			}
 		}
 	}
 
@@ -30,11 +37,56 @@ public class Scene_07_Brother : MonoBehaviour {
 	public MicrophoneInput micInputToListen;
 	public float loudnessCap = 40f;
 
+	bool insist = true;
+	int insistCpt = 0;
+
+	bool insistRevealed = true;
+	int insistRevealdCpt = 0;
+
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator> ();
 		hiddenBy_BC = hiddenBy.GetComponent<BoxCollider2D> ();
 		boxCollider = this.GetComponent<BoxCollider2D> ();
+
+		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
+		StartCoroutine (Insist ());
+	}
+
+	void OnTalkEnded(TalkEventArgs e) {
+		if (e.ID == "piri") {
+			if (e.AudioClipId < 3)
+				StartCoroutine (Insist ());
+			else if (e.AudioClipId < 5)
+				StartCoroutine (InsistRevealed ());
+			else if (e.AudioClipId == 5)
+				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "brother", AudioClipId = 1, Autoplay = true });
+				
+		} else if (e.ID == "brother") {
+			if (e.AudioClipId == 0) {
+				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 5, Autoplay = true });
+			} else if (e.AudioClipId == 1) {
+				OngletManager.instance.HighlightNextOnglet ();
+			}
+		}
+	}
+
+	IEnumerator Insist() {
+		yield return new WaitForSeconds (3f);
+		if(insist)
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = (insistCpt % 3), Autoplay = true });
+		insistCpt++;
+	}
+
+	IEnumerator InsistRevealed() {
+		yield return new WaitForSeconds (5f);
+		if(insistRevealed)
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = (insistRevealdCpt % 2)+3, Autoplay = true });
+		insistRevealdCpt++;
+	}
+
+	public void BrotherReact() {
+		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "brother", AudioClipId = 0, Autoplay = true });
 	}
 	
 	// Update is called once per frame
