@@ -6,41 +6,71 @@ using System.Collections.Generic;
 public class Scene_09_Interview : MonoBehaviour {
 
 	public GameObject question1Wrapper;
-	public AudioClip question1Clip;
-
 	public GameObject question2Wrapper;
-	public AudioClip question2PositiveClip;
-	public AudioClip question2NegativeClip;
-	public AudioClip question2NeutralClip;
-
-	public AudioClip brotherBraveClip;
-	public AudioClip brotherScaredClip;
-
-	public AudioClip piriBraveClip;
-	public AudioClip piriScaredClip;
-
-	public AudioClip explicationsForest;
-	public AudioClip explicationsBush;
-	public AudioClip explicationsAnimal;
 
 	AudioSource audioSource;
 	bool scared;
 	string highlightMoment;
 
+
 	// Use this for initialization
 	void Start () {
 		audioSource = this.GetComponent<AudioSource> ();
 
-		StartCoroutine (LaunchInterview ());
-	}
-
-	IEnumerator LaunchInterview() {
 		question1Wrapper.SetActive (false);
 		question2Wrapper.SetActive (false);
-		Speak (question1Clip); 
 
-		yield return new WaitForSeconds (audioSource.clip.length);
+		TalkEventManager.TalkEnded += new TalkEventManager.TalkEvent (OnTalkEnded);
+		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "brother", AudioClipId = 0, Autoplay = false });
+	}
 
+	void OnTalkEnded(TalkEventArgs e) {
+		if (e.ID == "piri") {
+			switch (e.AudioClipId) {
+			case 0:
+				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "brother", AudioClipId = 1, Autoplay = true });
+				break;
+			case 1:
+				LaunchInterview ();
+				break;
+			case 2:
+			case 3:
+			case 4:
+				question1Wrapper.SetActive (false);
+				question2Wrapper.SetActive (true);
+				break;
+			case 5:
+			case 6:
+				if (highlightMoment == "forest")
+					TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 7, Autoplay = true });
+				else if (highlightMoment == "bush")
+					TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 8, Autoplay = true });
+				else
+					TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 9, Autoplay = true });
+				break;
+			case 7:
+			case 8:
+			case 9:
+				OngletManager.instance.HighlightNextOnglet ();
+				break;
+			}
+		} else if (e.ID == "brother") {
+			switch (e.AudioClipId) {
+			case 0:
+				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 0, Autoplay = true });
+				break;
+			case 1:
+				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true });
+				break;
+			case 2:
+			case 3:
+				EndOfInterview ();
+				break;
+			}
+		}
+	}
+
+	void LaunchInterview() {
 		question1Wrapper.SetActive (true);
 		question2Wrapper.SetActive (false);
 	}
@@ -51,15 +81,12 @@ public class Scene_09_Interview : MonoBehaviour {
 		else
 			scared = false;
 
-		question1Wrapper.SetActive (false);
-		question2Wrapper.SetActive (true);
-
 		if (answer == "positive")
-			Speak (question2PositiveClip);
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 2, Autoplay = true });
 		else if (answer == "negative")
-			Speak (question2NegativeClip);
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 3, Autoplay = true });
 		else
-			Speak (question2NeutralClip);
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 4, Autoplay = true });
 	}
 
 	public void AnswerQuestion2(string answer) {
@@ -68,34 +95,18 @@ public class Scene_09_Interview : MonoBehaviour {
 		highlightMoment = answer;
 
 		if (scared) {
-			Speak (brotherScaredClip);
+			//Speak (brotherScaredClip);
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "brother", AudioClipId = 2, Autoplay = true });
 		} else {
-			Speak (brotherBraveClip);
+			//Speak (brotherBraveClip);
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "brother", AudioClipId = 3, Autoplay = true });
 		}
-
-		StartCoroutine (EndOfInterview());
 	}
 
-	IEnumerator EndOfInterview() {
-		yield return new WaitForSeconds (audioSource.clip.length);
-
+	void EndOfInterview() {
 		if (scared)
-			Speak (piriScaredClip);
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 5, Autoplay = true }); // scared piri
 		else
-			Speak (piriBraveClip);
-
-		yield return new WaitForSeconds (audioSource.clip.length);
-		if (highlightMoment == "forest")
-			Speak (explicationsForest);
-		else if (highlightMoment == "bush")
-			Speak (explicationsBush);
-		else
-			Speak (explicationsAnimal);
-	}
-
-	void Speak (AudioClip clip) {
-		audioSource.clip = clip;
-		audioSource.time = 0f;
-		audioSource.Play ();
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 6, Autoplay = true }); // brave piri
 	}
 }
