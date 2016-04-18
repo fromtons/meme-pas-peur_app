@@ -48,9 +48,6 @@ public class Scene_06_Piri : MonoBehaviour {
 		#endif
 		animator.SetFloat ("speed", speed*4);
 
-		if (Mathf.Abs (speed) > 0.3 && wolf.CurrentAnimationState!=Scene_06_Wolf.STATE_AWAKEN)
-			wolf.CurrentAnimationState = Scene_06_Wolf.STATE_AWAKEN;
-
 		// Is moving or not management
 		if (!freeze && wolf.CurrentAnimationState != Scene_06_Wolf.STATE_AWAKEN && (speed < -0.1f || speed > 0.1f)) {
 			insist = false;
@@ -59,10 +56,6 @@ public class Scene_06_Piri : MonoBehaviour {
 
 		} else {
 			state = STATE_IDLE;
-			if (!freeze && wolf.CurrentAnimationState == Scene_06_Wolf.STATE_AWAKEN) {
-				freeze = true;
-				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 4, Autoplay = true });	
-			}
 		}
 
 		// Orientation management
