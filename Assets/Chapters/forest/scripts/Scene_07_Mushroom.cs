@@ -2,6 +2,7 @@
 using System.Collections;
 
 [RequireComponent (typeof(BoxCollider2D))]
+[RequireComponent (typeof(AudioSource))]
 public class Scene_07_Mushroom : MonoBehaviour {
 
 	protected Animator animator;
@@ -18,15 +19,25 @@ public class Scene_07_Mushroom : MonoBehaviour {
 		set {
 			animator.SetInteger ("state", (int)value);
 			_currentAnimationState = value;
+			
+			if(value == STATE_SHAKE) {
+				audioSource.time = 0f;
+				audioSource.Play();
+			}
 		}
 	}
 
+	public AudioClip soundOnTouch;
+	AudioSource audioSource;
 	BoxCollider2D boxCollider;
 
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator> ();
 		boxCollider = this.GetComponent<BoxCollider2D> ();
+		audioSource = this.GetComponent<AudioSource>();
+		
+		audioSource.clip = soundOnTouch;
 	}
 	
 	// Update is called once per frame

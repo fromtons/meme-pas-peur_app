@@ -27,9 +27,15 @@ public class Scene_07_Brother : MonoBehaviour {
 			} else if (value == STATE_BOUNCE_TO_FRONT) {
 				TalkEventManager.TriggerTalkStop (new TalkEventArgs { ID = "piri" });
 				insistRevealed = false;
+				audioSource.time=0f;
+				audioSource.clip=soundOnJump;
+				audioSource.Play();
 			}
 		}
 	}
+	
+	public AudioClip soundOnJump;
+	AudioSource audioSource;
 
 	public GameObject hiddenBy;
 	BoxCollider2D hiddenBy_BC;
@@ -52,6 +58,7 @@ public class Scene_07_Brother : MonoBehaviour {
 		animator = this.GetComponent<Animator> ();
 		hiddenBy_BC = hiddenBy.GetComponent<BoxCollider2D> ();
 		boxCollider = this.GetComponent<BoxCollider2D> ();
+		audioSource = this.GetComponent<AudioSource>();
 
 		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
 		TalkEventManager.TalkEnded += onTalkEnded;
