@@ -100,6 +100,7 @@ public class Scene_06_Piri : MonoBehaviour {
 
 	void OnGUI () {
 		GUILayout.Label("Gyro reading: " + Input.gyro.attitude.ToString());
+		GUILayout.Label("GyroSign : "+gyroSign);
 	}
 
 	void OnDestroy() {
