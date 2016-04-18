@@ -7,6 +7,11 @@ public class Scene_05_Bunny : MonoBehaviour {
 	public static uint STATE_HIDDEN = 0;
 	public static uint STATE_VISIBLE = 1;
 	public static uint STATE_HOPPING = 2;
+	
+	public AudioClip onRevealSound;
+	public AudioClip boingSound;
+
+	AudioSource audioSource;
 
 	protected uint _currentAnimationState = STATE_HIDDEN;
 	public uint CurrentAnimationState {
@@ -27,11 +32,16 @@ public class Scene_05_Bunny : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator> ();
+		audioSource = this.GetComponent<AudioSource>();
 	}
 
 	IEnumerator AfterVisible() {
+		audioSource.clip = onRevealSound;
+		audioSource.Play();
 		yield return new WaitForSeconds (5f);
 		CurrentAnimationState = STATE_HOPPING;
+		audioSource.clip = boingSound;
+		audioSource.Play();
 	}
 
 	void FinishedHopping() {

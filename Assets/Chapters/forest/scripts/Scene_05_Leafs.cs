@@ -32,6 +32,12 @@ public class Scene_05_Leafs : MonoBehaviour {
 	public float loudnessCap;
 	public Scene_05_Eyes Eyes;
 	public Scene_05_Bunny Bunny;
+	
+	public AudioClip bushMove1;
+	public AudioClip bushMove2;
+	public AudioClip bushSpread;
+	
+	AudioSource audioSource;
 
 	int insistCpt = 0;
 	bool insist = true;
@@ -42,6 +48,7 @@ public class Scene_05_Leafs : MonoBehaviour {
 	void Start () {
 		animator = GetComponent<Animator> ();
 		StartCoroutine (TimeWaiter ());
+		audioSource = this.GetComponent<AudioSource>();
 
 		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
 		TalkEventManager.TalkEnded += onTalkEnded;
@@ -77,6 +84,23 @@ public class Scene_05_Leafs : MonoBehaviour {
 
 	void ToggleBunny() {
 		Bunny.CurrentAnimationState = Scene_05_Bunny.STATE_VISIBLE;
+	}
+	
+	void PlaySound(int id) {
+		switch(id) {
+			case 1:
+				audioSource.clip = bushMove1;
+				break;
+			case 2:
+				audioSource.clip = bushMove2;
+				break;
+			case 3:
+				audioSource.clip = bushSpread;
+				break;
+		}
+		
+		audioSource.time = 0f;
+		audioSource.Play();
 	}
 	
 	// Update is called once per frame
