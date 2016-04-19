@@ -8,19 +8,20 @@ public class DrawingZone : MonoBehaviour {
 
 	public Color color;
 	public float drawingResolution = 2;
+	public int radius = 10;
 
-	RawImage rawImage;
-	RectTransform rectTransform;
+	protected RawImage rawImage;
+	protected RectTransform rectTransform;
 
-	Texture2D drawableTexture;
+	protected Texture2D drawableTexture;
 
-	Vector3[] corners;
-	Rect drawableZone;
-	Vector2 lastMousePos;
-	bool isDrawing = false;
+	protected Vector3[] corners;
+	protected Rect drawableZone;
+	protected Vector2 lastMousePos;
+	protected bool isDrawing = false;
 
 	// Use this for initialization
-	void Start () {
+	protected void Start () {
 		rectTransform = (RectTransform)this.GetComponent<RectTransform> ();
 		rawImage = (RawImage) this.GetComponent<RawImage> ();
 		Reset ();
@@ -44,12 +45,12 @@ public class DrawingZone : MonoBehaviour {
 					float dt = DistanceBetweenPoints (lastMousePos, mousePosOnTexture);
 					while(cpt < 400 && cpt < dt) {
 						Vector2 itvlPt = CalculateInBetweenPoint (lastMousePos, mousePosOnTexture, cpt);
-						if(itvlPt!=Vector2.zero) drawableTexture.DrawFilledCircle (Mathf.RoundToInt (itvlPt.x), Mathf.RoundToInt (itvlPt.y), 10, color);
+						if(itvlPt!=Vector2.zero) drawableTexture.DrawFilledCircle (Mathf.RoundToInt (itvlPt.x), Mathf.RoundToInt (itvlPt.y), radius, color);
 						cpt += 2;
 					}
 					Debug.Log (cpt);
 				}
-				drawableTexture.DrawFilledCircle (Mathf.RoundToInt (mousePosOnTexture.x), Mathf.RoundToInt (mousePosOnTexture.y), 10, color);
+				drawableTexture.DrawFilledCircle (Mathf.RoundToInt (mousePosOnTexture.x), Mathf.RoundToInt (mousePosOnTexture.y), radius, color);
 
 				drawableTexture.Apply ();
 				rawImage.texture = drawableTexture;
@@ -67,7 +68,7 @@ public class DrawingZone : MonoBehaviour {
 		rawImage.texture = drawableTexture;
 	}
 
-	void GetZoneInfos() {
+	protected void GetZoneInfos() {
 		// GameObject coordinates and boundaries for mouse use
 		corners = new Vector3[4];
 		rawImage.rectTransform.GetWorldCorners(corners);
