@@ -14,10 +14,13 @@ public class Scene_08_Camera : MonoBehaviour {
 	public GameObject afterWrapper;
 
 	TalkEventManager.TalkEvent onTalkEnded;
+	
+	AudioSource audioSource;
 
 	// Use this for initialization
 	void Start () {
 		bloom = this.GetComponent<BloomOptimized> ();
+		audioSource = this.GetComponent<AudioSource>();
 	
 		Hashtable ht = new Hashtable ();
 		ht.Add ("from", 2.5);
@@ -50,6 +53,13 @@ public class Scene_08_Camera : MonoBehaviour {
 		tweenParams.Add ("oncomplete", "OnFadeMiddle");
 		tweenParams.Add ("oncompletetarget", this.gameObject);
 		iTween.ValueTo(gameObject, tweenParams);
+		
+		Hashtable ht = new Hashtable();
+		ht.Add("from", audioSource.volume);
+		ht.Add("to", 0);
+		ht.Add("time", 1.5);
+		ht.Add("onupdate", "OnAudioUpdate");
+		iTween.ValueTo(gameObject, ht);
 	}
 
 	void OnFadeMiddle() {
@@ -76,6 +86,10 @@ public class Scene_08_Camera : MonoBehaviour {
 	void OnColorUpdated(Color color)
 	{
 		mask.color = color;
+	}
+	
+	void OnAudioUpdate(float value) {
+		audioSource.volume = value;
 	}
 
 	void OnBloomUpdate(float value) {
