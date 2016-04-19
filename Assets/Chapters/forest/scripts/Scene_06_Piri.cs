@@ -23,7 +23,6 @@ public class Scene_06_Piri : MonoBehaviour {
 	public Scene_06_Wolf wolf;
 
 	Vector3 initialScale;
-	float gyroSign;
 	bool freeze = true;
 
 	int insistCpt = 0;
@@ -43,8 +42,7 @@ public class Scene_06_Piri : MonoBehaviour {
 
 	void Update() {
 		#if !UNITY_EDITOR
-			gyroSign = Input.gyro.attitude.z > 0f ? -1f : 1f;
-			speed = Input.gyro.attitude.x * gyroSign;
+			speed = Input.gyro.gravity.x;
 		#endif
 		animator.SetFloat ("speed", speed*4);
 
@@ -99,8 +97,13 @@ public class Scene_06_Piri : MonoBehaviour {
 	}
 
 	void OnGUI () {
-		GUILayout.Label("Gyro reading: " + Input.gyro.attitude.ToString());
-		GUILayout.Label("GyroSign : "+gyroSign);
+		if(false) {
+			GUILayout.Label("Gyro attitude: " + Input.gyro.attitude.ToString());
+			GUILayout.Label("Gyro rotation rate: " + Input.gyro.rotationRate.ToString());
+			GUILayout.Label("Gyro rotation rate unbiased: " + Input.gyro.rotationRateUnbiased.ToString());
+			GUILayout.Label("Gyro gravity: " + Input.gyro.gravity.ToString());
+			GUILayout.Label("Gyro user accel: " + Input.gyro.userAcceleration.ToString());	
+		}
 	}
 
 	void OnDestroy() {
