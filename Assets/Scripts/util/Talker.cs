@@ -69,7 +69,7 @@ public class Talker : MonoBehaviour {
 	}
 
 	// toggles the UI + arm the new clip 
-	void SetCurrentClip(int newClipId, bool autoplay) {
+	void SetCurrentClip(int newClipId, bool autoplay, float delay) {
 		// We consider that if we change current clip while another one was playing, this has been played, so we stop it cleanly.
 		if(audioSource.isPlaying && currentClipId!=newClipId && !AudioClipsPlayed[currentClipId]) StopCurrent ();
 
@@ -77,8 +77,9 @@ public class Talker : MonoBehaviour {
 		currentClipId = newClipId;
 		audioSource.Stop ();
 
-		if (autoplay)
-			PlayCurrentClip ();
+		if (autoplay) {
+			StartCoroutine(DelayedPlayCurrentClip(delay));	
+		}
 	}
 
 	// play the current clip according to its ID
@@ -95,6 +96,12 @@ public class Talker : MonoBehaviour {
 		TalkEventManager.TriggerTalkBegin(new TalkEventArgs { ID = this.ID, AudioClipId = currentClipId });
 
 		StartCoroutine (WaitForClipEnd ());
+	}
+	
+	IEnumerator DelayedPlayCurrentClip(float delay) {
+		IsNew = false;
+		yield return new WaitForSeconds(delay);
+		PlayCurrentClip();
 	}
 
 	// Waits for the current clip to end playing
@@ -122,7 +129,7 @@ public class Talker : MonoBehaviour {
 	// TalkSet event listener which allows to call SetCurrentClip without access to this talker's instance
 	void OnTalkSet(TalkEventArgs eventArgs) {
 		if (eventArgs.ID == this.ID) {
-			SetCurrentClip (eventArgs.AudioClipId, eventArgs.Autoplay);
+			SetCurrentClip (eventArgs.AudioClipId, eventArgs.Autoplay, eventArgs.Delay);
 		}
 	}
 
@@ -134,7 +141,6 @@ public class Talker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		// Click listener
 		if (Input.GetMouseButtonDown(0) && isNew) {
 			Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

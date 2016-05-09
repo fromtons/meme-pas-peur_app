@@ -11,6 +11,7 @@ public class OngletManager : MonoBehaviour {
 	public List<string> scenesToLoad;
 	public GameObject prefab;
 	public GameObject loadingScreenPrefab;
+	public float highlightDelay = 4f; 
 
 	GameObject loadingScreen;
 
@@ -78,8 +79,15 @@ public class OngletManager : MonoBehaviour {
 	}
 
 	public void HighlightNextOnglet() {
+		StartCoroutine(RealHighlightNextOnglet());	
+	}
+	
+	IEnumerator RealHighlightNextOnglet() {
+		
+		yield return new WaitForSeconds(highlightDelay);
+		
 		audioSource.time = 0f;
 		audioSource.Play ();
-		nextOnglet.GetComponent<Onglet> ().CurrentState = Onglet.STATE_HIGHLIGHT;	
+		nextOnglet.GetComponent<Onglet> ().CurrentState = Onglet.STATE_HIGHLIGHT;
 	}
 }

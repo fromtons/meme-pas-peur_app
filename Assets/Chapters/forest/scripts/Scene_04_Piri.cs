@@ -8,6 +8,7 @@ public class Scene_04_Piri : MonoBehaviour {
 	public float moveToX;
 	public float moveToY;
 	public int duration = 3;
+	public float finalTalkDuration = 2f;
 
 	public static int STATE_IDLE = 0;
 	public static int STATE_PROFILE_WALK = 1;
@@ -80,8 +81,8 @@ public class Scene_04_Piri : MonoBehaviour {
 
 	public void OnLightenedLucioles() {
 		insist = false;
-		state = STATE_IDLE;
-		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true });
+		state = STATE_IDLE;	
+		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true, Delay = 2f });
 	}
 		
 	void OnDestroy () {
