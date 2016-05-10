@@ -26,7 +26,7 @@ public class Talker : MonoBehaviour {
 		set { 
 			isNew = value; 
 			if (newMessageUi)
-				newMessageUi.SetActive (isNew);
+				newMessageUi.GetComponent<Animator>().SetBool("show", value);
 		}
 	}
 	// TODO - Check if the public getter here is still usefull (dont think so)
@@ -61,7 +61,7 @@ public class Talker : MonoBehaviour {
 			// Adds the UI part
 			newMessageUi = Instantiate (newMessageUiPrefab);
 			newMessageUi.transform.SetParent (this.transform);
-			newMessageUi.SetActive (false);
+			IsNew = false;
 			// Try to position it according to sprite bounds
 			if (sprite)
 				newMessageUi.transform.position = new Vector3 (sprite.bounds.center.x + sprite.bounds.size.x / 2, sprite.bounds.center.y + sprite.bounds.size.y / 2, sprite.bounds.center.z);
@@ -145,7 +145,7 @@ public class Talker : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0) && isNew) {
 			Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
-			if (hitCollider == collider) {
+			if ((hitCollider == collider) || (hitCollider == newMessageUi.GetComponent<BoxCollider2D>())) {
 				PlayCurrentClip ();
 			}
 		}
