@@ -65,12 +65,9 @@ public class Scene_02_Piri : MonoBehaviour {
 				Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 				Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
 				if (hitCollider == listenToCollider) {
-					clicked = true;
-					TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true });
+					TriggerLastSentence (0f);
 				}
 			}
-			
-			
 		}
 	}
 
@@ -78,6 +75,8 @@ public class Scene_02_Piri : MonoBehaviour {
 		if (eventArgs.ID == "piri") {
 			if (eventArgs.AudioClipId == 0) {
 				firstSentenceDone = true;
+			
+				listenTo.GetComponent<Animator>().SetBool("shaking", true);
 			} else if (eventArgs.AudioClipId == 1) {
 				TriggerAnimation ();
 			}
@@ -86,9 +85,14 @@ public class Scene_02_Piri : MonoBehaviour {
 	
 	void OnSoundCapBegin(MicEventArgs eventArgs) {
 		if (!clicked && firstSentenceDone) {
-			clicked = true;
-			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true, Delay = 0.5f });
+			TriggerLastSentence (0.5f);
 		}
+	}
+
+	void TriggerLastSentence(float delay) {
+		clicked = true;
+		listenTo.GetComponent<Animator>().SetBool("shaking", false);
+		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true, Delay = delay });
 	}
 
 	void TriggerAnimation() {
