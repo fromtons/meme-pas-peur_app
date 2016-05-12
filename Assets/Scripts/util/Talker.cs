@@ -129,6 +129,11 @@ public class Talker : MonoBehaviour {
 	// TalkSet event listener which allows to call SetCurrentClip without access to this talker's instance
 	void OnTalkSet(TalkEventArgs eventArgs) {
 		if (eventArgs.ID == this.ID) {
+			
+			// If it already has been played, we reset it
+			if (audioClipsPlayed [eventArgs.AudioClipId])
+				audioClipsPlayed [eventArgs.AudioClipId] = false;
+			
 			SetCurrentClip (eventArgs.AudioClipId, eventArgs.Autoplay, eventArgs.Delay);
 		}
 	}

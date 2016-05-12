@@ -49,7 +49,7 @@ public class Scene_03_Piri : MonoBehaviour {
 	void OnAnimationComplete() {
 		state = STATE_SAD;
 
-		TalkEventManager.TriggerTalkSet(new TalkEventArgs { ID = "piri", AudioClipId = 0, Autoplay = true });
+		TalkEventManager.TriggerTalkSet(new TalkEventArgs { ID = "piri", AudioClipId = 0, Autoplay = false });
 		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);;
 		TalkEventManager.TalkEnded += onTalkEnded;
 	}
