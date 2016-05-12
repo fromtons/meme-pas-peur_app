@@ -11,17 +11,22 @@ public class Shaky : MonoBehaviour {
 	int sign;
 	Vector3 initialRotation;
 
+	Hashtable ht;
+
 	bool firstShake = true;
 
 	// Use this for initialization
 	void Start () {
 		sign = Random.value < .5 ? 1 : -1;
 		initialRotation = this.transform.localEulerAngles;
+
+		ht = new Hashtable ();
+
 		Forward ();
 	}
 
 	void Forward() {
-		Hashtable ht = new Hashtable ();
+		ht.Clear ();
 		ht.Add ("rotation", new Vector3 (initialRotation.x, initialRotation.y, initialRotation.z + intensity * sign));
 		ht.Add ("time", timeCycle);
 		if (firstShake) {
@@ -36,7 +41,7 @@ public class Shaky : MonoBehaviour {
 	}
 
 	void Backward() {
-		Hashtable ht = new Hashtable ();
+		ht.Clear ();
 		ht.Add ("rotation", new Vector3 (initialRotation.x, initialRotation.y, initialRotation.z - intensity * sign));
 		ht.Add ("time", timeCycle);
 		ht.Add ("islocal", true);
