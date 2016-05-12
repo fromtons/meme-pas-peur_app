@@ -25,21 +25,15 @@ public static class MicEventManager {
 	public static void TriggerBlowBegin(MicEventArgs eventArgs = null) {
 		if (BlowBegin != null)
 			BlowBegin (eventArgs);           
-
-		Debug.Log ("blow_begin");
 	}
 
 	public static void TriggerBlow(MicEventArgs eventArgs = null) {
 		if (Blow != null)
 			Blow (eventArgs);         
-
-		Debug.Log ("blow");
 	}
 
 	public static void TriggerBlowEnd(MicEventArgs eventArgs = null) {
 		if (BlowEnd != null)
 			BlowEnd (eventArgs);
-
-		Debug.Log ("blow_end");
 	}
 }

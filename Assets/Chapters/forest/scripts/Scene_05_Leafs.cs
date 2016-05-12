@@ -41,7 +41,7 @@ public class Scene_05_Leafs : MonoBehaviour {
 	bool insist = true;
 
 	TalkEventManager.TalkEvent onTalkEnded;
-	MicEventManager.MicEvent onSoundCapBegin;
+	MicEventManager.MicEvent onBlowBegin;
 
 	// Use this for initialization
 	void Start () {
@@ -52,8 +52,8 @@ public class Scene_05_Leafs : MonoBehaviour {
 		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
 		TalkEventManager.TalkEnded += onTalkEnded;
 
-		onSoundCapBegin = new MicEventManager.MicEvent (OnSoundCapBegin);
-		MicEventManager.SoundCapBegin += onSoundCapBegin;
+		onBlowBegin = new MicEventManager.MicEvent (OnBlowBegin);
+		MicEventManager.BlowBegin += onBlowBegin;
 	}
 
 	IEnumerator TimeWaiter() {
@@ -105,14 +105,14 @@ public class Scene_05_Leafs : MonoBehaviour {
 		audioSource.Play();
 	}
 	
-	void OnSoundCapBegin(MicEventArgs eventArgs) {
-		if (eventArgs.OriginID == "leafs" && CurrentAnimationState == STATE_OPEN_SMALL) {
+	void OnBlowBegin(MicEventArgs eventArgs) {
+		if (CurrentAnimationState == STATE_OPEN_SMALL) {
 			CurrentAnimationState = STATE_OPEN_WIDE;
 		}
 	}
 
 	void OnDestroy() {
 		TalkEventManager.TalkEnded -= onTalkEnded;
-		MicEventManager.SoundCapBegin -= onSoundCapBegin;
+		MicEventManager.BlowBegin -= onBlowBegin;
 	}
 }
