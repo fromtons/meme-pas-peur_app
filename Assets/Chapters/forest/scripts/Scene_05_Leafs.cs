@@ -27,9 +27,7 @@ public class Scene_05_Leafs : MonoBehaviour {
 			if(value == STATE_OPEN_WIDE) insist = false;
 		}
 	}
-
-	public MicrophoneInput micInputToListen;
-	public float loudnessCap;
+		
 	public Scene_05_Eyes Eyes;
 	public Scene_05_Bunny Bunny;
 	
@@ -43,6 +41,7 @@ public class Scene_05_Leafs : MonoBehaviour {
 	bool insist = true;
 
 	TalkEventManager.TalkEvent onTalkEnded;
+	MicEventManager.MicEvent onSoundCapBegin;
 
 	// Use this for initialization
 	void Start () {
@@ -52,6 +51,9 @@ public class Scene_05_Leafs : MonoBehaviour {
 
 		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
 		TalkEventManager.TalkEnded += onTalkEnded;
+
+		onSoundCapBegin = new MicEventManager.MicEvent (OnSoundCapBegin);
+		MicEventManager.SoundCapBegin += onSoundCapBegin;
 	}
 
 	IEnumerator TimeWaiter() {
@@ -103,16 +105,14 @@ public class Scene_05_Leafs : MonoBehaviour {
 		audioSource.Play();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		if (CurrentAnimationState == STATE_OPEN_SMALL) {
-			if (micInputToListen.loudness > loudnessCap) {
-				CurrentAnimationState = STATE_OPEN_WIDE;
-			}
+	void OnSoundCapBegin(MicEventArgs eventArgs) {
+		if (eventArgs.OriginID == "leafs" && CurrentAnimationState == STATE_OPEN_SMALL) {
+			CurrentAnimationState = STATE_OPEN_WIDE;
 		}
 	}
 
 	void OnDestroy() {
 		TalkEventManager.TalkEnded -= onTalkEnded;
+		MicEventManager.SoundCapBegin -= onSoundCapBegin;
 	}
 }

@@ -23,11 +23,13 @@ public class Scene_06_Wolf : MonoBehaviour {
 
 	int nbOfFramesSinceAwakened = 0;
 
-	public MicrophoneInput micInputToListen;
-	public float loudnessCap = 5f;
+	MicEventManager.MicEvent onSoundCapBegin;
 
 	void Start() {
 		animator = this.GetComponent<Animator> ();
+
+		onSoundCapBegin = new MicEventManager.MicEvent (OnSoundCapBegin);
+		MicEventManager.SoundCapBegin += onSoundCapBegin;
 	}
 
 	void Update() {
@@ -37,8 +39,10 @@ public class Scene_06_Wolf : MonoBehaviour {
 
 			nbOfFramesSinceAwakened++;
 		}
+	}
 
-		if (micInputToListen.loudness > loudnessCap) {
+	void OnSoundCapBegin(MicEventArgs eventArgs) {
+		if (eventArgs.OriginID == "wolf") {
 			CurrentAnimationState = STATE_AWAKEN;
 		}
 	}

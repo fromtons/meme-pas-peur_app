@@ -36,6 +36,8 @@ public class Scene_02_Piri : MonoBehaviour {
 	Vector3 initialPosition;
 
 	TalkEventManager.TalkEvent onTalkEnded;
+	
+	MicEventManager.MicEvent onSoundCapBegin;
 
 	// Use this for initialization
 	void Start () {
@@ -46,6 +48,9 @@ public class Scene_02_Piri : MonoBehaviour {
 		TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 0, Autoplay = false });
 		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);	
 		TalkEventManager.TalkEnded += onTalkEnded;
+		
+		onSoundCapBegin = new MicEventManager.MicEvent (OnSoundCapBegin);
+		MicEventManager.SoundCapBegin += onSoundCapBegin;
 	}
 	
 	// Update is called once per frame
@@ -54,12 +59,18 @@ public class Scene_02_Piri : MonoBehaviour {
 	}
 
 	void CheckTarget() {
-		if (Input.GetMouseButtonDown(0) && !clicked && firstSentenceDone) {
-			Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
-			if (hitCollider == listenToCollider) {
-				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true });
+		if (!clicked && firstSentenceDone) {
+			
+			if(Input.GetMouseButtonDown(0)) { 
+				Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+				Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
+				if (hitCollider == listenToCollider) {
+					clicked = true;
+					TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true });
+				}
 			}
+			
+			
 		}
 	}
 
@@ -72,10 +83,15 @@ public class Scene_02_Piri : MonoBehaviour {
 			}
 		}
 	}
+	
+	void OnSoundCapBegin(MicEventArgs eventArgs) {
+		if (!clicked && firstSentenceDone) {
+			clicked = true;
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true, Delay = 0.5f });
+		}
+	}
 
 	void TriggerAnimation() {
-		clicked = true;
-
 		CurrentAnimationState = STATE_PROFILE_WALK;
 
 		Hashtable ht = new Hashtable ();
@@ -89,5 +105,6 @@ public class Scene_02_Piri : MonoBehaviour {
 
 	void OnDestroy() {
 		TalkEventManager.TalkEnded -= onTalkEnded;
+		MicEventManager.SoundCapBegin -= onSoundCapBegin;
 	}
 }

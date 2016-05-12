@@ -42,9 +42,6 @@ public class Scene_07_Brother : MonoBehaviour {
 
 	BoxCollider2D boxCollider;
 
-	public MicrophoneInput micInputToListen;
-	public float loudnessCap = 40f;
-
 	bool insist = true;
 	int insistCpt = 0;
 
@@ -52,6 +49,7 @@ public class Scene_07_Brother : MonoBehaviour {
 	int insistRevealdCpt = 0;
 
 	TalkEventManager.TalkEvent onTalkEnded;
+	MicEventManager.MicEvent onSoundCapBegin;
 
 	// Use this for initialization
 	void Start () {
@@ -62,6 +60,10 @@ public class Scene_07_Brother : MonoBehaviour {
 
 		onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
 		TalkEventManager.TalkEnded += onTalkEnded;
+
+		onSoundCapBegin = new MicEventManager.MicEvent (OnSoundCapBegin);
+		MicEventManager.SoundCapBegin += onSoundCapBegin;
+
 		StartCoroutine (Insist ());
 	}
 
@@ -118,9 +120,12 @@ public class Scene_07_Brother : MonoBehaviour {
 				CurrentAnimationState = STATE_BOUNCE_TO_FRONT;
 			}
 		}
+	}
 
-		if (CurrentAnimationState == STATE_REVEAL && micInputToListen.loudness > loudnessCap)
+	void OnSoundCapBegin(MicEventArgs eventArgs) {
+		if (eventArgs.OriginID == "brother" && CurrentAnimationState == STATE_REVEAL) {
 			CurrentAnimationState = STATE_BOUNCE_TO_FRONT;
+		}
 	}
 
 	void OnDestroy() {
