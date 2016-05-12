@@ -34,6 +34,7 @@ public class MicrophoneInput : MonoBehaviour {
 
 	void Update(){
 		loudness = GetAveragedVolume() * (sensitivity * (sensitivity/deviceFactor));
+		GraphDebugEventManager.TriggerUpdate (new GraphDebugEventArgs { ID = "mic", Value = loudness });
 	}
 
 	float GetAveragedVolume()
@@ -46,61 +47,5 @@ public class MicrophoneInput : MonoBehaviour {
 			a += Mathf.Abs(s);
 		}
 		return a/256;
-	}
-	
-	// TODO - Externalise this graph debugger
-	
-	private static Texture2D _staticRectTexture;
-	private static Texture2D _newStaticRectTexture;
-    private static GUIStyle _staticRectStyle;
-	
-	int debugFrom = 0;
-	int debugTo = 100;
-	int dividers = 10;
-	
-	int newValue;
-	
-	float newValueMinusMin;
-	float maxValueMinusMin;
-	
-	void OnGUI() {
-		if(debug) {
-			// Init
-			if( _staticRectTexture == null ) {
-				_staticRectTexture = new Texture2D( 100, 100);
-				_staticRectTexture.DrawFilledRectangle(new Rect(0,0,_staticRectTexture.width, _staticRectTexture.height), Color.black);
-			}
-			if( _newStaticRectTexture == null ) _newStaticRectTexture = new Texture2D( 100, 100);
-			if( _staticRectStyle == null ) _staticRectStyle = new GUIStyle();
-			
-			// Offsets to the left
-			for(int y = 0; y < _newStaticRectTexture.height; y++) {
-				for(int x = 1; x < _newStaticRectTexture.width; x++) {
-					_newStaticRectTexture.SetPixel(x-1,y, _staticRectTexture.GetPixel(x,y));
-				}
-			}
-			
-			// Calculate position
-			newValueMinusMin = loudness - debugFrom;
-			maxValueMinusMin = debugTo - debugFrom;
-			if(newValueMinusMin < 0) newValueMinusMin = 0;
-			if(maxValueMinusMin < 0) maxValueMinusMin = 0;
-			if(newValueMinusMin > maxValueMinusMin) newValueMinusMin = maxValueMinusMin;
-			newValue = (int) Mathf.Round((newValueMinusMin) * 100 / maxValueMinusMin);
-			
-			// Draw current line
-			_newStaticRectTexture.DrawFilledRectangle(new Rect(_staticRectTexture.width-1, 0, 1, _staticRectTexture.height), Color.black);
-			_newStaticRectTexture.DrawFilledRectangle(new Rect(_staticRectTexture.width-1, (_staticRectTexture.height - newValue), 1, newValue), Color.red);
-			
-			for(int i = 0; i < dividers; i++) {
-				_newStaticRectTexture.DrawFilledRectangle(new Rect(0, (int) (i*_staticRectTexture.height/dividers), _staticRectTexture.width, 1), Color.grey);
-			}
-			
-			_staticRectTexture = _newStaticRectTexture;
-        	_staticRectTexture.Apply();
-        	_staticRectStyle.normal.background = _staticRectTexture;
- 
-        	GUI.Box( new Rect(0,0,100,100), GUIContent.none, _staticRectStyle );
-		}
 	}
 }
