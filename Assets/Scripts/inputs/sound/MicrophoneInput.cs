@@ -5,22 +5,31 @@ using ProtoTurtle.BitmapDrawing;
 [RequireComponent(typeof(AudioSource))]
 public class MicrophoneInput : MonoBehaviour {
 	public float sensitivity = 100f;
+	public static float FREQ_AMP = 1000f;
 	public float loudness = 0;
-	
-	float deviceFactor = 100f;
-	bool deviceFactorActive = true;
-	
-	bool debug = true;
+
+	static float DEVICE_FACTOR_EDITOR = 70f;
+	static float DEVICE_FACTOR_IOS = 35f;
+	static float DEVICE_FACTOR_DEFAULT = 100f;
+	static float DEVICE_FACTOR;
+	static bool DEVICE_FACTOR_ACTIVE = true;
 
 	AudioSource audio;
 
+	float[] spectrum;
+	public float freq_avg;
+
 	void Start() {
 
-		if(deviceFactorActive) { 
+		spectrum = new float[256];
+
+		if(DEVICE_FACTOR_ACTIVE) { 
 			#if UNITY_EDITOR
-				deviceFactor=70f;
+				DEVICE_FACTOR=DEVICE_FACTOR_EDITOR;
 			#elif UNITY_IOS 
-				deviceFactor=35f;
+				DEVICE_FACTOR=DEVICE_FACTOR_IOS;
+			#else 
+				DEVICE_FACTOR=DEVICE_FACTOR_DEFAULT;
 			#endif
 		}
 		
@@ -33,8 +42,34 @@ public class MicrophoneInput : MonoBehaviour {
 	}
 
 	void Update(){
-		loudness = GetAveragedVolume() * (sensitivity * (sensitivity/deviceFactor));
+		loudness = GetAveragedVolume() * (sensitivity * (sensitivity/DEVICE_FACTOR));
+
+		// Loudness debug
 		GraphDebugEventManager.TriggerUpdate (new GraphDebugEventArgs { ID = "mic", Value = loudness });
+	}
+
+	public float[] GetSpectrum() {
+		// Gets the sound spectrum.
+		audio.GetSpectrumData (spectrum, 0, FFTWindow.Rectangular);
+
+		// Spectrum debug
+		GraphDebugEventManager.TriggerUpdateSpectrum (new GraphDebugEventArgs { ID = "spectrum", Values = spectrum });
+
+		return spectrum;
+	}
+
+	public float GetAvgFrequencies(bool refreshSpectrum) {
+		if(refreshSpectrum) GetSpectrum ();
+
+		freq_avg = 0;
+		for (int i = 0; i < spectrum.Length; i++) {
+			freq_avg += spectrum [i] * FREQ_AMP;
+		}
+		freq_avg /= spectrum.Length;
+
+		// Spectrum avg debug
+		GraphDebugEventManager.TriggerUpdate (new GraphDebugEventArgs { ID = "avg", Value = freq_avg });
+		return freq_avg;
 	}
 
 	float GetAveragedVolume()
