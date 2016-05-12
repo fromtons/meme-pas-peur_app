@@ -14,6 +14,7 @@ public class GraphDebug : MonoBehaviour
 	public int debugFrom = 0;
 	public int debugTo = 100;
 	public int dividers = 10;
+	public Color color;
 
 	public int posX = 0;
 	public int posY = 0;
@@ -64,7 +65,7 @@ public class GraphDebug : MonoBehaviour
 
 		// Draw current line
 		_newStaticRectTexture.DrawFilledRectangle(new Rect(_staticRectTexture.width-1, 0, 1, _staticRectTexture.height), Color.black);
-		_newStaticRectTexture.DrawFilledRectangle(new Rect(_staticRectTexture.width-1, (_staticRectTexture.height - newValue), 1, newValue), Color.red);
+		_newStaticRectTexture.DrawFilledRectangle(new Rect(_staticRectTexture.width-1, (_staticRectTexture.height - newValue), 1, newValue), color);
 
 		for(int i = 0; i < dividers; i++) {
 			_newStaticRectTexture.DrawFilledRectangle(new Rect(0, (int) (i*_staticRectTexture.height/dividers), _staticRectTexture.width, 1), Color.grey);
