@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using MPP.Util;
+using MPP.Events;
 
 namespace MPP.Forest.Scene_07 {
 	[RequireComponent (typeof(BoxCollider2D))]

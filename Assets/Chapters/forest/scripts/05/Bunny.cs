@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using MPP.Events;
 
 namespace MPP.Forest.Scene_05 {
 	public class Bunny : MonoBehaviour {

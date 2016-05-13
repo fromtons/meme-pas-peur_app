@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using MPP.Util;
 
 namespace MPP.Forest.Scene_01 {
 	

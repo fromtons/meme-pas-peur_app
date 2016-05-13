@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using MPP.Util;
+using MPP.Events;
 
 namespace MPP.Forest.Scene_09 {
 	[RequireComponent (typeof(AudioSource))]

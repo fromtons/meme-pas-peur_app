@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ColorChanger : MonoBehaviour {
+namespace MPP.Drawing {
+	public class ColorChanger : MonoBehaviour {
 
-	public Color color;
-	public DrawingZone drawingZone;
+		public Color color;
+		public DrawingZone drawingZone;
 
-	public void OnClick() {
-		drawingZone.color = color;
+		public void OnClick() {
+			drawingZone.color = color;
+		}
 	}
 }

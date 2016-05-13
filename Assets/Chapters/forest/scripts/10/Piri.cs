@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using MPP.Events;
 
 namespace MPP.Forest.Scene_10 {
 	public class Piri : MonoBehaviour {

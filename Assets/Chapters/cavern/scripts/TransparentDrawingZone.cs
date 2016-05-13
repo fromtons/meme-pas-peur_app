@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using MPP.Drawing;
 
 public class TransparentDrawingZone : DrawingZone {    
     // Use this for initialization

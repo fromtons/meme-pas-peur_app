@@ -2,6 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
+using MPP.Util;
+using MPP.Events;
 
 namespace MPP.Forest.Scene_08 {
 	[RequireComponent (typeof(BloomOptimized))]
