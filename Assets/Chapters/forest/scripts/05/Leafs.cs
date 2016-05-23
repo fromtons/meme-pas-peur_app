@@ -42,6 +42,7 @@ namespace MPP.Forest.Scene_05 {
 
 		int insistCpt = 0;
 		bool insist = true;
+		bool hasClicked = false;
 
 		TalkEventManager.TalkEvent onTalkEnded;
 		MicEventManager.MicEvent onBlowBegin;
@@ -49,7 +50,6 @@ namespace MPP.Forest.Scene_05 {
 		// Use this for initialization
 		void Start () {
 			animator = GetComponent<Animator> ();
-			StartCoroutine (TimeWaiter ());
 			audioSource = this.GetComponent<AudioSource>();
 
 			onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
@@ -59,8 +59,16 @@ namespace MPP.Forest.Scene_05 {
 			MicEventManager.BlowBegin += onBlowBegin;
 		}
 
+		void Update() {
+			if (!hasClicked && Input.GetMouseButtonDown (0)) { 
+				StartCoroutine (TimeWaiter ());
+
+				hasClicked = true;
+			}
+		}
+
 		IEnumerator TimeWaiter() {
-			yield return new WaitForSeconds (1f);
+			yield return new WaitForSeconds (.5f);
 			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 0, Autoplay = true });
 			yield return new WaitForSeconds(5f);
 			OpenSmall ();
@@ -81,7 +89,7 @@ namespace MPP.Forest.Scene_05 {
 		}
 
 		IEnumerator Insist() {
-			yield return new WaitForSeconds (3f);
+			yield return new WaitForSeconds (6f);
 			if(insist)
 				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = (insistCpt % 3)+3, Autoplay = true });
 			insistCpt++;

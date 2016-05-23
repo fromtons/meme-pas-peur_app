@@ -40,7 +40,7 @@ namespace MPP.Forest.Scene_05 {
 		IEnumerator AfterVisible() {
 			audioSource.clip = onRevealSound;
 			audioSource.Play();
-			yield return new WaitForSeconds (5f);
+			yield return new WaitForSeconds (2f);
 			CurrentAnimationState = STATE_HOPPING;
 			audioSource.clip = boingSound;
 			audioSource.Play();
