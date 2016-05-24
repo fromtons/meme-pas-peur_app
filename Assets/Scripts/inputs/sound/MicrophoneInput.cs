@@ -7,6 +7,7 @@ namespace MPP.Inputs._Sound {
 	[RequireComponent(typeof(AudioSource))]
 	public class MicrophoneInput : MonoBehaviour {
 		public float sensitivity = 100f;
+		public int samples = 256;
 		public static float FREQ_AMP = 1000f;
 		public float loudness = 0;
 
@@ -23,7 +24,7 @@ namespace MPP.Inputs._Sound {
 
 		void Start() {
 
-			spectrum = new float[256];
+			spectrum = new float[samples];
 
 			if(DEVICE_FACTOR_ACTIVE) { 
 				#if UNITY_EDITOR
@@ -44,46 +45,30 @@ namespace MPP.Inputs._Sound {
 		}
 
 		void Update(){
-			loudness = GetAveragedVolume() * (sensitivity * (sensitivity/DEVICE_FACTOR));
+			loudness = AudioUtils.GetAveragedVolume(audio, samples) * (sensitivity * (sensitivity/DEVICE_FACTOR));
 
 			// Loudness debug
 			GraphDebugEventManager.TriggerUpdate (new GraphDebugEventArgs { ID = "mic", Value = loudness });
-		}
 
-		public float[] GetSpectrum() {
-			// Gets the sound spectrum.
-			audio.GetSpectrumData (spectrum, 0, FFTWindow.Rectangular);
-
+			// SPECTRUM
+			/*GetSpectrum ();*/
+			GetAvgFrequencies (true);
 			// Spectrum debug
 			GraphDebugEventManager.TriggerUpdateSpectrum (new GraphDebugEventArgs { ID = "spectrum", Values = spectrum });
+			// Spectrum avg debug
+			GraphDebugEventManager.TriggerUpdate (new GraphDebugEventArgs { ID = "avg", Value = freq_avg });
+		}
 
+		// Gets the sound spectrum.
+		public float[] GetSpectrum() {
+			spectrum = AudioUtils.GetSpectrum (audio, samples, spectrum);
 			return spectrum;
 		}
 
 		public float GetAvgFrequencies(bool refreshSpectrum) {
-			if(refreshSpectrum) GetSpectrum ();
-
-			freq_avg = 0;
-			for (int i = 0; i < spectrum.Length; i++) {
-				freq_avg += spectrum [i] * FREQ_AMP;
-			}
-			freq_avg /= spectrum.Length;
-
-			// Spectrum avg debug
-			GraphDebugEventManager.TriggerUpdate (new GraphDebugEventArgs { ID = "avg", Value = freq_avg });
+			if (refreshSpectrum) spectrum = GetSpectrum ();
+			freq_avg = AudioUtils.GetAvgFrequencies (audio, spectrum, FREQ_AMP);
 			return freq_avg;
-		}
-
-		float GetAveragedVolume()
-		{ 
-			float[] data = new float[256];
-			float a = 0;
-			audio.GetOutputData(data,0);
-			foreach(float s in data)
-			{
-				a += Mathf.Abs(s);
-			}
-			return a/256;
 		}
 	}
 }

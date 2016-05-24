@@ -59,11 +59,13 @@ namespace MPP.Forest.Scene_06 {
 				state = STATE_IDLE;
 			}
 
-			// Orientation management
-			if (speed < 0) {
-				this.transform.localScale = new Vector3 (-initialScale.x, initialScale.y, initialScale.z);
-			} else {
-				this.transform.localScale = new Vector3 (initialScale.x, initialScale.y, initialScale.z);
+			if (!freeze) {
+				// Orientation management
+				if (speed < 0) {
+					this.transform.localScale = new Vector3 (-initialScale.x, initialScale.y, initialScale.z);
+				} else {
+					this.transform.localScale = new Vector3 (initialScale.x, initialScale.y, initialScale.z);
+				}
 			}
 		}
 

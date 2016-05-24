@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using MPP.Events;
+using MPP.Inputs._Sound;
 
 namespace MPP.Forest.Scene_06 {
 	public class Wolf : MonoBehaviour {
@@ -23,12 +24,16 @@ namespace MPP.Forest.Scene_06 {
 			}
 		}
 
+		public float shakeFactor = 0f;
+
+		AudioSource audio;
 		int nbOfFramesSinceAwakened = 0;
 
 		MicEventManager.MicEvent onSoundCapBegin;
 
 		void Start() {
 			animator = this.GetComponent<Animator> ();
+			audio = this.GetComponent<AudioSource> ();
 
 			onSoundCapBegin = new MicEventManager.MicEvent (OnSoundCapBegin);
 			MicEventManager.SoundCapBegin += onSoundCapBegin;
@@ -41,6 +46,8 @@ namespace MPP.Forest.Scene_06 {
 
 				nbOfFramesSinceAwakened++;
 			}
+
+			shakeFactor = AudioUtils.GetAveragedVolume (audio, 256) * 5;
 		}
 
 		void OnSoundCapBegin(MicEventArgs eventArgs) {
