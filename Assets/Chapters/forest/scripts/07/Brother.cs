@@ -67,7 +67,7 @@ namespace MPP.Forest.Scene_07 {
 			onSoundCapBegin = new MicEventManager.MicEvent (OnSoundCapBegin);
 			MicEventManager.SoundCapBegin += onSoundCapBegin;
 
-			StartCoroutine (Insist ());
+			StartCoroutine (BeginTheTalk ());
 		}
 
 		void OnTalkEnded(TalkEventArgs e) {
@@ -88,8 +88,13 @@ namespace MPP.Forest.Scene_07 {
 			}
 		}
 
+		IEnumerator BeginTheTalk() {
+			yield return new WaitForSeconds (15f);
+			StartCoroutine (Insist());
+		}
+
 		IEnumerator Insist() {
-			yield return new WaitForSeconds (3f);
+			yield return new WaitForSeconds (10f);
 			if(insist)
 				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = (insistCpt % 3), Autoplay = true });
 			insistCpt++;
