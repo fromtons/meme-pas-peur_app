@@ -12,6 +12,7 @@ namespace MPP.Forest.Scene_08 {
 		public RawImage mask;
 		public float delayBeforeMask = 1f;
 		BloomOptimized bloom;
+		VignetteAndChromaticAberration vignette;
 
 		public GameObject beforeWrapper;
 		public GameObject afterWrapper;
@@ -23,6 +24,7 @@ namespace MPP.Forest.Scene_08 {
 		// Use this for initialization
 		void Start () {
 			bloom = this.GetComponent<BloomOptimized> ();
+			vignette = this.GetComponent<VignetteAndChromaticAberration> ();
 			audioSource = this.GetComponent<AudioSource>();
 		
 			Hashtable ht = new Hashtable ();
@@ -70,6 +72,8 @@ namespace MPP.Forest.Scene_08 {
 			afterWrapper.SetActive(true);
 
 			bloom.intensity = 0;
+			vignette.intensity = 0;
+			vignette.blur = 0;
 
 			Hashtable tweenParams = new Hashtable();
 			tweenParams.Add("from", mask.color);
