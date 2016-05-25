@@ -10,6 +10,7 @@ namespace MPP.Forest.Scene_06 {
 		public static uint STATE_SLEEPING = 0;
 		public static uint STATE_AWAKEN = 1;
 
+		Coroutine awakeCoolDown;
 		protected uint _currentAnimationState = STATE_SLEEPING;
 		public uint CurrentAnimationState {
 			get {
@@ -20,14 +21,19 @@ namespace MPP.Forest.Scene_06 {
 				animator.SetInteger ("state", (int)value);
 				_currentAnimationState = value;
 
-				nbOfFramesSinceAwakened = 0;
+				WolfEventManager.TriggerWolfChangeState (new WolfEventArgs { State = value });
+
+				if (value == STATE_AWAKEN) {
+					// Awake debouncer
+					if(awakeCoolDown != null) StopCoroutine (awakeCoolDown);
+					awakeCoolDown = StartCoroutine (AwakeCoolDown());
+				}
 			}
 		}
 
 		public float shakeFactor = 0f;
 
 		AudioSource audio;
-		int nbOfFramesSinceAwakened = 0;
 
 		MicEventManager.MicEvent onSoundCapBegin;
 
@@ -40,13 +46,6 @@ namespace MPP.Forest.Scene_06 {
 		}
 
 		void Update() {
-			if (CurrentAnimationState == STATE_AWAKEN) {
-				if(nbOfFramesSinceAwakened>0)
-					CurrentAnimationState = STATE_SLEEPING;
-
-				nbOfFramesSinceAwakened++;
-			}
-
 			shakeFactor = AudioUtils.GetAveragedVolume (audio, 256) * 5;
 		}
 
@@ -54,6 +53,11 @@ namespace MPP.Forest.Scene_06 {
 			if (eventArgs.OriginID == "wolf") {
 				CurrentAnimationState = STATE_AWAKEN;
 			}
+		}
+
+		IEnumerator AwakeCoolDown() {
+			yield return new WaitForSeconds (2f);
+			CurrentAnimationState = STATE_SLEEPING;
 		}
 	}
 }

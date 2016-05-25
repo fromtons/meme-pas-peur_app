@@ -22,16 +22,20 @@ namespace MPP.Forest.Scene_06 {
 
 		public float speed = 0f;
 		public GameObject target;
+		public GameObject origin;
 
 		public Wolf wolf;
 
 		Vector3 initialScale;
-		bool freeze = true;
+		bool travelling = false; 
+		bool goingBack = false;
+		bool wasTravelling = false;
 
 		int insistCpt = 0;
 		bool insist = true;
 
 		TalkEventManager.TalkEvent onTalkEnded;
+		WolfEventManager.WolfEvent onWolfStateChange;
 
 		// Use this for initialization
 		void Start () {
@@ -41,25 +45,31 @@ namespace MPP.Forest.Scene_06 {
 			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID="piri", AudioClipId=0, Autoplay=false });
 			onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
 			TalkEventManager.TalkEnded += onTalkEnded;
+			onWolfStateChange = new WolfEventManager.WolfEvent (OnWolfStateChange);
+			WolfEventManager.WolfChangeState += onWolfStateChange;
 		}
 
 		void Update() {
-			#if !UNITY_EDITOR
+			// If travelling, we get speed from the gyroscope, else if we are not going back, we force speed to 0
+			if (travelling) {
+				#if !UNITY_EDITOR
 				speed = Input.gyro.gravity.x;
-			#endif
+				#endif
+			} else if(!goingBack) speed = 0;
 			animator.SetFloat ("speed", speed*4);
 
 			// Is moving or not management
-			if (!freeze && wolf.CurrentAnimationState != Wolf.STATE_AWAKEN && (speed < -0.1f || speed > 0.1f)) {
-				insist = false;
+			if ((speed < -0.1f || speed > 0.1f)) {
+				insist = false; // The first time we move, insist will go from true to false, meaning the user understood how to move
 				this.transform.Translate (new Vector3 (4f, 0f, 0f) * speed * Time.deltaTime);
 				state = STATE_PROFILE_WALK;
-
 			} else {
 				state = STATE_IDLE;
 			}
 
-			if (!freeze) {
+			// Orientation management
+			// We don't go there until piri's travelling or goingback
+			if (travelling || goingBack) {			
 				// Orientation management
 				if (speed < 0) {
 					this.transform.localScale = new Vector3 (-initialScale.x, initialScale.y, initialScale.z);
@@ -73,15 +83,26 @@ namespace MPP.Forest.Scene_06 {
 			if (e.ID == "piri") {
 				if (e.AudioClipId == 0)
 					TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true });
-				else if (e.AudioClipId != 4) {
+				else if (e.AudioClipId != 4 && e.AudioClipId != 5) {
 					StartCoroutine (Insist ());
-				} else {
-					freeze = false;
-				}
 
-				if (e.AudioClipId == 1) {
-					freeze = false;
+					if (e.AudioClipId == 1) {
+						travelling = true;
+					}
 				}
+			}
+		}
+
+		void OnWolfStateChange(WolfEventArgs e) {
+			wasTravelling = false;
+			if (travelling && e.State == Wolf.STATE_AWAKEN) {
+				// Don't try to go back if we already are at origin position
+				if (checkIfAlreadyAtOrigin())
+					return;
+			
+				goBack ();
+			} else {
+				afterGoingBack ();
 			}
 		}
 
@@ -94,20 +115,52 @@ namespace MPP.Forest.Scene_06 {
 
 		void OnTriggerEnter2D(Collider2D other) {        
 			if (other.gameObject == target) {
-				freeze = true;
+				travelling = false;
 				OngletManager.instance.HighlightNextOnglet ();
+			} else if (other.gameObject == origin) {
+				if (goingBack) {
+					afterGoingBack ();
+				}
 			} else {
 				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID="piri", AudioClipId=5, Autoplay=true });	
 			}
 		}
 
+		void OnTriggerStay2D(Collider2D other) {
+			if (other.gameObject == origin && goingBack) {
+				afterGoingBack ();
+			}
+		}
+
+		bool checkIfAlreadyAtOrigin() {
+			Collider2D[] colliders = Physics2D.OverlapCircleAll (new Vector2(this.transform.position.x, this.transform.position.y), (this.GetComponent<SpriteRenderer>()).bounds.size.x);
+			for (int i = 0; i < colliders.Length; i++) {
+				if (colliders [i].gameObject == origin) {
+					return true;
+				}
+			}
+			return false;
+		}
+
+		void goBack() {
+			wasTravelling = true; // Allows to know the value to reset after going back
+			travelling = false;
+			goingBack = true;
+			speed = -3;
+		}
+
+		void afterGoingBack() {
+			if(wasTravelling)
+				travelling = true;
+
+			goingBack = false;
+			speed = 0;
+		}
+
 		void OnGUI () {
 			if(false) {
-				GUILayout.Label("Gyro attitude: " + Input.gyro.attitude.ToString());
-				GUILayout.Label("Gyro rotation rate: " + Input.gyro.rotationRate.ToString());
-				GUILayout.Label("Gyro rotation rate unbiased: " + Input.gyro.rotationRateUnbiased.ToString());
+				GUILayout.Label("Going back: " + goingBack);
 				GUILayout.Label("Gyro gravity: " + Input.gyro.gravity.ToString());
-				GUILayout.Label("Gyro user accel: " + Input.gyro.userAcceleration.ToString());	
 			}
 		}
 
