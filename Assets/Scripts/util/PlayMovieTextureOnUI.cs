@@ -30,7 +30,7 @@ namespace MPP.Util {
 		{
 			if ( wct.width < 100 && rawImageARF && rawImageRT)
 			{
-				Debug.Log("Still waiting another frame for correct info...");
+				//Debug.Log("Still waiting another frame for correct info...");
 				return;
 			}
 

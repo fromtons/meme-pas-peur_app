@@ -8,6 +8,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace MPP.Data {
 	public class NameManager : MonoBehaviour {
 
+		public SpriteRenderer spriteToSave;
 		InputField inputField;
 
 		// Use this for initialization
@@ -23,6 +24,7 @@ namespace MPP.Data {
 
 			ProfileData data = new ProfileData ();
 			data.name = inputField.text;
+			data.picture = spriteToSave.sprite.texture;
 
 			bf.Serialize(file, data);
 			file.Close();
@@ -35,6 +37,7 @@ namespace MPP.Data {
 				ProfileData data = (ProfileData) bf.Deserialize(file);
 				file.Close();
 
+				spriteToSave.sprite = Sprite.Create (data.picture, new Rect (0, 0, data.picture.width, data.picture.height), new Vector2 (0.5f, 0.5f));
 				inputField.text = data.name;
 			}
 		}
@@ -43,5 +46,21 @@ namespace MPP.Data {
 	[Serializable]
 	class ProfileData {
 		public string name;
+		public int age;
+		public string picturePath;
+
+		public Texture2D picture {
+			get {
+				byte[] jpg = File.ReadAllBytes (picturePath);
+				Texture2D texture = new Texture2D (1, 1);
+				texture.LoadImage (jpg);
+				return texture;
+			}
+			set {
+				byte[] jpg = value.EncodeToJPG();
+				picturePath = Application.persistentDataPath + "/" + name + ".jpg";
+				File.WriteAllBytes (picturePath, jpg);
+			}
+		}
 	}
 }

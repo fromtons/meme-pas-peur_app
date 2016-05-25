@@ -24,8 +24,8 @@ namespace MPP.Inputs._Sound {
 		// Update is called once per frame
 		void Update () {
 
-			Debug.Log (valueToReach);
-			Debug.Log (currentValue);
+			/*Debug.Log (valueToReach);
+			Debug.Log (currentValue);*/
 
 			float minimisedValue = micIn.loudness - minValue;
 			if (minimisedValue < 0)
