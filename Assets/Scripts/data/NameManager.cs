@@ -22,7 +22,7 @@ namespace MPP.Data {
 			BinaryFormatter bf = new BinaryFormatter ();
 			FileStream file = File.Create(Application.persistentDataPath + "/ProfileData.dat");
 
-			ProfileData data = new ProfileData ();
+			NameData data = new NameData ();
 			data.name = inputField.text;
 			data.picture = spriteToSave.sprite.texture;
 
@@ -34,7 +34,7 @@ namespace MPP.Data {
 			if (File.Exists (Application.persistentDataPath + "/ProfileData.dat")) {
 				BinaryFormatter bf = new BinaryFormatter ();
 				FileStream file = File.Open(Application.persistentDataPath + "/ProfileData.dat", FileMode.Open);
-				ProfileData data = (ProfileData) bf.Deserialize(file);
+				NameData data = (NameData) bf.Deserialize(file);
 				file.Close();
 
 				spriteToSave.sprite = Sprite.Create (data.picture, new Rect (0, 0, data.picture.width, data.picture.height), new Vector2 (0.5f, 0.5f));
@@ -44,7 +44,7 @@ namespace MPP.Data {
 	}
 
 	[Serializable]
-	class ProfileData {
+	class NameData {
 		public string name;
 		public int age;
 		public string picturePath;
