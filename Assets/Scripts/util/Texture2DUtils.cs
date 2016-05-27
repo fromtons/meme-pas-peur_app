@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using ProtoTurtle.BitmapDrawing;
 
 namespace MPP.Util
 {
@@ -31,6 +32,19 @@ namespace MPP.Util
 			}
 			newTexture.Apply ();
 
+			return newTexture;
+		}
+
+		public static Texture2D RotateLeft(Texture2D texture) {
+			Texture2D newTexture = new Texture2D (texture.height, texture.width);
+
+			for (int y = 0; y < texture.height; y++) {
+				for (int x = 0; x < texture.width; x++) {
+					BitmapDrawingExtensions.DrawPixel (newTexture, y, newTexture.height - x, BitmapDrawingExtensions.GetPixel (texture, x, y));
+				}
+			}
+
+			newTexture.Apply ();
 			return newTexture;
 		}
 	}

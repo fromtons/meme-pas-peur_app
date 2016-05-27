@@ -29,6 +29,13 @@ namespace ProtoTurtle.BitmapDrawing
             texture.SetPixel(x, TransformToLeftTop_y(y, texture.height), color);
         }
 
+		/// <summary>
+		/// Returns a pixel just like GetPixel except 0,0 is the left top corner.</summary>
+		public static Color GetPixel(this Texture2D texture, int x, int y)
+		{
+			return texture.GetPixel(x, TransformToLeftTop_y(y, texture.height));
+		}
+
         /// <summary>
         /// Draws a pixel just like SetPixel except 0,0 is the left top corner.
         /// Takes the width and height as parameters - faster for calling this in a loop.

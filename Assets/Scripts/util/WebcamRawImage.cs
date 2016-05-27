@@ -64,10 +64,14 @@ namespace MPP.Util {
 			Texture2D snap = new Texture2D(wct.width, wct.height);
 			snap.SetPixels(wct.GetPixels());
 
-			if (wct.videoRotationAngle == 180) {
-				snap = FlipTexture (snap, "h");
-				snap = FlipTexture (snap, "v");
+			for (int i = 0; i < (wct.videoRotationAngle / 90) % 4; i++) {
+				snap = MPP.Util.Texture2DUtils.RotateLeft (snap);
+				#if UNITY_IOS
+					snap = FlipTexture (snap, "v");
+					snap = FlipTexture (snap, "h");
+				#endif
 			}
+
 			snap.Apply();
 			return snap;
 		}

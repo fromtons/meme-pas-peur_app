@@ -12,6 +12,8 @@ namespace MPP.Menus.Profile {
 		public Text accrocheText;
 		public Text sousAccrocheText;
 
+		public MPP.Util.SceneLoader sceneLoaderBack;
+
 		static int SCREEN_WIDTH = 768;
 		static int SCREEN_HEIGHT  = 1024;
 
@@ -61,7 +63,8 @@ namespace MPP.Menus.Profile {
 			if (_currentStep > 0)
 				GoToStep (_currentStep - 1);
 			else {
-				// TODO - Load last scene
+				if (sceneLoaderBack != null)
+					sceneLoaderBack.ManuallyLoadScene ();
 			}
 		}
 		

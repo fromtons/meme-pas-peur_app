@@ -21,14 +21,13 @@ namespace MPP.Menus.Profile {
 		}	
 
 		public void Capture() {
-		 	picture = wRI.SnapShot ();
+			picture = Texture2DUtils.CropSquare (wRI.SnapShot ());
 			snapshot.texture = picture;
-			(snapshot.GetComponent<AspectRatioFitter> ()).aspectRatio = (wRI.GetComponent<AspectRatioFitter> ()).aspectRatio;
 
 			pictureButton.gameObject.SetActive (false);
 			cancelButton.gameObject.SetActive (true);
 			snapshot.gameObject.SetActive (true);
-			confirmButton.interactable = true;
+			confirmButton.gameObject.SetActive(true);
 		}
 
 		public void Cancel() {
@@ -36,12 +35,7 @@ namespace MPP.Menus.Profile {
 			cancelButton.gameObject.SetActive (false);
 			snapshot.gameObject.SetActive (false);
 			picture = null;
-			confirmButton.interactable = false;
-		}
-		
-		// Update is called once per frame
-		void Update () {
-		
+			confirmButton.gameObject.SetActive (false);
 		}
 	}
 }
