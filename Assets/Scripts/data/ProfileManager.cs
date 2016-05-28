@@ -11,6 +11,7 @@ namespace MPP.Data {
 		
 		public static ProfileManager instance;
 		Profile _currentProfile;
+		LastProfileOpened _lastProfileOpened;
 
 		public Profile CurrentProfile {
 			get {
@@ -19,6 +20,7 @@ namespace MPP.Data {
 			set {
 				_currentProfile = value;
 				Debug.Log ("New current profile is now : " + _currentProfile.name);
+				SaveLastProfileOpened ();
 				Save ();
 			}
 		}
@@ -40,6 +42,10 @@ namespace MPP.Data {
 			}
 		}
 
+		void Start() {
+			CurrentProfile = LoadProfile (GetLastProfileOpened ());
+		}
+
 		public void Save() {
 			if (CurrentProfile == null)
 				return;
@@ -52,10 +58,6 @@ namespace MPP.Data {
 
 			bf.Serialize(file, data);
 			file.Close();
-		}
-
-		public void SetCurrentProfile(string profileName) {
-			CurrentProfile = LoadProfile (profileName);
 		}
 		
 		public Profile LoadProfile (string fileName) {
@@ -79,6 +81,31 @@ namespace MPP.Data {
 			foreach (FileInfo f in info) 
 			{ 
 				_availableProfiles.Add (LoadProfile(f.Name));
+			}
+		}
+
+		void SaveLastProfileOpened() {
+			if (CurrentProfile == null)
+				return;
+
+			BinaryFormatter bf = new BinaryFormatter ();
+			FileStream file = File.Create (Application.persistentDataPath + "/last.profile");
+			LastProfileOpened data = new LastProfileOpened (CurrentProfile.name);
+			bf.Serialize (file, data);
+			file.Close ();
+		}
+
+		string GetLastProfileOpened() {
+			if (File.Exists (Application.persistentDataPath + "/last.profile")) {
+				BinaryFormatter bf = new BinaryFormatter ();
+				FileStream file = File.Open (Application.persistentDataPath + "/last.profile", FileMode.Open);
+				LastProfileOpened data = (LastProfileOpened) bf.Deserialize (file);
+				file.Close ();
+
+				return data.name;
+			} else {
+				Debug.LogError ("File doesn't exists");
+				return null;
 			}
 		}
 	}
@@ -112,6 +139,15 @@ namespace MPP.Data {
 			if(profile.age != null) this.age = profile.age;
 			if(profile.difficulty != null) this.difficulty = profile.difficulty;
 			if(profile.picture != null) this.picture = profile.picture;
+		}
+	}
+
+	[Serializable]
+	class LastProfileOpened {
+		public string name;
+
+		public LastProfileOpened(string name) {
+			this.name = name+".dat";
 		}
 	}
 }
