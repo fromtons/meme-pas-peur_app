@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -17,17 +18,25 @@ namespace MPP.Data {
 			}
 			set {
 				_currentProfile = value;
+				Debug.Log ("New current profile is now : " + _currentProfile.name);
 				Save ();
 			}
 		}
 
+		List<Profile> _availableProfiles;
+		public List<Profile> AvailableProfiles {
+			get { return _availableProfiles; }
+		}
+
+
 		// Use this for initialization
-		void Start () {
+		void OnEnable () {
 			// Singleton
 			if (instance == null) {
 				instance = this;
+				DontDestroyOnLoad (this.gameObject);
 			} else {
-				Destroy (this);
+				Destroy (this.gameObject);
 			}
 		}
 
@@ -44,23 +53,38 @@ namespace MPP.Data {
 			bf.Serialize(file, data);
 			file.Close();
 		}
+
+		public void SetCurrentProfile(string profileName) {
+			CurrentProfile = LoadProfile (profileName);
+		}
 		
-		public void Load(string fileName) {
+		public Profile LoadProfile (string fileName) {
 			if (File.Exists (Application.persistentDataPath + "/" + fileName)) {
 				BinaryFormatter bf = new BinaryFormatter ();
 				FileStream file = File.Open (Application.persistentDataPath + "/" + fileName, FileMode.Open);
 				ProfileData data = (ProfileData)bf.Deserialize (file);
 				file.Close ();
 
-				CurrentProfile = new Profile (data.name, data.age, data.difficulty, data.picture);
+				return new Profile (data);
 			} else {
 				Debug.LogError ("File doesn't exists");
+				return null;
+			}
+		}
+
+		public void GetProfiles() {
+			_availableProfiles = new List<Profile> ();
+			DirectoryInfo dir = new DirectoryInfo(Application.persistentDataPath + "/");
+			FileInfo[] info = dir.GetFiles("*.dat");
+			foreach (FileInfo f in info) 
+			{ 
+				_availableProfiles.Add (LoadProfile(f.Name));
 			}
 		}
 	}
 
 	[Serializable]
-	class ProfileData {
+	public class ProfileData {
 		public string name;
 		public int age;
 		public int difficulty;
@@ -68,6 +92,9 @@ namespace MPP.Data {
 
 		public Texture2D picture {
 			get {
+				if (_picturePath == null || _picturePath.Length <= 0)
+					return null;
+
 				byte[] jpg = File.ReadAllBytes (_picturePath);
 				Texture2D texture = new Texture2D (1, 1);
 				texture.LoadImage (jpg);

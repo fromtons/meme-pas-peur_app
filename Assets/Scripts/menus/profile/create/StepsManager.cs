@@ -39,7 +39,10 @@ namespace MPP.Menus.Profile {
 
 			// Adds head and body steps
 			if(headStepsWrapper != null) foreach (RectTransform rt  in headStepsWrapper.transform) headSteps.Add (rt.gameObject);
-			foreach (RectTransform rt  in bodyStepsWrapper.transform) bodySteps.Add (rt.gameObject);
+			foreach (RectTransform rt  in bodyStepsWrapper.transform) {
+				if(rt.gameObject.name != "Image")
+					bodySteps.Add (rt.gameObject);
+			}
 			if (headStepsWrapper != null && headSteps.Count != bodySteps.Count)
 				Debug.LogError ("The number of head steps and body steps is not the same");
 
@@ -59,7 +62,6 @@ namespace MPP.Menus.Profile {
 		}
 
 		public void GoBack () {
-			Debug.Log ("GoBack");
 			if (_currentStep > 0)
 				GoToStep (_currentStep - 1);
 			else {
@@ -103,39 +105,25 @@ namespace MPP.Menus.Profile {
 		}
 
 		public void BringToFront() {
-			if (inTransition)
-				return;
-
 			Hashtable ht = new Hashtable ();
 			ht.Add ("from", 0f);
 			ht.Add ("to", wrapperRt.sizeDelta.y);
 			ht.Add ("time", 1f);
 			ht.Add ("onupdate", "OnVerticalPositionUpdate");
 			ht.Add ("onupdatetarget", this.gameObject);
-			ht.Add ("oncomplete", "OnTransitionComplete");
-			ht.Add ("oncompletetarget", this.gameObject);
 			ht.Add ("easetype", iTween.EaseType.easeOutExpo);
 			iTween.ValueTo (wrapperRt.gameObject, ht);
-
-			inTransition = true;
 		}
 			
 		public void BringToOrigin() {
-			if (inTransition)
-				return;
-
 			Hashtable ht = new Hashtable ();
 			ht.Add ("from", wrapperRt.anchoredPosition.y);
 			ht.Add ("to", originalPos.y);
 			ht.Add ("time", 1f);
 			ht.Add ("onupdate", "OnVerticalPositionUpdate");
 			ht.Add ("onupdatetarget", this.gameObject);
-			ht.Add ("oncomplete", "OnTransitionComplete");
-			ht.Add ("oncompletetarget", this.gameObject);
 			ht.Add ("easetype", iTween.EaseType.easeOutExpo);
 			iTween.ValueTo (wrapperRt.gameObject, ht);
-
-			inTransition = true;
 		}
 
 		void OnVerticalPositionUpdate(float value) {
