@@ -90,7 +90,6 @@ public class CreateProfile : MonoBehaviour {
 	}
 
 	public void SetPicture() {
-		// TODO - Crop a square format at center
 		// Model
 		_profile.picture = MPP.Util.Texture2DUtils.CropSquare(pictureInput.texture as Texture2D);
 		// View
