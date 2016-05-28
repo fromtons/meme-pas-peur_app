@@ -92,9 +92,9 @@ namespace MPP.Data {
 
 		public Texture2D picture {
 			get {
-				if (_picturePath == null || _picturePath.Length <= 0)
+				if (_picturePath == null || _picturePath.Length <= 0 || !File.Exists (_picturePath))
 					return null;
-
+				
 				byte[] jpg = File.ReadAllBytes (_picturePath);
 				Texture2D texture = new Texture2D (1, 1);
 				texture.LoadImage (jpg);

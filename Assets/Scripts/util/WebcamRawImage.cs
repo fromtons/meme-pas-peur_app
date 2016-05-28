@@ -26,6 +26,10 @@ namespace MPP.Util {
 			wct.Play();
 		}
 
+		void OnDestroy() {
+			wct.Stop ();
+		}
+
 		private void Update()
 		{
 			if ( wct.width < 100 && rawImageARF && rawImageRT)

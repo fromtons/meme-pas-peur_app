@@ -95,6 +95,7 @@ public class CreateProfile : MonoBehaviour {
 		_profile.picture = MPP.Util.Texture2DUtils.CropSquare(pictureInput.texture as Texture2D);
 		// View
 		recapPicture.texture = _profile.picture;
+		Save ();
 	}
 
 	public void Save() {
