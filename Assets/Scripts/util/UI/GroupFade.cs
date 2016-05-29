@@ -9,6 +9,8 @@ namespace MPP.Util.UI {
 
 		public CanvasGroup _canvasGroup;
 
+		protected float _hideFadeDelay = 0f;
+
 		// Use this for initialization
 		void Start () {
 			if(_canvasGroup == null)
@@ -40,6 +42,7 @@ namespace MPP.Util.UI {
 			ht.Add ("from", 1f);
 			ht.Add ("to", 0f);
 			ht.Add ("time", duration);
+			ht.Add ("delay", _hideFadeDelay);
 			ht.Add ("onupdate", "OnUpdate");
 			ht.Add ("onupdatetarget", this.gameObject);
 			ht.Add ("oncomplete", "OnHideComplete");

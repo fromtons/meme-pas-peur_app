@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using MPP.Util.UI;
 
 namespace MPP.Util {
 	public class SceneLoader : MonoBehaviour {
@@ -8,13 +9,16 @@ namespace MPP.Util {
 		public string sceneToLoad;
 		public bool disableMouseButtonDown = false;
 		public float delay = 0f;
+		public float inDuration = 0.6f;
+		public float outDuration = 0.4f;
 
 		BoxCollider2D collider;
-		public GameObject loadingScreen; 
+		public GameObject prefabLoading;
+
+		LoadingWrapper _loading;
 
 		// Use this for initialization
 		void Start () {
-			if(loadingScreen) loadingScreen.SetActive (false);
 			collider = GetComponent<BoxCollider2D> ();
 		}
 
@@ -30,11 +34,19 @@ namespace MPP.Util {
 		}
 
 		IEnumerator DisplayLoadingScreen(string level) {
-			if(loadingScreen) loadingScreen.SetActive(true);
+			AsyncOperation async = SceneManager.LoadSceneAsync (level);
+
+			if (prefabLoading != null) {
+				async.allowSceneActivation = false;
+				_loading = Instantiate (prefabLoading).GetComponent<LoadingWrapper>();
+				_loading.Async = async;
+				_loading.InDuration = inDuration;
+				_loading.OutDuration = outDuration;
+			} else
+				Debug.Log("No prefab loading given !");
 
 			yield return new WaitForSeconds(delay);
 
-			AsyncOperation async = SceneManager.LoadSceneAsync (level);
 			while (!async.isDone) {
 				yield return null;
 			}

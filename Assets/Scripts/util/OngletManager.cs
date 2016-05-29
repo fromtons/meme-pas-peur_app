@@ -53,7 +53,7 @@ namespace MPP.Util {
 				SceneLoader ongletSl = ((SceneLoader) onglet.GetComponent<SceneLoader> ());
 				UnityEngine.UI.Text ongletText = onglet.GetComponent<Onglet> ().textObject.GetComponent<UnityEngine.UI.Text> ();
 				RectTransform ongletTextRt = ((RectTransform)(ongletText.GetComponent<RectTransform> ()));
-				ongletScript.GetComponent<SceneLoader> ().loadingScreen = loadingScreen;
+				//ongletScript.GetComponent<SceneLoader> ().loadingScreen = loadingScreen;
 
 				// Move it along
 				// Pastille
