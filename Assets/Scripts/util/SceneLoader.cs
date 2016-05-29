@@ -8,7 +8,7 @@ namespace MPP.Util {
 
 		public string sceneToLoad;
 		public bool disableMouseButtonDown = false;
-		public bool heavyLoad = false;
+		public bool heavyLoad = true;
 		public float delay = 0f;
 		public float inDuration = 0.6f;
 		public float outDuration = 0.4f;
@@ -20,6 +20,11 @@ namespace MPP.Util {
 
 		// Use this for initialization
 		void Start () {
+			if (prefabLoading != null) {
+				_loading = Instantiate (prefabLoading).GetComponent<LoadingWrapper> ();
+				_loading.InDuration = inDuration;
+				_loading.OutDuration = outDuration;
+			}
 			collider = GetComponent<BoxCollider2D> ();
 		}
 
@@ -40,7 +45,8 @@ namespace MPP.Util {
 				async = SceneManager.LoadSceneAsync (level);
 
 			if (prefabLoading != null) {
-				_loading = Instantiate (prefabLoading).GetComponent<LoadingWrapper>();
+				_loading.Launch ();
+
 				if (!heavyLoad && async != null) {
 					async.allowSceneActivation = false;
 					_loading.Async = async;
@@ -48,8 +54,6 @@ namespace MPP.Util {
 					// HEAVY LOADING
 					_loading.LevelToLoad = level;
 				}
-				_loading.InDuration = inDuration;
-				_loading.OutDuration = outDuration;
 			} else
 				Debug.Log("No prefab loading given !");
 

@@ -3,14 +3,15 @@ using System.Collections;
 
 namespace MPP.Util.UI {
 	public class GroupRightToLeftMask : GroupFade {
-
 		public GameObject contentToMove;
-
+	
 		public override void Show(float duration) {
 			base.Show(0f);
+		
+			Debug.Log ("[Show] screen width: " + Screen.width);
 
 			Hashtable ht = new Hashtable ();
-			ht.Add ("from", ((this.transform as RectTransform).parent.transform as RectTransform).sizeDelta.x);
+			ht.Add ("from", Screen.width); // TODO - Find another way than Screen.width to get width of our mask
 			ht.Add ("to", 0f);
 			ht.Add ("time", duration);
 			ht.Add ("onupdate", "OnContentUpdate");
@@ -22,9 +23,11 @@ namespace MPP.Util.UI {
 		public override void Hide(float duration) {
 			_hideFadeDelay = duration;
 
+			Debug.Log ("[Hide] screen width: " + Screen.width);
+
 			Hashtable ht = new Hashtable ();
 			ht.Add ("from", 0f);
-			ht.Add ("to", -((this.transform as RectTransform).parent.transform as RectTransform).sizeDelta.x);
+			ht.Add ("to", -Screen.width); // TODO - Find another way than Screen.width to get width of our mask
 			ht.Add ("time", duration);
 			ht.Add ("onupdate", "OnContentUpdate");
 			ht.Add ("onupdatetarget", this.gameObject);

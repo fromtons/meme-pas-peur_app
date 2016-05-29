@@ -8,7 +8,6 @@ namespace MPP.Util.UI {
 	public class GroupFade : MonoBehaviour {
 
 		public CanvasGroup _canvasGroup;
-
 		protected float _hideFadeDelay = 0f;
 
 		// Use this for initialization
