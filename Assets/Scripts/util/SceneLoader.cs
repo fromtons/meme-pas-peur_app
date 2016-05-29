@@ -39,6 +39,10 @@ namespace MPP.Util {
 			}
 		}
 
+		public void SetOrigin(RectTransform value) {
+			_loading.loadingObject.SetOrigin (value);
+		}
+
 		IEnumerator DisplayLoadingScreen(string level) {
 			AsyncOperation async = null;
 			if (!heavyLoad)

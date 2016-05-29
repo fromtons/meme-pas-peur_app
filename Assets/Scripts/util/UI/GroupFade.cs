@@ -9,6 +9,7 @@ namespace MPP.Util.UI {
 
 		public CanvasGroup _canvasGroup;
 		protected float _hideFadeDelay = 0f;
+		protected RectTransform _origin;
 
 		// Use this for initialization
 		void Start () {
@@ -18,6 +19,10 @@ namespace MPP.Util.UI {
 
 		void OnUpdate(float value) {
 			_canvasGroup.alpha = value;
+		}
+
+		public virtual void SetOrigin(RectTransform value) {
+			_origin = value;
 		}
 		
 		public virtual void Show(float duration) {

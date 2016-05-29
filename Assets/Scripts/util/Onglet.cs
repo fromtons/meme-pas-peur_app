@@ -41,5 +41,15 @@ namespace MPP.Util {
 		}
 
 		public Image background;
+
+		void Start() {
+			Button button = this.GetComponent<Button> ();
+			button.onClick.AddListener (OnClick);
+		}
+
+		void OnClick() {
+			SceneLoader sl = this.GetComponent<SceneLoader> ();
+			sl.SetOrigin (this.gameObject.transform as RectTransform);
+		}
 	}
 }

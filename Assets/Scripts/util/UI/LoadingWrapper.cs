@@ -27,15 +27,13 @@ namespace MPP.Util.UI {
 		bool _inEnded = false;
 
 		void Start() {
-			DontDestroyOnLoad (this.gameObject);
-
-			Debug.Log ("Start loadingwrapper");
 			loadingObject._canvasGroup.alpha = 0;
-
 			gameObject.SetActive (false);
 		}
 
 		public void Launch() {
+			DontDestroyOnLoad (this.gameObject);
+
 			gameObject.SetActive (true);
 			loadingObject.Show (_inDuration);
 			StartCoroutine (OnInEnd ());
