@@ -11,10 +11,7 @@ namespace MPP.Util {
 		public int currentOnglet = 0;
 		public List<string> scenesToLoad;
 		public GameObject prefab;
-		public GameObject loadingScreenPrefab;
 		public float highlightDelay = 4f; 
-
-		GameObject loadingScreen;
 
 		RectTransform rt;
 
@@ -39,12 +36,6 @@ namespace MPP.Util {
 			canvasWidth = rt.rect.width;
 			ongletsSize = canvasWidth / scenesToLoad.Count;
 
-			loadingScreen = Instantiate (loadingScreenPrefab);
-			loadingScreen.transform.SetParent(this.transform);
-			loadingScreen.GetComponent<RectTransform> ().localScale = new Vector3 (1f, 1f, 1f);
-			loadingScreen.GetComponent<RectTransform> ().sizeDelta = new Vector2 (rt.rect.width, rt.rect.height);
-			loadingScreen.GetComponent<RectTransform> ().anchoredPosition = new Vector2 (0f, 0f);
-
 			for (int i = 0; i < scenesToLoad.Count; i++) {
 				// Get the onglet
 				GameObject onglet = (GameObject) Instantiate(prefab);
@@ -53,7 +44,6 @@ namespace MPP.Util {
 				SceneLoader ongletSl = ((SceneLoader) onglet.GetComponent<SceneLoader> ());
 				UnityEngine.UI.Text ongletText = onglet.GetComponent<Onglet> ().textObject.GetComponent<UnityEngine.UI.Text> ();
 				RectTransform ongletTextRt = ((RectTransform)(ongletText.GetComponent<RectTransform> ()));
-				//ongletScript.GetComponent<SceneLoader> ().loadingScreen = loadingScreen;
 
 				// Move it along
 				// Pastille
@@ -75,8 +65,6 @@ namespace MPP.Util {
 				if (i == currentOnglet + 1)
 					nextOnglet = ongletScript;
 			}
-
-			loadingScreen.transform.SetSiblingIndex (999);
 		}
 
 		public void HighlightNextOnglet() {

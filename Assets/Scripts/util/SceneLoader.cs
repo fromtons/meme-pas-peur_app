@@ -8,6 +8,7 @@ namespace MPP.Util {
 
 		public string sceneToLoad;
 		public bool disableMouseButtonDown = false;
+		public bool heavyLoad = false;
 		public float delay = 0f;
 		public float inDuration = 0.6f;
 		public float outDuration = 0.4f;
@@ -34,12 +35,19 @@ namespace MPP.Util {
 		}
 
 		IEnumerator DisplayLoadingScreen(string level) {
-			AsyncOperation async = SceneManager.LoadSceneAsync (level);
+			AsyncOperation async = null;
+			if (!heavyLoad)
+				async = SceneManager.LoadSceneAsync (level);
 
 			if (prefabLoading != null) {
-				async.allowSceneActivation = false;
 				_loading = Instantiate (prefabLoading).GetComponent<LoadingWrapper>();
-				_loading.Async = async;
+				if (!heavyLoad && async != null) {
+					async.allowSceneActivation = false;
+					_loading.Async = async;
+				} else {
+					// HEAVY LOADING
+					_loading.LevelToLoad = level;
+				}
 				_loading.InDuration = inDuration;
 				_loading.OutDuration = outDuration;
 			} else
@@ -47,8 +55,10 @@ namespace MPP.Util {
 
 			yield return new WaitForSeconds(delay);
 
-			while (!async.isDone) {
-				yield return null;
+			if (async != null) {
+				while (!async.isDone) {
+					yield return null;
+				}
 			}
 		}
 
