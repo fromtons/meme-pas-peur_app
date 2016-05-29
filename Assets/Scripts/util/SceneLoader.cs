@@ -58,8 +58,10 @@ namespace MPP.Util {
 					// HEAVY LOADING
 					_loading.LevelToLoad = level;
 				}
-			} else
-				Debug.Log("No prefab loading given !");
+			} else {
+				Debug.Log ("No prefab loading given !");
+				async = SceneManager.LoadSceneAsync (level);
+			}
 
 			yield return new WaitForSeconds(delay);
 
