@@ -55,6 +55,10 @@ namespace MPP.Forest.Scene_06 {
 			}
 		}
 
+		void OnDestroy() {
+			MicEventManager.SoundCapBegin -= OnSoundCapBegin;
+		}
+
 		IEnumerator AwakeCoolDown() {
 			yield return new WaitForSeconds (2f);
 			CurrentAnimationState = STATE_SLEEPING;

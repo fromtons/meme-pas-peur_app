@@ -59,6 +59,10 @@ namespace MPP.Inputs._Sound {
 			GraphDebugEventManager.TriggerUpdate (new GraphDebugEventArgs { ID = "avg", Value = freq_avg });
 		}
 
+		void OnDestroy () {
+			Microphone.End (Microphone.devices [0]);
+		}
+
 		// Gets the sound spectrum.
 		public float[] GetSpectrum() {
 			spectrum = AudioUtils.GetSpectrum (audio, samples, spectrum);
