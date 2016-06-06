@@ -60,7 +60,7 @@ namespace MPP.Forest.Scene_06 {
 		}
 
 		IEnumerator AwakeCoolDown() {
-			yield return new WaitForSeconds (2f);
+			yield return new WaitForSeconds (.5f);
 			CurrentAnimationState = STATE_SLEEPING;
 		}
 	}
