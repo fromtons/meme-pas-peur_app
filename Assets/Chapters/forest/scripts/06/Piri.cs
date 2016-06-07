@@ -29,7 +29,6 @@ namespace MPP.Forest.Scene_06 {
 		Vector3 initialScale;
 		bool travelling = false; 
 		bool goingBack = false;
-		bool wasTravelling = false;
 
 		int insistCpt = 0;
 		bool insist = true;
@@ -85,6 +84,7 @@ namespace MPP.Forest.Scene_06 {
 					TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true });
 				else if (e.AudioClipId != 4 && e.AudioClipId != 5) {
 					StartCoroutine (Insist ());
+					WolfEventManager.TriggerWolfListening (new WolfEventArgs { Listening = true });
 
 					if (e.AudioClipId == 1) {
 						travelling = true;
@@ -94,7 +94,6 @@ namespace MPP.Forest.Scene_06 {
 		}
 
 		void OnWolfStateChange(WolfEventArgs e) {
-			wasTravelling = false;
 			if (travelling && e.State == Wolf.STATE_AWAKEN) {
 				// Don't try to go back if we already are at origin position
 				if (checkIfAlreadyAtOrigin())
@@ -117,6 +116,7 @@ namespace MPP.Forest.Scene_06 {
 			if (other.gameObject == target) {
 				travelling = false;
 				OngletManager.instance.HighlightNextOnglet ();
+				WolfEventManager.TriggerWolfListening (new WolfEventArgs { Listening = false });
 			} else if (other.gameObject == origin) {
 				if (goingBack) {
 					afterGoingBack ();
@@ -143,16 +143,13 @@ namespace MPP.Forest.Scene_06 {
 		}
 
 		void goBack() {
-			wasTravelling = true; // Allows to know the value to reset after going back
 			travelling = false;
 			goingBack = true;
 			speed = -3;
 		}
 
 		void afterGoingBack() {
-			if(wasTravelling)
-				travelling = true;
-
+			travelling = true;
 			goingBack = false;
 			speed = 0;
 		}

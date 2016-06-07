@@ -6,11 +6,16 @@ namespace MPP.Forest.Scene_06 {
 
 		public delegate void WolfEvent(WolfEventArgs eventArgs);
 
-		public static event WolfEvent WolfChangeState;
+		public static event WolfEvent WolfChangeState, WolfListening;
 
 		public static void TriggerWolfChangeState(WolfEventArgs eventArgs = null) {
 			if (WolfChangeState != null)
 				WolfChangeState (eventArgs);
+		}
+
+		public static void TriggerWolfListening(WolfEventArgs eventArgs = null) {
+			if (WolfListening != null)
+				WolfListening (eventArgs);
 		}
 	}
 }

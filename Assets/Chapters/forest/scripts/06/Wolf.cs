@@ -33,9 +33,11 @@ namespace MPP.Forest.Scene_06 {
 
 		public float shakeFactor = 0f;
 
+		bool _listening = false;
 		AudioSource audio;
 
 		MicEventManager.MicEvent onSoundCapBegin;
+		WolfEventManager.WolfEvent onListening;
 
 		void Start() {
 			animator = this.GetComponent<Animator> ();
@@ -43,20 +45,29 @@ namespace MPP.Forest.Scene_06 {
 
 			onSoundCapBegin = new MicEventManager.MicEvent (OnSoundCapBegin);
 			MicEventManager.SoundCapBegin += onSoundCapBegin;
+
+			onListening = new WolfEventManager.WolfEvent (OnListening);
+			WolfEventManager.WolfListening += onListening;
 		}
 
 		void Update() {
 			shakeFactor = AudioUtils.GetAveragedVolume (audio, 256) * 5;
 		}
 
+		void OnListening(WolfEventArgs eventArgs) {
+			if(eventArgs.Listening != null)
+				_listening = eventArgs.Listening;
+		}
+
 		void OnSoundCapBegin(MicEventArgs eventArgs) {
-			if (eventArgs.OriginID == "wolf") {
+			if (_listening && eventArgs.OriginID == "wolf") {
 				CurrentAnimationState = STATE_AWAKEN;
 			}
 		}
 
 		void OnDestroy() {
 			MicEventManager.SoundCapBegin -= OnSoundCapBegin;
+			WolfEventManager.WolfListening -= OnListening;
 		}
 
 		IEnumerator AwakeCoolDown() {
