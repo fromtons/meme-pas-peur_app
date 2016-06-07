@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using MPP.Util.UI;
+using MPP.Events;
 
 namespace MPP.Util {
 	public class SceneLoader : MonoBehaviour {
@@ -58,10 +59,12 @@ namespace MPP.Util {
 					// HEAVY LOADING
 					_loading.LevelToLoad = level;
 				}
-			} else {
+			} else if(heavyLoad) {
 				Debug.Log ("No prefab loading given !");
 				async = SceneManager.LoadSceneAsync (level);
 			}
+
+			SceneEventManager.TriggerSceneLoad (new SceneEventArgs { Name = level });
 
 			yield return new WaitForSeconds(delay);
 

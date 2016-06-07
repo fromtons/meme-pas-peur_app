@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using MPP.Events;
 
 namespace MPP.Util.UI {
 	public class LoadingWrapper : MonoBehaviour {
@@ -44,6 +45,7 @@ namespace MPP.Util.UI {
 				_async = null;
 
 				loadingObject.Hide (_outDuration);
+				SceneEventManager.TriggerSceneLoaded (new SceneEventArgs { Name = SceneManager.GetActiveScene().name });
 				StartCoroutine (OnOutEnd());
 			}
 		}
