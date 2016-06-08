@@ -36,6 +36,7 @@ namespace MPP.Forest.Scene_04 {
 		bool insist = true;
 
 		TalkEventManager.TalkEvent onTalkEnded;
+		LuciolesEventManager.LuciolesEvent onLuciolesLightened;
 
 		// Use this for initialization
 		void Start () {
@@ -53,6 +54,9 @@ namespace MPP.Forest.Scene_04 {
 			ht.Add ("oncomplete", "OnAnimationComplete");
 			ht.Add ("oncompletetarget", this.gameObject);
 			iTween.MoveTo(gameObject, ht);
+
+			onLuciolesLightened = new LuciolesEventManager.LuciolesEvent (OnLuciolesLightened);
+			LuciolesEventManager.LuciolesLightened += onLuciolesLightened;
 		}
 
 
@@ -63,6 +67,12 @@ namespace MPP.Forest.Scene_04 {
 			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 0, Autoplay = false });
 			onTalkEnded = new TalkEventManager.TalkEvent (OnTalkEnded);
 			TalkEventManager.TalkEnded += onTalkEnded;
+		}
+
+		void OnLuciolesLightened() {
+			insist = false;
+			state = STATE_IDLE;	
+			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true, Delay = 2f });
 		}
 
 		void OnTalkEnded(TalkEventArgs eventArgs) {
@@ -81,15 +91,10 @@ namespace MPP.Forest.Scene_04 {
 				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = ((insistCpt % 2)+2), Autoplay = true });
 			insistCpt++;
 		}
-
-		public void OnLightenedLucioles() {
-			insist = false;
-			state = STATE_IDLE;	
-			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true, Delay = 2f });
-		}
 			
 		void OnDestroy () {
 			TalkEventManager.TalkEnded -= onTalkEnded;
+			LuciolesEventManager.LuciolesLightened -= onLuciolesLightened;
 		}
 	}
 }

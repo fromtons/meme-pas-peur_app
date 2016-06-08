@@ -17,10 +17,10 @@ namespace MPP.Forest.Scene_04 {
 
 		public void toggleLight() {
 			disableGreyscale ();
-			enableLightSounds();
+			//enableLightSounds();
 		}
 
-		private void enableLightSounds() {
+		public void enableLightSounds() {
 			audioSource.clip = ambientLight;
 			audioSource.time = 0;
 			audioSource.Play ();

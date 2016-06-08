@@ -18,8 +18,8 @@ public class MixerManager : MonoBehaviour {
 
 		DontDestroyOnLoad (this.gameObject);
 	}
-	
-	public void FadeTo(string channel, float value, float duration) {
+
+	public void FadeTo(string channel, float value, float duration, iTween.EaseType ease) {
 		iTween.StopByName (this.gameObject, "Set"+channel);
 
 		float fromValue = 0f;
@@ -31,8 +31,12 @@ public class MixerManager : MonoBehaviour {
 		ht.Add ("to", value);
 		ht.Add ("time", duration);
 		ht.Add ("onupdate", "Set"+channel);
-		ht.Add ("easetype", iTween.EaseType.easeInExpo);
+		ht.Add ("easetype", ease);
 		iTween.ValueTo(gameObject, ht);
+	}
+
+	public void FadeTo(string channel, float value, float duration) {
+		FadeTo (channel, value, duration, iTween.EaseType.easeInExpo);
 	}
 
 	void SetMasterVol(float value) {

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace MPP.Forest.Scene_04 {
 	public class Manager : MonoBehaviour {
@@ -8,37 +9,58 @@ namespace MPP.Forest.Scene_04 {
 		public static int nbOfLuciolesChecked = 0;
 		public static int introAnimationDuration = 25;
 
+		public MusicLoop musicLoop;
+
+		public GameObject background;
+		public GameObject foreground;
+
+		LuciolesEventManager.LuciolesEvent onLuciolesCheck;
+		LuciolesEventManager.LuciolesEvent onLuciolesLightened;
+
 		// Use this for initialization
 		void Start () {
 			nbOfLuciolesChecked = 0;
+
+			onLuciolesCheck = new LuciolesEventManager.LuciolesEvent (OnLuciolesCheck);
+			LuciolesEventManager.LuciolesCheck += onLuciolesCheck;
+
+			onLuciolesLightened = new LuciolesEventManager.LuciolesEvent (OnLuciolesLightened);
+			LuciolesEventManager.LuciolesLightened += onLuciolesLightened;
 		}
 
-		public static void checkLuciole() {
-
-			// TODO - Improve these links
-			GameObject mainCamera = GameObject.Find("MainCamera");
-			GameObject background = GameObject.Find("background");
-			GameObject foreground = GameObject.Find("forest_first_plan");
-
-			GameObject hero = GameObject.Find ("piri");
-
+		void OnLuciolesCheck() {
 			nbOfLuciolesChecked++;
+			if (nbOfLuciolesChecked >= nbOfLuciolesToCheck) 
+				LuciolesEventManager.TriggerLuciolesLightened ();
+		}
 
-			if (nbOfLuciolesChecked >= nbOfLuciolesToCheck) {
+		void OnLuciolesLightened() {
+			// Lightens the background (may not be useful in the future, we'll see)
+			BackgroundManager bgMngr = (BackgroundManager) background.GetComponent(typeof(BackgroundManager));
+			bgMngr.ChangeColor (new Color(1f,1f,1f,1f));
+			BackgroundManager fgMngr = (BackgroundManager) foreground.GetComponent(typeof(BackgroundManager));
+			fgMngr.ChangeColor (new Color(1f,1f,1f,1f));
 
-				// Lightens the background (may not be useful in the future, we'll see)
-				BackgroundManager bgMngr = (BackgroundManager) background.GetComponent(typeof(BackgroundManager));
-				bgMngr.ChangeColor (new Color(1f,1f,1f,1f));
-				BackgroundManager fgMngr = (BackgroundManager) foreground.GetComponent(typeof(BackgroundManager));
-				fgMngr.ChangeColor (new Color(1f,1f,1f,1f));
+			// Notifies the camera manager in order to disable some filters
+			MainCamera cameraManager = (MainCamera) this.GetComponent(typeof(MainCamera));
+			cameraManager.toggleLight();
 
-				// Notifies the camera manager in order to disable some filters
-				MainCamera cameraManager = (MainCamera) mainCamera.GetComponent(typeof(MainCamera));
-				cameraManager.toggleLight();
-			
-				// Changes piri's state
-				((Piri) hero.GetComponent(typeof(Piri))).OnLightenedLucioles();
-			}
+			StartCoroutine (ChangeMusic());
+		}
+
+		IEnumerator ChangeMusic() {
+			if (MixerManager.instance != null)
+				MixerManager.instance.FadeTo ("MusicVol", -80f, 0.5f);
+
+			yield return new WaitForSeconds (0.5f);
+			musicLoop.Stop ();
+			MixerManager.instance.FadeTo ("MusicVol", 0f, 0f);
+			this.GetComponent<MainCamera> ().enableLightSounds ();
+		}
+
+		void OnDestroy() {
+			LuciolesEventManager.LuciolesCheck -= onLuciolesCheck;
+			LuciolesEventManager.LuciolesLightened -= onLuciolesLightened;
 		}
 	}
 }

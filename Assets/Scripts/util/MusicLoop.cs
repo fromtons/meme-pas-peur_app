@@ -72,12 +72,22 @@ public class MusicLoop : MonoBehaviour {
 		SceneEventManager.SceneLoad -= onSceneLoad;
 	}
 
-	void Reset() {
+	public void Reset() {
+		_audioSource.clip = this.openClip;
+		_audioSourceLoop.clip = this.loopClip;
+
 		if(MixerManager.instance != null)
 			MixerManager.instance.FadeTo ("MusicVol", 0f, 0f);
 		if (autoPlay) {
 			PlayOpen ();
 		}
+	}
+
+	public void Stop() {
+		_audioSource.clip = null;
+		_audioSourceLoop.clip = null;
+		_audioSource.Stop();
+		_audioSourceLoop.Stop();
 	}
 
 	void PlayOpen() {

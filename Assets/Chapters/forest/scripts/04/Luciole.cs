@@ -42,7 +42,7 @@ namespace MPP.Forest.Scene_04 {
 					audioSource.PlayOneShot(audioClip);
 
 
-					Manager.checkLuciole();
+					LuciolesEventManager.TriggerLuciolesCheck ();
 				}
 			}
 		} 
