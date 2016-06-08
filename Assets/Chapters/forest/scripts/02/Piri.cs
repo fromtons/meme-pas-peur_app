@@ -30,6 +30,7 @@ namespace MPP.Forest.Scene_02 {
 		public GameObject mouthToHide;
 		public GameObject listenTo;
 		public float walkAwayDuration = 2f;
+		public MPP.Forest.Scene_02.MusicManager musicManager;
 
 		bool firstSentenceDone = false;
 
@@ -96,6 +97,8 @@ namespace MPP.Forest.Scene_02 {
 			clicked = true;
 			listenTo.GetComponent<Animator>().SetBool("shaking", false);
 			TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true, Delay = delay });
+			if (musicManager != null)
+				musicManager.ChangeClip ();
 		}
 
 		void TriggerAnimation() {
