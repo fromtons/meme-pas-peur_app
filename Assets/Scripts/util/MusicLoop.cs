@@ -77,7 +77,7 @@ public class MusicLoop : MonoBehaviour {
 		_audioSourceLoop.clip = this.loopClip;
 
 		if(MixerManager.instance != null)
-			MixerManager.instance.FadeTo ("MusicVol", 0f, 0f);
+			MixerManager.instance.FadeTo ("MusicVol", 0f, .2f);
 		if (autoPlay) {
 			PlayOpen ();
 		}

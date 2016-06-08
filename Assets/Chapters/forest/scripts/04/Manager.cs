@@ -8,9 +8,7 @@ namespace MPP.Forest.Scene_04 {
 		public static int nbOfLuciolesToCheck = 3;
 		public static int nbOfLuciolesChecked = 0;
 		public static int introAnimationDuration = 25;
-
-		public MusicLoop musicLoop;
-
+	
 		public GameObject background;
 		public GameObject foreground;
 
@@ -49,11 +47,19 @@ namespace MPP.Forest.Scene_04 {
 		}
 
 		IEnumerator ChangeMusic() {
+			MusicLoop musicLoop = null;
+			foreach (MusicLoop mL in MusicLoop.instances) {
+				if (mL.ID == "forest34")
+					musicLoop = mL;
+			}
+			Debug.Log (musicLoop);
+
 			if (MixerManager.instance != null)
 				MixerManager.instance.FadeTo ("MusicVol", -80f, 0.5f);
 
 			yield return new WaitForSeconds (0.5f);
-			musicLoop.Stop ();
+			if(musicLoop != null)
+				musicLoop.Stop ();
 			MixerManager.instance.FadeTo ("MusicVol", 0f, 0f);
 			this.GetComponent<MainCamera> ().enableLightSounds ();
 		}
