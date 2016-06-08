@@ -19,6 +19,8 @@ namespace MPP.Events {
 			if (SceneLoaded != null)
 				SceneLoaded (eventArgs);
 
+			MixerManager.instance.FadeTo ("AmbientVol", 0f, 0.5f);
+			MixerManager.instance.FadeTo ("VoicesVol", 0f, 0.5f);
 			Debug.Log ("Scene Loaded : "+eventArgs.Name);
 		}
 	}

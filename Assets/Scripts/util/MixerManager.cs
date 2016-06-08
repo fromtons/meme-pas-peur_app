@@ -20,12 +20,13 @@ public class MixerManager : MonoBehaviour {
 	}
 	
 	public void FadeTo(string channel, float value, float duration) {
-		iTween.Stop (gameObject);
+		iTween.StopByName (this.gameObject, "Set"+channel);
 
 		float fromValue = 0f;
 		audioMixer.GetFloat (channel, out fromValue);
 
 		Hashtable ht = new Hashtable ();
+		ht.Add ("name", "Set"+channel);
 		ht.Add ("from", fromValue);
 		ht.Add ("to", value);
 		ht.Add ("time", duration);
@@ -34,11 +35,19 @@ public class MixerManager : MonoBehaviour {
 		iTween.ValueTo(gameObject, ht);
 	}
 
-	public void SetMasterVol(float value) {
+	void SetMasterVol(float value) {
 		audioMixer.SetFloat("MasterVol", value);
 	}
 
-	public void SetMusicVol(float value) {
+	void SetMusicVol(float value) {
 		audioMixer.SetFloat("MusicVol", value);
+	}
+
+	void SetAmbientVol(float value) {
+		audioMixer.SetFloat("AmbientVol", value);
+	}
+
+	void SetVoicesVol(float value) {
+		audioMixer.SetFloat("VoicesVol", value);
 	}
 }

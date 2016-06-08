@@ -65,6 +65,10 @@ namespace MPP.Util {
 			}
 
 			SceneEventManager.TriggerSceneLoad (new SceneEventArgs { Name = level });
+			if (MixerManager.instance != null) {
+				MixerManager.instance.FadeTo ("AmbientVol", -80f, 0.5f);
+				MixerManager.instance.FadeTo ("VoicesVol", -80f, 0.5f);
+			}
 
 			yield return new WaitForSeconds(delay);
 
