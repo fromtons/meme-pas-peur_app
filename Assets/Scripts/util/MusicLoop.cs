@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using MPP.Events;
 
-[RequireComponent (typeof(AudioSource))]
 public class MusicLoop : MonoBehaviour {
 
 	AudioSource _audioSource;
+	AudioSource _audioSourceLoop;
 
+	public AudioMixerGroup audioMixerGroup;
 	public static List<MusicLoop> instances;
 
 	public string ID;
@@ -37,7 +39,15 @@ public class MusicLoop : MonoBehaviour {
 
 		DontDestroyOnLoad (this.gameObject);
 
-		_audioSource = this.GetComponent<AudioSource> ();
+		_audioSource = this.gameObject.AddComponent<AudioSource> ();
+		_audioSource.outputAudioMixerGroup = audioMixerGroup;
+		_audioSource.loop = false;
+		_audioSource.clip = this.openClip;
+
+		_audioSourceLoop = this.gameObject.AddComponent<AudioSource> ();
+		_audioSourceLoop.outputAudioMixerGroup = audioMixerGroup;
+		_audioSourceLoop.loop = true;
+		_audioSourceLoop.clip = this.loopClip;
 
 		onSceneLoad = new SceneEventManager.SceneEvent (OnSceneLoad);
 		SceneEventManager.SceneLoad += onSceneLoad;
@@ -70,22 +80,20 @@ public class MusicLoop : MonoBehaviour {
 		}
 	}
 
-	void ChangeClip(AudioClip audioClip) {
-		_audioSource.clip = audioClip;
-	}
-
 	void PlayOpen() {
-		ChangeClip (this.openClip);
-		_audioSource.loop = false;
+		_audioSource.time = 0;
 		_audioSource.Play ();
+
+		_audioSourceLoop.Stop ();
 
 		StartCoroutine (waitForClipEnd(_audioSource.clip.length, this.PlayLoop));
 	}
 
 	void PlayLoop() {
-		ChangeClip (this.loopClip);
-		_audioSource.loop = true;
-		_audioSource.Play ();
+		_audioSourceLoop.time = 0;
+		_audioSourceLoop.Play ();
+
+		_audioSource.Stop ();
 	}
 
 	IEnumerator waitForClipEnd(float duration, Action callback) {
