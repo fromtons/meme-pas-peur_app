@@ -7,12 +7,15 @@ tpsheetFileNames:
 - Assets/Chapters/forest/spritesheets/08/owl_flying.tpsheet
 - Assets/Chapters/forest/spritesheets/06/wolf_head_asleeps.tpsheet
 - Assets/Chapters/forest/spritesheets/06/wolf_head.tpsheet
-- Assets/Chapters/forest/spritesheets/06/wolf_sleeping.tpsheet
 - Assets/Chapters/forest/spritesheets/global/brother/brother_with_baby_owl.tpsheet
 - Assets/Chapters/forest/spritesheets/05/bunny_hopping.tpsheet
 - Assets/Chapters/forest/spritesheets/global/eyes/eyes_open.tpsheet
 - Assets/Chapters/forest/spritesheets/global/eyes/eyes_idle.tpsheet
 - Assets/Chapters/forest/spritesheets/global/eyes/eyes_closing.tpsheet
+- Assets/Chapters/forest/spritesheets/06/wolf_sleeping2_2.tpsheet
+- Assets/Chapters/forest/spritesheets/06/wolf_sleeping2_0.tpsheet
+- Assets/Chapters/forest/spritesheets/06/wolf_sleeping2_1.tpsheet
+- Assets/Chapters/forest/spritesheets/06/wolf_sleeping2_3.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Chapters/forest/spritesheets/global/piri/piri_waving.png
@@ -20,14 +23,20 @@ textureFileNames:
 - Assets/Chapters/forest/spritesheets/08/owl_flying.png
 - Assets/Chapters/forest/spritesheets/06/wolf_head_asleeps.png
 - Assets/Chapters/forest/spritesheets/06/wolf_head.png
-- Assets/Chapters/forest/spritesheets/06/wolf_sleeping.png
 - Assets/Chapters/forest/spritesheets/global/brother/brother_with_baby_owl.png
 - Assets/Chapters/forest/spritesheets/05/bunny_hopping.png
 - Assets/Chapters/forest/spritesheets/global/eyes/eyes_open.png
 - Assets/Chapters/forest/spritesheets/global/eyes/eyes_idle.png
 - Assets/Chapters/forest/spritesheets/global/eyes/eyes_closing.png
+- Assets/Chapters/forest/spritesheets/06/wolf_sleeping2_2.png
+- Assets/Chapters/forest/spritesheets/06/wolf_sleeping2_0.png
+- Assets/Chapters/forest/spritesheets/06/wolf_sleeping2_1.png
+- Assets/Chapters/forest/spritesheets/06/wolf_sleeping2_3.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
+- 
 - 
 - 
 - 
