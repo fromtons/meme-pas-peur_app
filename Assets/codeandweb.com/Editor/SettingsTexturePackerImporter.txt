@@ -2,30 +2,30 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
-- Assets/Chapters/forest/spritesheets/global/brother/brother_with_baby_owl.tpsheet
-- Assets/Chapters/forest/spritesheets/05/bunny_hopping.tpsheet
-- Assets/Chapters/forest/spritesheets/global/eyes/eyes_open.tpsheet
-- Assets/Chapters/forest/spritesheets/global/eyes/eyes_closing.tpsheet
-- Assets/Chapters/forest/spritesheets/global/eyes/eyes_idle.tpsheet
 - Assets/Chapters/forest/spritesheets/global/piri/piri_waving.tpsheet
 - Assets/Chapters/forest/spritesheets/08/baby_owl_blinking.tpsheet
 - Assets/Chapters/forest/spritesheets/08/owl_flying.tpsheet
 - Assets/Chapters/forest/spritesheets/06/wolf_head_asleeps.tpsheet
 - Assets/Chapters/forest/spritesheets/06/wolf_head.tpsheet
 - Assets/Chapters/forest/spritesheets/06/wolf_sleeping.tpsheet
+- Assets/Chapters/forest/spritesheets/global/brother/brother_with_baby_owl.tpsheet
+- Assets/Chapters/forest/spritesheets/05/bunny_hopping.tpsheet
+- Assets/Chapters/forest/spritesheets/global/eyes/eyes_open.tpsheet
+- Assets/Chapters/forest/spritesheets/global/eyes/eyes_idle.tpsheet
+- Assets/Chapters/forest/spritesheets/global/eyes/eyes_closing.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
-- Assets/Chapters/forest/spritesheets/global/brother/brother_with_baby_owl.png
-- Assets/Chapters/forest/spritesheets/05/bunny_hopping.png
-- Assets/Chapters/forest/spritesheets/global/eyes/eyes_open.png
-- Assets/Chapters/forest/spritesheets/global/eyes/eyes_closing.png
-- Assets/Chapters/forest/spritesheets/global/eyes/eyes_idle.png
 - Assets/Chapters/forest/spritesheets/global/piri/piri_waving.png
 - Assets/Chapters/forest/spritesheets/08/baby_owl_blinking.png
 - Assets/Chapters/forest/spritesheets/08/owl_flying.png
 - Assets/Chapters/forest/spritesheets/06/wolf_head_asleeps.png
 - Assets/Chapters/forest/spritesheets/06/wolf_head.png
 - Assets/Chapters/forest/spritesheets/06/wolf_sleeping.png
+- Assets/Chapters/forest/spritesheets/global/brother/brother_with_baby_owl.png
+- Assets/Chapters/forest/spritesheets/05/bunny_hopping.png
+- Assets/Chapters/forest/spritesheets/global/eyes/eyes_open.png
+- Assets/Chapters/forest/spritesheets/global/eyes/eyes_idle.png
+- Assets/Chapters/forest/spritesheets/global/eyes/eyes_closing.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
 - 
