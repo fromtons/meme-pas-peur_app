@@ -22,8 +22,10 @@ namespace MPP.Menus.Map {
 
 		public GroupFade _animation;
 
+		public AudioSource _audioSource;
+
 		void Awake() {
-			if(_animation == null)
+			if (_animation == null)
 				_animation = this.GetComponent<GroupFade> ();
 		}
 
@@ -37,6 +39,8 @@ namespace MPP.Menus.Map {
 
 		public void Show() {
 			_animation.Show (0.6f);
+			if (_audioSource != null)
+				_audioSource.Play();
 		}
 
 		public void Hide() {
