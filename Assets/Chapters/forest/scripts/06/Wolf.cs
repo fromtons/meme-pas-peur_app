@@ -24,6 +24,11 @@ namespace MPP.Forest.Scene_06 {
 				WolfEventManager.TriggerWolfChangeState (new WolfEventArgs { State = value });
 
 				if (value == STATE_AWAKEN) {
+
+					// Growl
+					if(audioGrowl != null && !audioGrowl.isPlaying)
+						audioGrowl.Play();
+
 					// Awake debouncer
 					if(awakeCoolDown != null) StopCoroutine (awakeCoolDown);
 					awakeCoolDown = StartCoroutine (AwakeCoolDown());
@@ -34,14 +39,16 @@ namespace MPP.Forest.Scene_06 {
 		public float shakeFactor = 0f;
 
 		bool _listening = false;
-		AudioSource audio;
+		public AudioSource audio;
+		public AudioSource audioGrowl;
 
 		MicEventManager.MicEvent onSoundCapBegin;
 		WolfEventManager.WolfEvent onListening;
 
 		void Start() {
 			animator = this.GetComponent<Animator> ();
-			audio = this.GetComponent<AudioSource> ();
+			if(audio == null)
+				audio = this.GetComponent<AudioSource> ();
 
 			onSoundCapBegin = new MicEventManager.MicEvent (OnSoundCapBegin);
 			MicEventManager.SoundCapBegin += onSoundCapBegin;
