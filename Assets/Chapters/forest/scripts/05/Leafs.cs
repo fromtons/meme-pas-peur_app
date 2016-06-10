@@ -46,6 +46,7 @@ namespace MPP.Forest.Scene_05 {
 
 		TalkEventManager.TalkEvent onTalkEnded;
 		MicEventManager.MicEvent onBlowBegin;
+		BackdoorEventManager.BackdoorEvent onBackdoorToggle;
 
 		// Use this for initialization
 		void Start () {
@@ -57,6 +58,9 @@ namespace MPP.Forest.Scene_05 {
 
 			onBlowBegin = new MicEventManager.MicEvent (OnBlowBegin);
 			MicEventManager.BlowBegin += onBlowBegin;
+
+			onBackdoorToggle = new BackdoorEventManager.BackdoorEvent (OnBackdoorToggle);
+			BackdoorEventManager.BackdoorToggle += onBackdoorToggle;
 		}
 
 		void Update() {
@@ -85,6 +89,12 @@ namespace MPP.Forest.Scene_05 {
 					StartCoroutine (Insist ());
 				else if(e.AudioClipId == 2) 
 					OngletManager.instance.HighlightNextOnglet ();
+			}
+		}
+
+		void OnBackdoorToggle(BackdoorEventArgs e) {
+			if (e.ID == "leafsBlow") {
+				OnBlowBegin (null);
 			}
 		}
 
@@ -125,6 +135,7 @@ namespace MPP.Forest.Scene_05 {
 		void OnDestroy() {
 			TalkEventManager.TalkEnded -= onTalkEnded;
 			MicEventManager.BlowBegin -= onBlowBegin;
+			BackdoorEventManager.BackdoorToggle -= onBackdoorToggle;
 		}
 	}
 }
