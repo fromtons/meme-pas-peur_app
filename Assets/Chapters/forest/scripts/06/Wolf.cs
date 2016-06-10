@@ -44,6 +44,7 @@ namespace MPP.Forest.Scene_06 {
 
 		MicEventManager.MicEvent onSoundCapBegin;
 		WolfEventManager.WolfEvent onListening;
+		BackdoorEventManager.BackdoorEvent onBackdoorToggle;
 
 		void Start() {
 			animator = this.GetComponent<Animator> ();
@@ -55,6 +56,9 @@ namespace MPP.Forest.Scene_06 {
 
 			onListening = new WolfEventManager.WolfEvent (OnListening);
 			WolfEventManager.WolfListening += onListening;
+
+			onBackdoorToggle = new BackdoorEventManager.BackdoorEvent (OnBackdoorToggle);
+			BackdoorEventManager.BackdoorToggle += onBackdoorToggle;
 		}
 
 		void Update() {
@@ -72,9 +76,20 @@ namespace MPP.Forest.Scene_06 {
 			}
 		}
 
+		void OnBackdoorToggle(BackdoorEventArgs eventArgs) {
+			if (eventArgs.ID == "awakeWolf") {
+				CurrentAnimationState = STATE_AWAKEN;
+			} else if (eventArgs.ID == "disableWolf") {
+				WolfEventManager.TriggerWolfListening (new WolfEventArgs { Listening = false });
+			}  else if (eventArgs.ID == "enableWolf") {
+				WolfEventManager.TriggerWolfListening (new WolfEventArgs { Listening = true });
+			}
+		}
+
 		void OnDestroy() {
 			MicEventManager.SoundCapBegin -= OnSoundCapBegin;
 			WolfEventManager.WolfListening -= OnListening;
+			BackdoorEventManager.BackdoorToggle -= onBackdoorToggle;
 		}
 
 		IEnumerator AwakeCoolDown() {

@@ -84,9 +84,9 @@ namespace MPP.Forest.Scene_06 {
 					TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 1, Autoplay = true });
 				else if (e.AudioClipId != 4 && e.AudioClipId != 5) {
 					StartCoroutine (Insist ());
-					WolfEventManager.TriggerWolfListening (new WolfEventArgs { Listening = true });
 
 					if (e.AudioClipId == 1) {
+						WolfEventManager.TriggerWolfListening (new WolfEventArgs { Listening = true });
 						travelling = true;
 					}
 				}
