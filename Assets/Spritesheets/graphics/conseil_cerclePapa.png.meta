@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: aab285161ccb944b79edf84237bfa6a8
-timeCreated: 1465566559
+timeCreated: 1465677306
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: conseil_cerclePapa_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +39,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +50,84 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: conseil_cerclePapa_0
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 110
+        width: 292
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -143, y: -12}
+        - {x: -146, y: -12}
+        - {x: -146, y: -64}
+        - {x: -138, y: -110}
+        - {x: -66, y: -144}
+        - {x: -52, y: -146}
+        - {x: -18, y: -146}
+        - {x: -18, y: -138}
+        - {x: -139, y: -15}
+      - - {x: -17, y: -142}
+        - {x: -18, y: -144}
+        - {x: -18, y: -146}
+        - {x: 18, y: -146}
+        - {x: 18, y: -144}
+        - {x: 16, y: -142}
+      - - {x: 143, y: -13}
+        - {x: 140, y: -19}
+        - {x: 18, y: -140}
+        - {x: 18, y: -146}
+        - {x: 48, y: -146}
+        - {x: 81, y: -139}
+        - {x: 145, y: -65}
+        - {x: 146, y: -53}
+        - {x: 146, y: -13}
+      - - {x: -53, y: 136}
+        - {x: -104, y: 125}
+        - {x: -135, y: 74}
+        - {x: -135, y: -113}
+        - {x: -64, y: -136}
+        - {x: 124, y: -136}
+        - {x: 137, y: -97}
+        - {x: 137, y: 81}
+        - {x: 66, y: 136}
+      - - {x: 142, y: 17}
+        - {x: 142, y: -12}
+        - {x: 145, y: -13}
+        - {x: 146, y: -13}
+        - {x: 146, y: 18}
+        - {x: 144, y: 18}
+      - - {x: -146, y: 9}
+        - {x: -146, y: -12}
+        - {x: -143, y: -12}
+        - {x: -141, y: -11}
+        - {x: -141, y: 8}
+        - {x: -143, y: 9}
+      - - {x: -75, y: 146}
+        - {x: -146, y: 83}
+        - {x: -146, y: 9}
+        - {x: -141, y: 9}
+        - {x: -140, y: 10}
+        - {x: -9, y: 133}
+        - {x: -9, y: 146}
+      - - {x: 12, y: 146}
+        - {x: 12, y: 139}
+        - {x: 21, y: 122}
+        - {x: 141, y: 18}
+        - {x: 146, y: 18}
+        - {x: 146, y: 68}
+        - {x: 140, y: 90}
+        - {x: 58, y: 144}
+        - {x: 37, y: 146}
+      - - {x: -9, y: 146}
+        - {x: -9, y: 141}
+        - {x: 11, y: 141}
+        - {x: 12, y: 143}
+        - {x: 12, y: 146}
     outline: []
   spritePackingTag: 
   userData: 

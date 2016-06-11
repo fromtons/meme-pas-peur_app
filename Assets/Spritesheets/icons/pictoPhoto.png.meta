@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: 3aa3abd3457e64459a6088202e7a0447
-timeCreated: 1464352124
+timeCreated: 1465677935
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: pictoPhoto_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,7 +39,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +50,49 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: pictoPhoto_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 69
+        width: 164
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -70, y: 59}
+        - {x: -82, y: 50}
+        - {x: -82, y: -59}
+        - {x: 80, y: -59}
+        - {x: 82, y: -57}
+        - {x: 82, y: 57}
+        - {x: 36, y: 59}
+      - - {x: -18, y: 25}
+        - {x: -30, y: 13}
+        - {x: -30, y: -23}
+        - {x: -23, y: -40}
+        - {x: 32, y: -40}
+        - {x: 35, y: -29}
+        - {x: 35, y: 15}
+        - {x: 22, y: 25}
+      - - {x: 42, y: 37}
+        - {x: 40, y: 33}
+        - {x: 40, y: 16}
+        - {x: 45, y: 14}
+        - {x: 73, y: 14}
+        - {x: 75, y: 17}
+        - {x: 75, y: 36}
+        - {x: 70, y: 37}
+      - - {x: -69, y: 30}
+        - {x: -70, y: 28}
+        - {x: -70, y: 22}
+        - {x: -67, y: 21}
+        - {x: -43, y: 21}
+        - {x: -41, y: 25}
+        - {x: -41, y: 28}
+        - {x: -44, y: 30}
     outline: []
   spritePackingTag: 
   userData: 
