@@ -47,6 +47,10 @@ namespace MPP.Util {
 			collider = this.GetComponent<BoxCollider2D> ();
 			sprite = this.GetComponent<SpriteRenderer> ();
 
+			if (mouthManager != null) {
+				mouthManager.AudioSource = audioSource;
+			}
+
 			// Subscribe to talkset events
 			onTalkSet = new TalkEventManager.TalkEvent(OnTalkSet);
 			onTalkStop = new TalkEventManager.TalkEvent (OnTalkStop);
@@ -90,9 +94,6 @@ namespace MPP.Util {
 			audioSource.clip = audioClips [currentClipId];
 			audioSource.Play ();
 
-			if (mouthManager)
-				mouthManager.play ();
-
 			IsNew = false;
 
 			TalkEventManager.TriggerTalkBegin(new TalkEventArgs { ID = this.ID, AudioClipId = currentClipId });
@@ -121,9 +122,6 @@ namespace MPP.Util {
 		void StopCurrent() {
 			audioSource.Stop ();
 			audioClipsPlayed [currentClipId] = true;
-
-			if (mouthManager)
-				mouthManager.stop ();
 
 			TalkEventManager.TriggerTalkEnded(new TalkEventArgs { ID = this.ID, AudioClipId = currentClipId });
 		}
