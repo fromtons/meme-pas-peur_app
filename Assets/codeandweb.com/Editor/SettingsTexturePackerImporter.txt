@@ -13,7 +13,6 @@ tpsheetFileNames:
 - Assets/Chapters/forest/spritesheets/09/interview_choices.tpsheet
 - Assets/Spritesheets/piri/ui_piri_idle.tpsheet
 - Assets/Chapters/forest/spritesheets/06/wolf_sleeping2_0.tpsheet
-- Assets/Spritesheets/piri/ui_piri_ciao.tpsheet
 - Assets/Spritesheets/piri/ui_piri_bouh.tpsheet
 - Assets/Chapters/forest/spritesheets/06/wolf_sleeping2_1.tpsheet
 - Assets/Spritesheets/piri/ui_piri_prout.tpsheet
@@ -40,7 +39,6 @@ textureFileNames:
 - Assets/Chapters/forest/spritesheets/09/interview_choices.png
 - Assets/Spritesheets/piri/ui_piri_idle.png
 - Assets/Chapters/forest/spritesheets/06/wolf_sleeping2_0.png
-- Assets/Spritesheets/piri/ui_piri_ciao.png
 - Assets/Spritesheets/piri/ui_piri_bouh.png
 - Assets/Chapters/forest/spritesheets/06/wolf_sleeping2_1.png
 - Assets/Spritesheets/piri/ui_piri_prout.png
@@ -56,7 +54,6 @@ textureFileNames:
 - Assets/Chapters/forest/spritesheets/global/piri/piri_waving.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
-- 
 - 
 - 
 - 
