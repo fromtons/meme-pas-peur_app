@@ -1,0 +1,270 @@
+fileFormatVersion: 2
+guid: 6ff2c04b1493b4d53a912c312c034aaf
+timeCreated: 1465649760
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bras_droit
+    21300002: bras_gauche
+    21300004: head
+    21300006: jambe_droite
+    21300008: jambe_gauche
+    21300010: oreille_droite
+    21300012: oreille_gauche
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: bras_droit
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 41
+        width: 167
+        height: 163
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 167, y: 47.5}
+        - {x: 167, y: 68.5}
+        - {x: 165, y: 69.5}
+        - {x: 162, y: 69.5}
+        - {x: 159, y: 68.5}
+        - {x: 157, y: 81.5}
+        - {x: 140, y: 81.5}
+        - {x: 133, y: 78.5}
+        - {x: 117, y: 67.5}
+        - {x: 12, y: 10.5}
+        - {x: 10, y: 8.5}
+        - {x: 0, y: -0.5}
+        - {x: 0, y: -56.5}
+        - {x: 12, y: -81.5}
+        - {x: 69, y: -81.5}
+        - {x: 167, y: 25.5}
+        - {x: 167, y: 35.5}
+        - {x: 165, y: 37.5}
+    - name: bras_gauche
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 259
+        width: 175
+        height: 150
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -121, y: 75}
+        - {x: -175, y: 75}
+        - {x: -175, y: 24}
+        - {x: -169, y: 6}
+        - {x: -61, y: -75}
+        - {x: -16, y: -75}
+        - {x: 0, y: -56}
+        - {x: 0, y: 22}
+        - {x: -5, y: 46}
+    - name: head
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 411
+        width: 461
+        height: 611
+      alignment: 9
+      pivot: {x: 1.411063, y: 1.0016366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -268.5, y: -563}
+        - {x: -234.5, y: -529}
+        - {x: -214.5, y: -500}
+        - {x: -195.5, y: -457}
+        - {x: -189.5, y: -430}
+        - {x: -189.5, y: -349}
+        - {x: -191.5, y: -339}
+        - {x: -198.5, y: -315}
+        - {x: -208.5, y: -290}
+        - {x: -233.5, y: -251}
+        - {x: -232.5, y: -240}
+        - {x: -220.5, y: -226}
+        - {x: -209.5, y: -208}
+        - {x: -208.5, y: -200}
+        - {x: -218.5, y: -195}
+        - {x: -212.5, y: -171}
+        - {x: -213.5, y: -157}
+        - {x: -219.5, y: -150}
+        - {x: -231.5, y: -151}
+        - {x: -237.5, y: -162}
+        - {x: -246.5, y: -204}
+        - {x: -258.5, y: -229}
+        - {x: -272.5, y: -213}
+        - {x: -315.5, y: -187}
+        - {x: -337.5, y: -179}
+        - {x: -374.5, y: -169}
+        - {x: -411.5, y: -163}
+        - {x: -414.5, y: -154}
+        - {x: -430.5, y: -156}
+        - {x: -435.5, y: -110}
+        - {x: -440.5, y: -84}
+        - {x: -452.5, y: -45}
+        - {x: -467.5, y: -10}
+        - {x: -479.5, y: -1}
+        - {x: -522.5, y: -1}
+        - {x: -541.5, y: -7}
+        - {x: -556.5, y: -16}
+        - {x: -558.5, y: -21}
+        - {x: -556.5, y: -50}
+        - {x: -544.5, y: -81}
+        - {x: -517.5, y: -139}
+        - {x: -495.5, y: -174}
+        - {x: -518.5, y: -176}
+        - {x: -526.5, y: -189}
+        - {x: -547.5, y: -200}
+        - {x: -594.5, y: -237}
+        - {x: -608.5, y: -217}
+        - {x: -616.5, y: -174}
+        - {x: -629.5, y: -159}
+        - {x: -639.5, y: -164}
+        - {x: -644.5, y: -172}
+        - {x: -642.5, y: -199}
+        - {x: -646.5, y: -221}
+        - {x: -613.5, y: -265}
+        - {x: -622.5, y: -276}
+        - {x: -641.5, y: -315}
+        - {x: -649.5, y: -343}
+        - {x: -650.5, y: -353}
+        - {x: -650.5, y: -430}
+        - {x: -646.5, y: -450}
+        - {x: -641.5, y: -463}
+        - {x: -630.5, y: -489}
+        - {x: -614.5, y: -518}
+        - {x: -578.5, y: -557}
+        - {x: -555.5, y: -575}
+        - {x: -515.5, y: -597}
+        - {x: -483.5, y: -608}
+        - {x: -462.5, y: -612}
+        - {x: -376.5, y: -612}
+        - {x: -349.5, y: -606}
+        - {x: -324.5, y: -597}
+        - {x: -295.5, y: -582}
+    - name: jambe_droite
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 206
+        width: 54
+        height: 203
+      alignment: 9
+      pivot: {x: 6.9722223, y: 3.6108375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -345.5, y: -530}
+        - {x: -367.5, y: -530}
+        - {x: -376.5, y: -657}
+        - {x: -376.5, y: -730}
+        - {x: -360.5, y: -733}
+        - {x: -322.5, y: -733}
+        - {x: -322.5, y: -695}
+        - {x: -330.5, y: -574}
+    - name: jambe_gauche
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 9
+        width: 49
+        height: 195
+      alignment: 9
+      pivot: {x: 10.479591, y: 3.6820512}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -496.5, y: -523}
+        - {x: -513.5, y: -604}
+        - {x: -513.5, y: -718}
+        - {x: -484.5, y: -718}
+        - {x: -464.5, y: -696}
+        - {x: -464.5, y: -640}
+        - {x: -468.5, y: -523}
+    - name: oreille_droite
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 218
+        width: 62
+        height: 39
+      alignment: 9
+      pivot: {x: 0.026385523, y: 0.1728191}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30.364098, y: 32.260056}
+        - {x: 27.364098, y: 29.260056}
+        - {x: -1.6359024, y: 4.2600555}
+        - {x: -1.6359024, y: -6.7399445}
+        - {x: 52.364098, y: -6.7399445}
+        - {x: 60.364098, y: 2.2600555}
+        - {x: 60.364098, y: 32.260056}
+    - name: oreille_gauche
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 3
+        width: 59
+        height: 36
+      alignment: 9
+      pivot: {x: 0.93375695, y: 0.18636666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -55.09166, y: 29.2908}
+        - {x: -55.09166, y: 16.2908}
+        - {x: -52.09166, y: 13.2908}
+        - {x: -39.09166, y: -6.7092}
+        - {x: 3.9083405, y: -6.7092}
+        - {x: 3.9083405, y: 2.2908}
+        - {x: -5.0916595, y: 20.2908}
+        - {x: -23.09166, y: 29.2908}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
