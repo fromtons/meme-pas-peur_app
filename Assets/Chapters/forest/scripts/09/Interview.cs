@@ -86,6 +86,9 @@ namespace MPP.Forest.Scene_09 {
 			else
 				scared = false;
 
+			question1Wrapper.SetActive (false);
+			question2Wrapper.SetActive (false);
+
 			if (answer == "positive")
 				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID = "piri", AudioClipId = 2, Autoplay = true });
 			else if (answer == "negative")

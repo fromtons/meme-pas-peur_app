@@ -1,0 +1,13 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: interview_choices.png (1024 x 1024)
+# $TexturePacker:SmartUpdate:ee5bfdf656516c772903978ac9ee19c4:2f20c8a1949dbc94d7329dd3687c850b:bebb476d01f33abebc062785f4736d21$
+#
+
+choix_buisson;2;651;372;371;0.5;0.4986522911051213
+choix_foret;376;651;372;371;0.5;0.4986522911051213
+choix_gros_animal;2;278;372;371;0.5;0.4986522911051213
