@@ -22,6 +22,11 @@ tpsheetFileNames:
 - Assets/Chapters/forest/spritesheets/09/interview_choices.tpsheet
 - Assets/Chapters/forest/spritesheets/global/piri/piri_waving.tpsheet
 - Assets/Chapters/forest/spritesheets/09/brother/brother_parts.tpsheet
+- Assets/Spritesheets/piri/ui_piri_idle.tpsheet
+- Assets/Spritesheets/piri/ui_piri_bouh.tpsheet
+- Assets/Spritesheets/piri/ui_piri_prout.tpsheet
+- Assets/Spritesheets/piri/ui_piri_rigole.tpsheet
+- Assets/Spritesheets/piri/ui_piri_ciao.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Chapters/forest/spritesheets/08/baby_owl_blinking.png
@@ -44,8 +49,18 @@ textureFileNames:
 - Assets/Chapters/forest/spritesheets/09/interview_choices.png
 - Assets/Chapters/forest/spritesheets/global/piri/piri_waving.png
 - Assets/Chapters/forest/spritesheets/09/brother/brothers_parts.png
+- Assets/Spritesheets/piri/ui_piri_idle.png
+- Assets/Spritesheets/piri/ui_piri_bouh.png
+- Assets/Spritesheets/piri/ui_piri_prout.png
+- Assets/Spritesheets/piri/ui_piri_rigole.png
+- Assets/Spritesheets/piri/ui_piri_ciao.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
+- 
+- 
+- 
 - 
 - 
 - 

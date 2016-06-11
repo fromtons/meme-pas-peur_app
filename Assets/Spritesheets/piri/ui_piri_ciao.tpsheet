@@ -1,0 +1,60 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: ui_piri_ciao.png (4096 x 4096)
+# $TexturePacker:SmartUpdate:538be209dac61797bdf22f5ac2964b59:f1b20158b8dd98565ed639fa70580267:6aef361e30343752edb79ea4d6e5be98$
+#
+
+bras_droit00;2633;3092;429;500;0.5;0
+bras_droit01;2201;3594;430;500;0.5;0
+bras_droit02;2200;2590;430;500;0.5;0
+bras_droit03;2199;1586;431;500;0.5;0
+bras_droit04;1764;1084;432;500;0.5;0
+bras_droit05;1764;582;432;500;0.5;0
+bras_droit06;1764;80;432;500;0.5;0
+bras_droit07;1327;2088;434;500;0.5;0
+bras_droit08;1327;1586;434;500;0.5;0
+bras_droit09;1327;2590;435;500;0.5;0
+bras_droit10;1763;2088;434;500;0.5;0
+bras_droit11;1328;3594;435;500;0.5;0
+bras_droit12;1326;1084;436;500;0.5;0
+bras_droit13;887;1084;437;500;0.5;0
+bras_droit14;887;582;437;500;0.5;0
+bras_droit15;887;2590;438;500;0.5;0
+bras_droit16;888;3594;438;500;0.5;0
+bras_droit17;447;3594;439;500;0.5;0
+bras_droit18;888;3092;438;500;0.5;0
+bras_droit19;445;1084;440;500;0.5;0
+bras_droit20;445;582;440;500;0.5;0
+bras_droit21;2;1084;441;500;0.5;0
+bras_droit22;2;582;441;500;0.5;0
+bras_droit23;2;3092;442;500;0.5;0
+bras_droit24;2;2590;442;500;0.5;0
+bras_droit25;2;3594;443;500;0.5;0
+bras_droit26;2;2088;442;500;0.5;0
+bras_droit27;2;1586;442;500;0.5;0
+bras_droit28;2;80;441;500;0.5;0
+bras_droit29;445;80;440;500;0.5;0
+bras_droit30;446;3092;440;500;0.5;0
+bras_droit31;446;2590;439;500;0.5;0
+bras_droit32;446;2088;439;500;0.5;0
+bras_droit33;446;1586;439;500;0.5;0
+bras_droit34;887;2088;438;500;0.5;0
+bras_droit35;887;1586;438;500;0.5;0
+bras_droit36;887;80;437;500;0.5;0
+bras_droit37;1326;582;436;500;0.5;0
+bras_droit38;1326;80;436;500;0.5;0
+bras_droit39;1328;3092;435;500;0.5;0
+bras_droit40;1764;2590;434;500;0.5;0
+bras_droit41;1763;1586;434;500;0.5;0
+bras_droit42;1765;3594;434;500;0.5;0
+bras_droit43;1765;3092;433;500;0.5;0
+bras_droit44;2198;1084;432;500;0.5;0
+bras_droit45;2199;2088;432;500;0.5;0
+bras_droit46;2200;3092;431;500;0.5;0
+bras_droit47;2632;2590;430;500;0.5;0
+bras_droit48;2633;3594;430;500;0.5;0
+bras_droit49;2633;3092;429;500;0.5;0

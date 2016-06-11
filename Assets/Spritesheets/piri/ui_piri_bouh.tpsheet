@@ -1,0 +1,35 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: ui_piri_bouh.png (4096 x 4096)
+# $TexturePacker:SmartUpdate:2ee77c547d37b03d699e41f4f60c2ee8:ba5f2b7e531de60968b89f388398a1a9:86760042bf0e1636af015d116805687e$
+#
+
+bras_droit00;568;3092;443;500;0.5;0
+bras_droit01;1571;1586;464;500;0.5;0
+bras_droit02;1084;1586;485;500;0.5;0
+bras_droit03;1079;2088;506;500;0.5;0
+bras_droit04;552;1084;527;500;0.5;0
+bras_droit05;2;1084;548;500;0.5;0
+bras_droit06;2919;3594;568;500;0.5;0
+bras_droit07;2;3594;590;500;0.5;0
+bras_droit08;594;3594;586;500;0.5;0
+bras_droit09;1182;3594;581;500;0.5;0
+bras_droit10;1765;3594;577;500;0.5;0
+bras_droit11;2344;3594;573;500;0.5;0
+bras_droit12;3489;3594;568;500;0.5;0
+bras_droit13;2;3092;564;500;0.5;0
+bras_droit14;2;2590;560;500;0.5;0
+bras_droit15;2;2088;555;500;0.5;0
+bras_droit16;2;1586;551;500;0.5;0
+bras_droit17;2;582;546;500;0.5;0
+bras_droit18;2;80;541;500;0.5;0
+bras_droit19;545;80;537;500;0.5;0
+bras_droit20;550;582;532;500;0.5;0
+bras_droit21;555;1586;527;500;0.5;0
+bras_droit22;1081;1084;523;500;0.5;0
+bras_droit23;559;2088;518;500;0.5;0
+bras_droit24;564;2590;514;500;0.5;0
