@@ -2,7 +2,6 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
-- Assets/Chapters/forest/spritesheets/global/piri/piri_waving.tpsheet
 - Assets/Chapters/forest/spritesheets/08/baby_owl_blinking.tpsheet
 - Assets/Chapters/forest/spritesheets/08/owl_flying.tpsheet
 - Assets/Chapters/forest/spritesheets/06/wolf_head_asleeps.tpsheet
@@ -21,9 +20,10 @@ tpsheetFileNames:
 - Assets/Chapters/forest/spritesheets/09/interview_yes.tpsheet
 - Assets/Chapters/forest/spritesheets/09/interview_no.tpsheet
 - Assets/Chapters/forest/spritesheets/09/interview_choices.tpsheet
+- Assets/Chapters/forest/spritesheets/global/piri/piri_waving.tpsheet
+- Assets/Chapters/forest/spritesheets/09/brother/brother_parts.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
-- Assets/Chapters/forest/spritesheets/global/piri/piri_waving.png
 - Assets/Chapters/forest/spritesheets/08/baby_owl_blinking.png
 - Assets/Chapters/forest/spritesheets/08/owl_flying.png
 - Assets/Chapters/forest/spritesheets/06/wolf_head_asleeps.png
@@ -42,8 +42,11 @@ textureFileNames:
 - Assets/Chapters/forest/spritesheets/09/interview_yes.png
 - Assets/Chapters/forest/spritesheets/09/interview_no.png
 - Assets/Chapters/forest/spritesheets/09/interview_choices.png
+- Assets/Chapters/forest/spritesheets/global/piri/piri_waving.png
+- Assets/Chapters/forest/spritesheets/09/brother/brothers_parts.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
 - 
 - 
 - 

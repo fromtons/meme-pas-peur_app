@@ -1,0 +1,16 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: brothers_parts.png (2048 x 2048)
+# $TexturePacker:SmartUpdate:1e634ba7e323453ce499c6c920e9d887:b00f28d66459f178608782dfa6d59ed7:f9afb07ff23955d7a07a7ec319e46cf8$
+#
+
+bras_gauche;311;657;72;526;4.3125;0.9049429657794676
+bras_panier;2;446;307;737;-0.6986970684039088;0.9484396200814111
+head;2;1185;839;861;0.40822407628128726;0.38327526132404177
+jambes;311;137;400;518;0.30625;1.3783783783783785
+oreille_droite;2;382;115;62;-3.473913043478261;-0.9516129032258065
+oreille_gauche;2;318;115;62;2.9695652173913043;-1.1451612903225805
