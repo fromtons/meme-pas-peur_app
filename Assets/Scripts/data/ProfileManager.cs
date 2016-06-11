@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using MPP.Events;
+using UnityEngine.SceneManagement;
 
 namespace MPP.Data {
 	public class ProfileManager : MonoBehaviour {
@@ -30,6 +32,8 @@ namespace MPP.Data {
 			get { return _availableProfiles; }
 		}
 
+		BackdoorEventManager.BackdoorEvent onBackdoorToggle;
+
 
 		// Use this for initialization
 		void OnEnable () {
@@ -43,7 +47,13 @@ namespace MPP.Data {
 		}
 
 		void Start() {
-			CurrentProfile = LoadProfile (GetLastProfileOpened ());
+			Profile lastProfile = LoadProfile (GetLastProfileOpened ());
+			if(lastProfile != null) CurrentProfile = lastProfile;
+
+			Debug.Log (Application.persistentDataPath);
+
+			onBackdoorToggle = new BackdoorEventManager.BackdoorEvent (OnBackdoorToggle);
+			BackdoorEventManager.BackdoorToggle += onBackdoorToggle;
 		}
 
 		public void Save() {
@@ -69,7 +79,7 @@ namespace MPP.Data {
 
 				return new Profile (data);
 			} else {
-				Debug.LogError ("File doesn't exists");
+				Debug.Log("File doesn't exists");
 				return null;
 			}
 		}
@@ -104,9 +114,28 @@ namespace MPP.Data {
 
 				return data.name;
 			} else {
-				Debug.LogError ("File doesn't exists");
+				Debug.Log ("File doesn't exists");
 				return null;
 			}
+		}
+
+		void OnBackdoorToggle(BackdoorEventArgs eventArgs) {
+			if (eventArgs.ID == "deleteProfiles") {
+				Debug.Log ("deleteProfiles");
+				DirectoryInfo dir = new DirectoryInfo(Application.persistentDataPath + "/");
+				FileInfo[] info = dir.GetFiles("*");
+				foreach (FileInfo f in info) 
+				{ 
+					f.Delete ();
+				}
+				GetProfiles ();
+				Debug.Log ("profiles deleted");
+				SceneManager.LoadScene ("ChooseProfile");
+			}
+		}
+
+		void OnDestroy() {
+			BackdoorEventManager.BackdoorToggle -= onBackdoorToggle;
 		}
 	}
 

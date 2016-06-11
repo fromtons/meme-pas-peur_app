@@ -23,12 +23,16 @@ namespace MPP.Utils {
 				Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 				Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
 				if (hitCollider == _collider) {
-					Debug.Log ("backdoor toggled");
-					BackdoorEventManager.TriggerBackdoorToggle (new BackdoorEventArgs { ID = this.ID });
-					_disable = true;
+					Toggle ();
 					StartCoroutine (CoolDown ());
 				}
 			}
+		}
+
+		public void Toggle() {
+			Debug.Log ("backdoor toggled");
+			BackdoorEventManager.TriggerBackdoorToggle (new BackdoorEventArgs { ID = this.ID });
+			_disable = true;
 		}
 
 		IEnumerator CoolDown() {
