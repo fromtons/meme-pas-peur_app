@@ -36,5 +36,9 @@ namespace MPP.Forest.Scene_02 {
 		void OnSceneLoad(SceneEventArgs eventArgs) {
 			if(MixerManager.instance != null) MixerManager.instance.FadeTo("MusicVol", -80f, 1f);
 		}
+
+		void OnDestroy() {
+			SceneEventManager.SceneLoad -= onSceneLoad;
+		}
 	}
 }
