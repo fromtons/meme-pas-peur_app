@@ -121,7 +121,7 @@ namespace MPP.Forest.Scene_06 {
 				if (goingBack) {
 					afterGoingBack ();
 				}
-			} else {
+			} else if(other.gameObject.GetComponent<MPP.Utils.Backdoor>() == null) {
 				TalkEventManager.TriggerTalkSet (new TalkEventArgs { ID="piri", AudioClipId=5, Autoplay=true });	
 			}
 		}
