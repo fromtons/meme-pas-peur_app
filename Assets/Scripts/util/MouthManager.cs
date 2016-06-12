@@ -21,6 +21,8 @@ namespace MPP.Util {
 			}
 		}
 
+		public bool ultraSensitive = false;
+
 		bool _syncOnAudioSource = false;
 		float _avgVolume = 0f;
 		float _newScale = 0f;
@@ -38,7 +40,7 @@ namespace MPP.Util {
 			if (_syncOnAudioSource) {
 				_avgVolume = AudioUtils.GetAveragedVolume (_audioSource, 256) * 100;
 
-				_newScale = (_avgVolume-10) / 5;
+				_newScale = (_avgVolume-(ultraSensitive ? 5 : 10)) / 5;
 				if (_newScale > initialScale.y)
 					_newScale = initialScale.y;
 				else if (_newScale <= closeScaleY)
